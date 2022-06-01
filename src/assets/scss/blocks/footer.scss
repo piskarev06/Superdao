@@ -1,0 +1,47 @@
+.footer {
+  padding: 56px 0;
+  background: #171e25;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    gap: 36px;
+
+    & .nav__link {
+      padding: 10px;
+
+      font-size: 22px;
+      line-height: 27px;
+
+      letter-spacing: -0.01em;
+
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    .social__link {
+      & svg rect {
+        transition: all 0.3s linear;
+
+        &:hover {
+          fill-opacity: 0.25;
+        }
+
+        &:active {
+          fill-opacity: 0.1;
+        }
+      }
+    }
+  }
+}

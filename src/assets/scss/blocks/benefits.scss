@@ -1,0 +1,42 @@
+.benefits {
+  padding: $offset 0;
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px;
+
+    & .list {
+      &__item {
+        & svg {
+          cursor: pointer;
+
+          margin-bottom: 16px;
+
+          &:hover rect:first-child {
+            fill: rgba(119, 146, 248, 0.15);
+          }
+
+          &.polygon:hover rect:first-child {
+            fill: rgba(146, 89, 242, 0.15);
+          }
+
+          &.safe:hover rect:first-child {
+            fill: rgba(0, 140, 115, 0.15);
+            stroke: 2px solid rgba(0, 140, 115, 0.3);
+          }
+
+          & rect:first-child {
+            transition: all 0.3s linear;
+          }
+        }
+
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Loos Wide';
+  src: url('LoosWide.woff');
+  src: local('Loos Wide'), local('Loos Wide'), url('LoosWide.woff') format('woff'),
+    url('LoosWide.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}

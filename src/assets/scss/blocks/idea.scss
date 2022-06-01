@@ -1,0 +1,101 @@
+.idea {
+  padding: $offset 0;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    font-family: 'Loos Wide';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    text-align: center;
+
+    color: #495663;
+  }
+
+  &__btns {
+    margin-top: 62px;
+
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__btn {
+    &.telegram {
+      padding-right: 49px;
+
+      background: $yellow;
+      box-shadow: 0px 8px 40px rgba(255, 200, 3, 0.2);
+
+      transition: all 0.3s linear;
+
+      &:hover {
+        background: #ffdc25;
+        box-shadow: 0px 25px 60px rgba(255, 200, 3, 0.2);
+      }
+
+      &:active {
+        box-shadow: unset;
+        background: #e3b200;
+      }
+    }
+
+    &.email {
+      padding-right: 36px;
+
+      background: $purple-light;
+      box-shadow: 0px 8px 40px rgba(226, 193, 249, 0.2);
+
+      transition: all 0.3s linear;
+
+      &:hover {
+        box-shadow: 0px 25px 60px rgba(226, 193, 249, 0.2);
+      }
+
+      &:active {
+        box-shadow: unset;
+        background: #cda8e8;
+      }
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+
+    text-align: left;
+
+    margin-left: 16px;
+  }
+
+  &__strong {
+    font-family: 'Loos Wide';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #4d3705;
+  }
+
+  &__contacts {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #4d3705;
+
+    opacity: 0.7;
+  }
+}

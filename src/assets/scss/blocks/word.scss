@@ -1,0 +1,35 @@
+.word {
+  padding: $offset 0;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    max-width: 940px;
+    text-align: center;
+  }
+
+  &__span {
+    font-family: 'Loos Wide';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 74px;
+
+    text-align: center;
+    color: #37424d;
+
+    transition: all 0.3s linear;
+  }
+}
+
+.active {
+  color: #23c9de;
+}

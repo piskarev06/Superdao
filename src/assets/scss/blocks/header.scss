@@ -1,0 +1,28 @@
+.header {
+  padding: 30px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    gap: 20px;
+
+    & .nav__link {
+      padding: 10px;
+
+      font-size: 20px;
+      line-height: 24px;
+
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  &__btns {
+    display: flex;
+    gap: 16px;
+  }
+}

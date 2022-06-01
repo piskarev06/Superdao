@@ -1,0 +1,60 @@
+.digest {
+  padding: $offset 0;
+
+  &__decor {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    & img {
+      border-radius: 30px;
+    }
+  }
+
+  &__block {
+    position: relative;
+    padding: 40px 64px 64px;
+
+    background: #171e25;
+    border: 2px solid #2a3744;
+    border-radius: 30px;
+  }
+
+  &__title {
+    text-align: left;
+
+    margin-bottom: 14px;
+  }
+
+  &__text {
+    font-size: 36px;
+    line-height: 44px;
+
+    color: #9aafc4;
+    opacity: 0.6;
+
+    margin-bottom: 68px;
+  }
+
+  &__form {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__input {
+    padding: 21px 20px 20px 28px;
+
+    background: #171e25;
+    border: 2px solid #2a3744;
+    border-radius: 16px;
+
+    color: #3d4c5b;
+
+    &::placeholder {
+      font-size: 22px;
+      line-height: 27px;
+
+      color: #3d4c5b;
+    }
+  }
+}
