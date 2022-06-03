@@ -1,8 +1,12 @@
 @font-face {
-  font-family: 'Loos Wide';
-  src: url('LoosWide.woff');
-  src: local('Loos Wide'), local('Loos Wide'), url('LoosWide.woff') format('woff'),
-    url('LoosWide.woff2') format('woff2');
-  font-weight: bold;
-  font-style: normal;
+	font-family: 'Loos Wide';
+	src: url('Loos Latin, Cyrillic Wide-Bold-Web.eot');
+	src: url('Loos Latin, Cyrillic Wide-Bold-Web.eot#iefix')
+			format('embedded-opentype'),
+		url('Loos Latin, Cyrillic Wide-Bold-Web.woff2') format('woff2'),
+		url('Loos Latin, Cyrillic Wide-Bold-Web.woff') format('woff'),
+		url('Loos Latin, Cyrillic Wide-Bold-Web.ttf') format('truetype');
+
+	font-weight: 700;
+	font-style: normal;
 }
