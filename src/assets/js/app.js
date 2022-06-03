@@ -22,7 +22,7 @@ if (menuLinks.length > 0) {
       const gotoBlockValue =
         gotoBlock.getBoundingClientRect().top +
         pageYOffset -
-        document.querySelector('header').offsetHeight
+        -document.querySelector('header').offsetHeight
 
       if (iconMenu.classList.contains('_active')) {
         document.body.classList.remove('_lock')
@@ -45,43 +45,48 @@ if (menuLinks.length > 0) {
 // 900 контент секции
 // 128 на каждый
 
-let sectionOffset = 200
+const sectionWordStart =
+  document.querySelector('.word').clientHeight +
+  document.querySelector('.header').offsetHeight +
+  document.querySelector('.intro').offsetHeight
+const sectionWordContent = 900
+const sectionWordEnd = sectionWordStart + sectionWordContent
 let words = document.querySelectorAll('.word__span')
 
-let oneOffset = 200
-let twoOffset = 328
-let threeOffset = 456
-let fourOffset = 584
-let fiveOffset = 712
-let sixOffset = 840
-let sevenOffset = 968
+const oneWord = (sectionWordContent / words.length) * 2
+const twoWord = (sectionWordContent / words.length) * 3
+const threeWord = (sectionWordContent / words.length) * 4
+const fourWord = (sectionWordContent / words.length) * 5
+const fiveWord = (sectionWordContent / words.length) * 6
+const sixWord = (sectionWordContent / words.length) * 7
+const sevenWord = (sectionWordContent / words.length) * 8
 
 window.addEventListener('scroll', () => {
-  if (sectionOffset <= window.pageYOffset && twoOffset > window.pageYOffset) {
+  if (oneWord <= window.pageYOffset && twoWord > window.pageYOffset) {
     words[0].classList.add('active')
   } else words[0].classList.remove('active')
 
-  if (twoOffset <= window.pageYOffset && threeOffset > window.pageYOffset) {
+  if (twoWord <= window.pageYOffset && threeWord > window.pageYOffset) {
     words[1].classList.add('active')
   } else words[1].classList.remove('active')
 
-  if (threeOffset <= window.pageYOffset && fourOffset > window.pageYOffset) {
+  if (threeWord <= window.pageYOffset && fourWord > window.pageYOffset) {
     words[2].classList.add('active')
   } else words[2].classList.remove('active')
 
-  if (fourOffset <= window.pageYOffset && fiveOffset > window.pageYOffset) {
+  if (fourWord <= window.pageYOffset && fiveWord > window.pageYOffset) {
     words[3].classList.add('active')
   } else words[3].classList.remove('active')
 
-  if (fiveOffset <= window.pageYOffset && sixOffset > window.pageYOffset) {
+  if (fiveWord <= window.pageYOffset && sixWord > window.pageYOffset) {
     words[4].classList.add('active')
   } else words[4].classList.remove('active')
 
-  if (sixOffset <= window.pageYOffset && sevenOffset > window.pageYOffset) {
+  if (sixWord <= window.pageYOffset && sevenWord > window.pageYOffset) {
     words[5].classList.add('active')
   } else words[5].classList.remove('active')
 
-  if (sevenOffset <= window.pageYOffset && 1100 > window.pageYOffset) {
+  if (sevenWord <= window.pageYOffset && sectionWordEnd > window.pageYOffset) {
     words[6].classList.add('active')
   } else words[6].classList.remove('active')
 })
