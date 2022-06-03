@@ -1,39 +1,39 @@
 .intro {
-  &__inner {
-    height: calc(100vh - 104px);
+	&__inner {
+		height: calc(100vh - 104px);
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 
-    text-align: center;
-  }
+		text-align: center;
+	}
 
-  &__title {
-    font-family: 'Loos Wide';
-    font-weight: 700;
-    font-size: 62px;
-    line-height: 80px;
+	&__title {
+		font-family: 'Loos Wide';
+		font-weight: 700;
+		font-size: 62px;
+		line-height: 80px;
 
-    color: #ffffff;
+		color: #ffffff;
 
-    margin-bottom: 29px;
-  }
+		margin-bottom: 29px;
+	}
 
-  &__text {
-    max-width: 800px;
+	&__text {
+		max-width: 800px;
 
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 47px;
+		font-weight: 500;
+		font-size: 28px;
+		line-height: 47px;
 
-    color: $white;
+		color: $white;
 
-    opacity: 0.8;
-  }
+		opacity: 0.8;
+	}
 
-  &__btn {
-    margin-top: 66px;
-  }
+	&__btn {
+		margin-top: 66px;
+	}
 }

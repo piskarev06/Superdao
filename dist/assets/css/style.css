@@ -2,6 +2,8 @@
    v2.0-modified | 20110126
    License: none (public domain)
 */
+@import '../fonts/stylesheet.css';
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -365,7 +367,7 @@ html {
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", "Loos Wide" sans-serif;
     font-weight: 600;
     font-size: 22px;
     line-height: 27px;
@@ -394,7 +396,6 @@ a:focus {
 
 .h2 {
     font-family: "Loos Wide";
-    font-style: normal;
     font-weight: 700;
     font-size: 54px;
     line-height: 92px;
@@ -635,7 +636,7 @@ a:focus {
     transition: all 0.3s linear;
 }
 
-.active {
+.word__span.active {
     color: #23c9de;
 }
 
@@ -679,6 +680,64 @@ a:focus {
 
 .benefits__list .list__item svg rect:first-child {
     transition: all 0.3s linear;
+}
+
+.step {
+    padding: 100px 0;
+}
+
+.step__inner {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.step__title {
+    margin-bottom: 20px;
+}
+
+.step__text {
+    max-width: 890px;
+    text-align: center;
+    margin-bottom: 82px;
+}
+
+.step__span {
+    font-family: "Loos Wide";
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 74px;
+    text-align: center;
+    color: #37424d;
+    transition: all 0.3s linear;
+}
+
+.step__span.active {
+    color: #e2c1f9;
+}
+
+.step__content {
+    padding: 45px;
+    display: none;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 40px;
+    background: #121e28;
+    border: 1px solid #2a3744;
+    border-radius: 32px;
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+
+.step__content.active {
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 1;
 }
 
 .digest {
