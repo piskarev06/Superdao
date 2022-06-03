@@ -1,4 +1,4 @@
-.word {
+.step {
   padding: $offset 0;
 
   &__inner {
@@ -13,14 +13,16 @@
   }
 
   &__text {
-    max-width: 940px;
+    max-width: 890px;
     text-align: center;
+
+    margin-bottom: 82px;
   }
 
   &__span {
     font-family: 'Loos Wide';
     font-weight: 700;
-    font-size: 40px;
+    font-size: 48px;
     line-height: 74px;
 
     text-align: center;
@@ -29,7 +31,27 @@
     transition: all 0.3s linear;
 
     &.active {
-      color: #23c9de;
+      color: $purple-light;
+    }
+  }
+
+  &__content {
+    padding: 45px;
+
+    display: none;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    background: #121e28;
+    border: 1px solid #2a3744;
+    border-radius: 32px;
+
+    opacity: 0;
+    transition: all 0.3s linear;
+
+    &.active {
+      display: flex;
+      opacity: 1;
     }
   }
 }
