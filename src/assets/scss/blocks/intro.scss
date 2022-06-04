@@ -1,40 +1,82 @@
 .intro {
-	&__inner {
-		height: calc(100vh - 104px);
+  &__inner {
+    height: calc(100vh - 104px);
 
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-		text-align: center;
-	}
+    text-align: center;
 
-	&__title {
-		font-family: 'Loos Wide';
-		font-weight: 700;
-		font-size: 62px;
-		line-height: 80px;
+    @include breakpoint(768px) {
+      max-width: 320px;
+      margin: 0 auto;
+    }
+  }
 
-		color: #ffffff;
+  &__title {
+    font-family: 'Loos Wide';
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 80px;
 
-		margin-bottom: 29px;
-	}
+    color: #ffffff;
 
-	&__text {
-		max-width: 800px;
+    margin-bottom: 29px;
 
-		font-weight: 500;
-		font-size: 28px;
-		line-height: 47px;
+    @include breakpoint(992px) {
+      font-size: 42px;
+      line-height: 53px;
 
-		color: $white;
+      margin-bottom: 32px;
+    }
+    @include breakpoint(768px) {
+      font-size: 32px;
+      line-height: 41px;
 
-		opacity: 0.8;
-	}
+      margin-bottom: 24px;
+    }
+  }
 
-	&__btn {
-		margin-top: 66px;
-		font-size: 20px;
-	}
+  &__text {
+    max-width: 800px;
+
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 47px;
+
+    color: $white;
+    opacity: 0.8;
+
+    @include breakpoint(992px) {
+      font-size: 22px;
+      line-height: 32px;
+    }
+    @include breakpoint(768px) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  &__btn {
+    margin-top: 66px;
+    font-size: 20px;
+
+    @include breakpoint(992px) {
+      padding: 13px 38px;
+
+      margin-top: 56px;
+
+      font-size: 17px;
+      line-height: 30px;
+    }
+    @include breakpoint(768px) {
+      padding: 8px 28px;
+
+      margin-top: 32px;
+
+      font-size: 15px;
+    }
+  }
 }

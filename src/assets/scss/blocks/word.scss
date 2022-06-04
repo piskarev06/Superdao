@@ -6,15 +6,28 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include breakpoint(768px) {
+      max-width: 400px;
+      margin: 0 auto;
+    }
   }
 
   &__title {
     margin-bottom: 20px;
+
+    @include breakpoint(992px) {
+      margin-bottom: 16px;
+    }
   }
 
   &__text {
     max-width: 1140px;
     text-align: center;
+
+    @include breakpoint(992px) {
+      max-width: 693px;
+    }
   }
 
   &__span {
@@ -27,6 +40,26 @@
     color: #37424d;
 
     transition: all 0.3s linear;
+
+    @include breakpoint(992px) {
+      font-size: 32px;
+      line-height: 50px;
+
+      &:nth-child(1) {
+        display: block;
+      }
+    }
+
+    @include breakpoint(768px) {
+      font-size: 20px;
+      line-height: 36px;
+
+      display: block;
+      &:nth-child(3),
+      &:nth-child(4) {
+        display: inline;
+      }
+    }
 
     &.active {
       color: #23c9de;

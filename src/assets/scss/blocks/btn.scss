@@ -1,87 +1,99 @@
 .btn {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-	padding: 16px 48px;
+  padding: 16px 48px;
 
-	font-size: 20px;
-	background: #ffcf01;
-	box-shadow: 0px 9px 44px rgba(255, 207, 1, 0.2);
-	border-radius: 16px;
-	cursor: pointer;
+  font-size: 20px;
+  background: #ffcf01;
+  box-shadow: 0px 9px 44px rgba(255, 207, 1, 0.2);
+  border-radius: 16px;
+  cursor: pointer;
 
-	font-family: inherit;
-	font-size: inherit;
-	line-height: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 
-	color: $bg;
-	text-decoration: none;
+  color: $bg;
+  text-decoration: none;
 
-	transition: all 0.2s linear;
+  transition: all 0.2s linear;
 
-	&:hover {
-		opacity: 0.9;
-		text-decoration: none;
-	}
+  &:hover {
+    opacity: 0.9;
+    text-decoration: none;
+  }
 
-	&--give {
-		padding: 11px 20px;
+  &--give {
+    padding: 11px 20px;
 
-		font-weight: 700;
-		font-size: 18px;
-		line-height: 22px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
 
-		color: $bg;
+    color: $bg;
 
-		background: #77e6ff;
-		border-radius: 12px;
-		box-shadow: unset;
+    background: #77e6ff;
+    border-radius: 12px;
+    box-shadow: unset;
 
-		&:hover {
-			background: #93ebff;
-		}
+    &:hover {
+      background: #93ebff;
+    }
 
-		&:active {
-			background: #23c9de;
-		}
-	}
+    &:active {
+      background: #23c9de;
+    }
+  }
 
-	&--login {
-		padding: 11px 20px;
+  &--login {
+    padding: 11px 20px;
 
-		font-weight: 500;
-		font-size: 18px;
-		line-height: 22px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
 
-		color: #ffffff;
+    color: #ffffff;
 
-		background: #28323d;
-		border-radius: 12px;
-		box-shadow: unset;
+    background: #28323d;
+    border-radius: 12px;
+    box-shadow: unset;
 
-		&:hover {
-			background: #35414e;
-		}
+    &:hover {
+      background: #35414e;
+    }
 
-		&:active {
-			background: #1f2933;
-		}
-	}
+    &:active {
+      background: #1f2933;
+    }
+  }
 
-	&--digest {
-		padding: 16px 36px;
+  &--digest {
+    padding: 16px 36px;
 
-		font-weight: 600;
-		font-size: 20px;
-		line-height: 36px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 36px;
 
-		color: #10151a;
-		background: #ceaaff;
-		box-shadow: unset;
-	}
+    color: #10151a;
+    background: $purple-light;
+    box-shadow: unset;
 
-	&--idea {
-		padding: 16px 20px;
-	}
+    @include breakpoint(992px) {
+      padding: 12px 32px;
+      width: 100%;
+    }
+    @include breakpoint(768px) {
+      padding: 10px 32px;
+    }
+  }
+
+  &--idea {
+    padding: 16px 20px;
+
+    @include breakpoint(992px) {
+      padding: 10px;
+    }
+  }
 }
