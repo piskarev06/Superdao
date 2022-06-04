@@ -18,12 +18,26 @@
     background: #171e25;
     border: 2px solid #2a3744;
     border-radius: 30px;
+
+    @include breakpoint(992px) {
+      padding: 36px 48px 48px;
+    }
+    @include breakpoint(768px) {
+      padding: 28px 24px 24px;
+      text-align: center;
+    }
   }
 
   &__title {
     text-align: left;
 
     margin-bottom: 14px;
+
+    @include breakpoint(768px) {
+      text-align: center;
+
+      margin-bottom: 8px;
+    }
   }
 
   &__text {
@@ -34,11 +48,35 @@
     opacity: 0.6;
 
     margin-bottom: 68px;
+
+    @include breakpoint(992px) {
+      font-size: 28px;
+      line-height: 40px;
+
+      margin-bottom: 48px;
+    }
+    @include breakpoint(992px) {
+      font-size: 19px;
+      line-height: 28px;
+
+      margin-bottom: 24px;
+    }
   }
 
   &__form {
     display: flex;
     gap: 24px;
+
+    @include breakpoint(992px) {
+      max-width: 515px;
+      width: 100%;
+    }
+    @include breakpoint(768px) {
+      flex-direction: column;
+      gap: 16px;
+
+      max-width: 100%;
+    }
   }
 
   &__input {
@@ -48,13 +86,35 @@
     border: 2px solid #2a3744;
     border-radius: 16px;
 
-    color: #3d4c5b;
+    color: #fff;
+
+    transition: all 0.3s linear;
+
+    @include breakpoint(992px) {
+      padding: 18px 24px;
+    }
+    @include breakpoint(768px) {
+      padding: 13px 18px;
+    }
+
+    &:focus {
+      border: 2px solid $purple-light;
+    }
 
     &::placeholder {
       font-size: 22px;
       line-height: 27px;
 
       color: #3d4c5b;
+
+      @include breakpoint(992px) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+      @include breakpoint(768px) {
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
   }
 }
