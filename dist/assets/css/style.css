@@ -401,6 +401,20 @@ a:focus {
     color: #e5e5e5;
 }
 
+@media (max-width: 992px) {
+    .h2 {
+        font-size: 36px;
+        line-height: 45px;
+    }
+}
+
+@media (max-width: 768px) {
+    .h2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+}
+
 /* Blocks */
 .footer {
     padding: 56px 0;
@@ -416,10 +430,31 @@ a:focus {
     align-items: center;
 }
 
+@media (max-width: 768px) {
+    .footer__inner {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer__logo img {
+        width: 127px;
+        height: 21.1px;
+    }
+}
+
 .footer__list {
     display: -ms-flexbox;
     display: flex;
     gap: 36px;
+}
+
+@media (max-width: 992px) {
+    .footer__list {
+        gap: 16px;
+    }
 }
 
 .footer__list .nav__link {
@@ -430,12 +465,51 @@ a:focus {
     color: rgba(255, 255, 255, 0.8);
 }
 
+@media (max-width: 992px) {
+    .footer__list .nav__link {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer__list .nav__link {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
 .footer__social {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
     align-items: center;
     gap: 20px;
+}
+
+@media (max-width: 992px) {
+    .footer__social {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer__social {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .footer__social .social__link svg {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer__social .social__link svg {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 .footer__social .social__link svg rect {
@@ -927,11 +1001,9 @@ a:focus {
 .podcast__link {
     position: relative;
     padding-right: 36px;
-    font-family: "Loos Wide";
-    font-weight: 700;
     font-size: 22px;
-    line-height: 36px;
-    color: #ffcf01;
+    line-height: 40px;
+    color: #8395a7;
     text-shadow: 0px 2px 25px rgba(0, 0, 0, 0.6);
 }
 
@@ -964,6 +1036,12 @@ a:focus {
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 30px;
+}
+
+@media (max-width: 992px) {
+    .podcast__list .list__wrapper {
+        padding: 24px 20px 20px 20px;
+    }
 }
 
 .podcast__list .list__item {
@@ -1002,21 +1080,36 @@ a:focus {
     margin-bottom: 12px;
 }
 
+@media (max-width: 992px) {
+    .podcast__list .list__title {
+        font-size: 17px;
+        line-height: 24px;
+    }
+}
+
 .podcast__list .list__name {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 18px;
     line-height: 25px;
     color: #e2e2e2;
+    opacity: 0.8;
     margin-bottom: 4px;
 }
 
 .podcast__list .list__span {
     display: block;
-    font-weight: 400;
-    font-size: 14.0426px;
-    line-height: 21px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
     color: #e2e2e2;
-    opacity: 0.5;
+    opacity: 0.8;
+}
+
+@media (max-width: 992px) {
+    .podcast__list .list__name, .podcast__list .list__span {
+        font-size: 14px;
+        line-height: 24px;
+    }
 }
 
 .podcast__list .list__link {
@@ -1025,6 +1118,13 @@ a:focus {
     font-size: 16px;
     line-height: 20px;
     color: #ffffff;
+}
+
+@media (max-width: 992px) {
+    .podcast__list .list__link {
+        font-size: 12px;
+        line-height: 15px;
+    }
 }
 
 .podcast__list .list__link::after {
@@ -1058,7 +1158,19 @@ a:focus {
 }
 
 .idea__title {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
+}
+
+@media (max-width: 992px) {
+    .idea__title {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .idea__title {
+        margin-bottom: 12px;
+    }
 }
 
 .idea__text {
@@ -1070,6 +1182,20 @@ a:focus {
     color: #495663;
 }
 
+@media (max-width: 992px) {
+    .idea__text {
+        font-size: 30px;
+        line-height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .idea__text {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
 .idea__btns {
     margin-top: 62px;
     display: -ms-flexbox;
@@ -1077,6 +1203,22 @@ a:focus {
     -ms-flex-align: center;
     align-items: center;
     gap: 32px;
+}
+
+@media (max-width: 992px) {
+    .idea__btns {
+        margin-top: 42px;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .idea__btns {
+        margin-top: 32px;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 16px;
+    }
 }
 
 .idea__btn.telegram {

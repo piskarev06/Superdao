@@ -6,11 +6,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include breakpoint(768px) {
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+
+  &__logo img {
+    @include breakpoint(768px) {
+      width: 127px;
+      height: 21.1px;
+    }
   }
 
   &__list {
     display: flex;
     gap: 36px;
+
+    @include breakpoint(992px) {
+      gap: 16px;
+    }
 
     & .nav__link {
       padding: 10px;
@@ -21,6 +37,14 @@
       letter-spacing: -0.01em;
 
       color: rgba(255, 255, 255, 0.8);
+
+      @include breakpoint(992px) {
+        font-size: 18px;
+      }
+      @include breakpoint(768px) {
+        font-size: 14px;
+        line-height: 17px;
+      }
     }
   }
 
@@ -30,7 +54,25 @@
 
     gap: 20px;
 
+    @include breakpoint(992px) {
+      gap: 12px;
+    }
+    @include breakpoint(768px) {
+      gap: 20px;
+    }
+
     .social__link {
+      & svg {
+        @include breakpoint(992px) {
+          width: 44px;
+          height: 44px;
+        }
+        @include breakpoint(768px) {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
       & svg rect {
         transition: all 0.3s linear;
 

@@ -3,47 +3,56 @@
 @import 'vendor/reset';
 
 html {
-	font-size: 22px;
+  font-size: 22px;
 }
 
 body {
-	font-family: 'Montserrat', 'Loos Wide' sans-serif;
-	font-weight: 600;
-	font-size: 22px;
-	line-height: 27px;
-	color: $white;
+  font-family: 'Montserrat', 'Loos Wide' sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+  color: $white;
 
-	background: $bg;
+  background: $bg;
 
-	&._lock {
-		overflow: hidden;
-	}
+  &._lock {
+    overflow: hidden;
+  }
 }
 
 *,
 *:before,
 *:after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 
-	&:focus {
-		outline: none;
-	}
+  &:focus {
+    outline: none;
+  }
 }
 
 .h2 {
-	font-family: 'Loos Wide';
-	font-weight: 700;
-	font-size: 54px;
-	line-height: 92px;
+  font-family: 'Loos Wide';
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 92px;
 
-	text-align: center;
+  text-align: center;
 
-	color: $white;
+  color: $white;
+
+  @include breakpoint(992px) {
+    font-size: 36px;
+    line-height: 45px;
+  }
+  @include breakpoint(768px) {
+	font-size: 28px;
+	line-height: 36px;
+  }
 }
 
 /* Blocks */
