@@ -365,7 +365,7 @@ html {
 }
 
 body {
-    font-family: "Montserrat", "Loos Wide" sans-serif;
+    font-family: "Montserrat", "Loos Wide", sans-serif;
     font-weight: 600;
     font-size: 22px;
     line-height: 27px;
@@ -663,12 +663,11 @@ a:focus {
 }
 
 .intro__text {
-    max-width: 800px;
+    max-width: 720px;
     font-weight: 500;
     font-size: 28px;
     line-height: 47px;
-    color: #e5e5e5;
-    opacity: 0.8;
+    color: #ffffff;
 }
 
 .intro__btn {
@@ -719,41 +718,195 @@ a:focus {
 }
 
 .benefits__title {
-    margin-bottom: 32px;
+    margin-bottom: 44px;
+}
+
+@media (max-width: 992px) {
+    .benefits__title {
+        margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .benefits__title {
+        margin-bottom: 24px;
+    }
 }
 
 .benefits__list {
+    margin: 0 auto;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    gap: 36px;
+    width: 100%;
+    gap: 30px;
 }
 
-.benefits__list .list__item {
-    text-align: center;
+@media (max-width: 992px) {
+    .benefits__list {
+        gap: 27px;
+    }
 }
 
-.benefits__list .list__item svg {
-    cursor: pointer;
+@media (max-width: 768px) {
+    .benefits__list {
+        max-width: 310px;
+        gap: 28px;
+    }
+}
+
+.benefits .list__item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.benefits .list__item-block {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 160px;
+    height: 160px;
+    background: #121e28;
+    border: 2px solid #2a3744;
+    border-radius: 40px;
     margin-bottom: 16px;
 }
 
-.benefits__list .list__item svg:hover rect:first-child {
-    fill: rgba(119, 146, 248, 0.15);
+@media (max-width: 992px) {
+    .benefits .list__item-block {
+        width: 100px;
+        height: 100px;
+        border-radius: 24px;
+        margin-bottom: 12px;
+    }
+
+    .benefits .list__item-block > svg {
+        width: 40px;
+        height: 40px;
+    }
 }
 
-.benefits__list .list__item svg.polygon:hover rect:first-child {
-    fill: rgba(146, 89, 242, 0.15);
+@media (max-width: 768px) {
+    .benefits .list__item-block {
+        width: 84px;
+        height: 84px;
+        border-radius: 20px;
+    }
+
+    .benefits .list__item-block > svg {
+        width: 36px;
+        height: 36px;
+    }
 }
 
-.benefits__list .list__item svg.safe:hover rect:first-child {
-    fill: rgba(0, 140, 115, 0.15);
-    stroke: 2px solid rgba(0, 140, 115, 0.3);
+.benefits .list__item-block-1 svg {
+    -webkit-filter: drop-shadow(0px 0px 47px rgba(98, 126, 234, 0.3));
+    filter: drop-shadow(0px 0px 47px rgba(98, 126, 234, 0.3));
 }
 
-.benefits__list .list__item svg rect:first-child {
-    transition: all 0.3s linear;
+.benefits .list__item-block-2 svg {
+    -webkit-filter: drop-shadow(0px 0px 47px rgba(130, 71, 229, 0.3));
+    filter: drop-shadow(0px 0px 47px rgba(130, 71, 229, 0.3));
+}
+
+.benefits .list__item-block-3 svg {
+    -webkit-filter: drop-shadow(0px 4px 47px rgba(0, 140, 115, 0.3));
+    filter: drop-shadow(0px 4px 47px rgba(0, 140, 115, 0.3));
+}
+
+.benefits .list__item-block-4 svg {
+    -webkit-filter: drop-shadow(0px 0px 47px rgba(255, 172, 50, 0.3));
+    filter: drop-shadow(0px 0px 47px rgba(255, 172, 50, 0.3));
+}
+
+.benefits .list__item-block-5 svg {
+    -webkit-filter: drop-shadow(0px 0px 47px rgba(117, 184, 251, 0.3));
+    filter: drop-shadow(0px 0px 47px rgba(117, 184, 251, 0.3));
+}
+
+.benefits .list__item-block-6 svg {
+    -webkit-filter: drop-shadow(0px 0px 47px rgba(32, 129, 226, 0.3));
+    filter: drop-shadow(0px 0px 47px rgba(32, 129, 226, 0.3));
+}
+
+.benefits .list__item-block-1 {
+    transition: all 0.3s ease;
+}
+
+.benefits .list__item-block-1:hover {
+    background: rgba(119, 146, 248, 0.15);
+    border: 2px solid rgba(119, 146, 248, 0.3);
+}
+
+.benefits .list__item-block-2 {
+    transition: all 0.3s ease;
+}
+
+.benefits .list__item-block-2:hover {
+    background: rgba(146, 89, 242, 0.15);
+    border: 2px solid rgba(146, 89, 242, 0.3);
+}
+
+.benefits .list__item-block-3 {
+    transition: all 0.3s ease;
+}
+
+.benefits .list__item-block-3:hover {
+    background: rgba(0, 140, 115, 0.15);
+    border: 2px solid rgba(0, 140, 115, 0.3);
+}
+
+.benefits .list__item-block-4 {
+    transition: all 0.3s ease;
+}
+
+.benefits .list__item-block-4:hover {
+    background: rgba(255, 195, 67, 0.15);
+    border: 2px solid rgba(255, 195, 67, 0.3);
+}
+
+.benefits .list__item-block-5 {
+    transition: all 0.3s ease;
+}
+
+.benefits .list__item-block-5:hover {
+    background: rgba(133, 175, 253, 0.15);
+    border: 2px solid rgba(133, 175, 253, 0.3);
+}
+
+.benefits .list__item-block-6 {
+    transition: all 0.3s ease;
+}
+
+.benefits .list__item-block-6:hover {
+    background: rgba(55, 147, 239, 0.15);
+    border: 2px solid rgba(55, 147, 239, 0.3);
+}
+
+@media (max-width: 992px) {
+    .benefits .list__title {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .benefits .list__title {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+    }
 }
 
 .digest {
