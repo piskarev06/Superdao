@@ -365,7 +365,7 @@ html {
 }
 
 body {
-    font-family: "Montserrat", "Loos Wide" sans-serif;
+    font-family: "Montserrat", "Loos Wide", sans-serif;
     font-weight: 600;
     font-size: 22px;
     line-height: 27px;
@@ -730,30 +730,19 @@ a:focus {
     gap: 36px;
 }
 
-.benefits__list .list__item {
+.benefits__list__list-item {
+    display: block;
     text-align: center;
 }
 
-.benefits__list .list__item svg {
-    cursor: pointer;
-    margin-bottom: 16px;
+.benefits__list__list-item__item-block {
+    display: block;
+    width: 160px;
+    height: 160px;
 }
 
-.benefits__list .list__item svg:hover rect:first-child {
-    fill: rgba(119, 146, 248, 0.15);
-}
-
-.benefits__list .list__item svg.polygon:hover rect:first-child {
-    fill: rgba(146, 89, 242, 0.15);
-}
-
-.benefits__list .list__item svg.safe:hover rect:first-child {
-    fill: rgba(0, 140, 115, 0.15);
-    stroke: 2px solid rgba(0, 140, 115, 0.3);
-}
-
-.benefits__list .list__item svg rect:first-child {
-    transition: all 0.3s linear;
+.benefits__list .list__item {
+    text-align: center;
 }
 
 .digest {
