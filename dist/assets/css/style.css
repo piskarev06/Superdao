@@ -562,6 +562,12 @@ a:focus {
     padding: 0 15px;
 }
 
+@media (max-width: 768px) {
+    .container {
+        max-width: 400px;
+    }
+}
+
 .btn {
     display: -ms-flexbox;
     display: flex;

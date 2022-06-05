@@ -2,8 +2,19 @@
 @import 'vars';
 @import 'vendor/reset';
 
+.paddings {
+	padding: 100px 0;
+	@include breakpoint(992px) {
+		padding: 50px 0;
+	}
+	@include breakpoint(768px) {
+		padding: 40px 0;
+	}
+}
+
 html {
 	font-size: 22px;
+	overflow-x: hidden;
 }
 
 body {

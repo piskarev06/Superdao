@@ -1,5 +1,11 @@
 .container {
-  max-width: $container;
-  margin: 0 auto;
-  padding: 0 15px;
+	max-width: $container;
+	margin: 0 auto;
+	padding: 0 15px;
+	// @include breakpoint(1200px) {
+	// 	max-width: 992px;
+	// }
+	@include breakpoint(768px) {
+		max-width: 400px;
+	}
 }
