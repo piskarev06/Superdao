@@ -43,7 +43,7 @@ a {
 
 	text-align: center;
 
-	color: $white;
+	color: #fff;
 
 	@include breakpoint(992px) {
 		font-size: 36px;
@@ -61,6 +61,7 @@ a {
 @import 'blocks/container';
 @import 'blocks/btn';
 @import 'blocks/intro';
+@import 'blocks/ready';
 @import 'blocks/word';
 @import 'blocks/benefits';
 // @import 'blocks/step';

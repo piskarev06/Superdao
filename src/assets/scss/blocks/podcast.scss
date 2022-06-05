@@ -178,6 +178,9 @@
       &__link {
         position: relative;
 
+        max-width: 250px;
+        width: fit-content;
+
         font-weight: 700;
         font-size: 16px;
         line-height: 20px;
@@ -193,7 +196,7 @@
           position: absolute;
           top: 50%;
           transform: translateY(-50%);
-          right: 115px;
+          right: -40px;
           content: '';
 
           width: 24px;
