@@ -96,6 +96,15 @@ window.addEventListener('scroll', () => {
 	console.log(window.pageYOffset);
 	console.log(sectionWordEnd);
 });
+
+const constellation = (element) => {
+	window.addEventListener('scroll', (e) => {
+		element.style.setProperty('--rotation', window.scrollY);
+	});
+};
+
+document.querySelectorAll('.constellation').forEach(constellation);
+
 // End of Word
 
 // let clientTop = document.documentElement.clientTop

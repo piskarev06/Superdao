@@ -1,16 +1,38 @@
 .ready {
-	
-
 	&__inner {
 		text-align: center;
 	}
 
 	&__title {
+		display: inline-block;
 		margin-bottom: 50px;
+		position: relative;
 
 		@include breakpoint(992px) {
 			margin-bottom: 44px;
 		}
+	}
+	&__title-stars {
+		position: absolute;
+		left: -140px;
+		top: -10px;
+		width: 88px;
+		height: 88px;
+	}
+	&__title-stars > svg:nth-child(1) {
+		position: absolute;
+		left: 20px;
+		top: 0px;
+	}
+	&__title-stars > svg:nth-child(2) {
+		position: absolute;
+		left: 0px;
+		bottom: 10px;
+	}
+	&__title-stars > svg:nth-child(3) {
+		position: absolute;
+		right: 0px;
+		bottom: 0px;
 	}
 
 	&__list {
@@ -107,16 +129,11 @@
 	}
 
 	&__block {
+		border-radius: 30px;
+		background: #010001;
 		width: 100%;
 		height: 493px;
 		overflow: hidden;
-
-		display: flex;
-		justify-content: center;
-		gap: 17px;
-
-		border-radius: 30px;
-		background: #010001;
 
 		@include breakpoint(992px) {
 			max-width: 100%;
@@ -125,15 +142,22 @@
 		}
 	}
 
+	&__columns {
+		display: flex;
+		justify-content: center;
+		gap: 17px;
+		transform: rotate(-2deg);
+	}
+
 	&__column {
-		animation: 60s infinite moveColumns;
+		animation: 60s infinite linear alternate moveColumns;
 
 		&:nth-child(2) {
-			animation: 60s infinite moveColumn2;
+			animation: 60s infinite linear alternate-reverse moveColumn2;
 		}
 
 		&:nth-child(4) {
-			animation: 60s infinite moveColumn4;
+			animation: 60s infinite linear alternate-reverse moveColumn4;
 		}
 	}
 
@@ -156,36 +180,39 @@
 
 @keyframes moveColumns {
 	0% {
-		transform: translateY(0) rotate(-2deg);
+		transform: translateY(0);
 	}
 	50% {
-		transform: translateY(-540px) rotate(-2deg);
+		// transform: translateY(-540px) rotate(-2deg);
 	}
 	100% {
-		transform: translateY(0) rotate(-2deg);
+		// transform: translateY(0) rotate(-2deg);
+		transform: translateY(-540px);
 	}
 }
 
 @keyframes moveColumn2 {
 	0% {
-		transform: translateY(45px) rotate(-2deg);
+		transform: translateY(45px);
 	}
 	50% {
-		transform: translateY(-495px) rotate(-2deg);
+		// transform: translateY(-495px) rotate(-2deg);
 	}
 	100% {
-		transform: translateY(45px) rotate(-2deg);
+		// transform: translateY(45px) rotate(-2deg);
+		transform: translateY(-495px);
 	}
 }
 
 @keyframes moveColumn4 {
 	0% {
-		transform: translateY(160px) rotate(-2deg);
+		transform: translateY(160px);
 	}
 	50% {
-		transform: translateY(-380px) rotate(-2deg);
+		// transform: translateY(-380px) rotate(-2deg);
 	}
 	100% {
-		transform: translateY(160px) rotate(-2deg);
+		// transform: translateY(160px) rotate(-2deg);
+		transform: translateY(-280px);
 	}
 }

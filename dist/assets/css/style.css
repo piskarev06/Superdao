@@ -360,8 +360,25 @@ textarea {
     padding: 0.2em 0;
 }
 
+.paddings {
+    padding: 100px 0;
+}
+
+@media (max-width: 992px) {
+    .paddings {
+        padding: 50px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .paddings {
+        padding: 40px 0;
+    }
+}
+
 html {
     font-size: 22px;
+    overflow-x: hidden;
 }
 
 body {
@@ -498,30 +515,37 @@ a:focus {
     }
 }
 
-@media (max-width: 992px) {
-    .footer__social .social__link svg {
-        width: 44px;
-        height: 44px;
-    }
+.footer__social .social__link {
+    width: 56px;
+    height: 56px;
+    border-radius: 50px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
-@media (max-width: 768px) {
-    .footer__social .social__link svg {
-        width: 40px;
-        height: 40px;
-    }
+.footer__social .social__link-1 {
+    transition: all 0.3 ease;
+    background: rgba(119, 230, 255, 0.15);
 }
 
-.footer__social .social__link svg rect {
-    transition: all 0.3s linear;
+.footer__social .social__link-1:hover {
+    background: rgba(119, 230, 255, 0.25);
 }
 
-.footer__social .social__link svg rect:hover {
-    fill-opacity: 0.25;
+.footer__social .social__link-2 {
+    background: rgba(119, 149, 255, 0.15);
 }
 
-.footer__social .social__link svg rect:active {
-    fill-opacity: 0.1;
+.footer__social .social__link-3 {
+    background: rgba(247, 135, 135, 0.15);
+}
+
+.footer__social .social__link-4 {
+    background: rgba(146, 119, 255, 0.15);
 }
 
 .header {
@@ -759,10 +783,6 @@ a:focus {
         margin-top: 32px;
         font-size: 15px;
     }
-}
-
-.ready {
-    padding: 100px 0;
 }
 
 .ready__inner {
@@ -1028,10 +1048,6 @@ a:focus {
     }
 }
 
-.word {
-    padding: 100px 0;
-}
-
 .word__inner {
     display: -ms-flexbox;
     display: flex;
@@ -1106,10 +1122,6 @@ a:focus {
 
 .word__span.active {
     color: #23c9de;
-}
-
-.benefits {
-    padding: 100px 0;
 }
 
 .benefits__title {
@@ -1302,10 +1314,6 @@ a:focus {
         font-size: 12px;
         line-height: 18px;
     }
-}
-
-.digest {
-    padding: 100px 0;
 }
 
 .digest__decor {
@@ -1504,10 +1512,6 @@ a:focus {
         font-size: 14px;
         line-height: 18px;
     }
-}
-
-.press {
-    padding: 100px 0;
 }
 
 .press__top {
@@ -1741,10 +1745,6 @@ a:focus {
     background-size: cover;
 }
 
-.podcast {
-    padding: 100px 0;
-}
-
 .podcast__top {
     display: -ms-flexbox;
     display: flex;
@@ -1963,10 +1963,6 @@ a:focus {
     background: url("../images/arrows/arrow--white.svg");
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.idea {
-    padding: 100px 0;
 }
 
 .idea__inner {
