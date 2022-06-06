@@ -7,6 +7,9 @@
 		margin: auto;
 		width: 77px;
 		height: 88px;
+		@include breakpoint(992px) {
+			transform: scale(0.7);
+		}
 	}
 	&__stars svg:nth-child(1) {
 		position: absolute;

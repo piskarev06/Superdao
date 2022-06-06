@@ -24,6 +24,16 @@
 		bottom: 80px;
 		width: 61px;
 		height: 55px;
+		@include breakpoint(992px) {
+			transform: scale(0.7);
+			left: 200px;
+			bottom: 10px;
+		}
+		@include breakpoint(768px) {
+			transform: scale(0.6);
+			left: 150px;
+			bottom: 10px;
+		}
 	}
 
 	&__title-stars > svg:nth-child(1) {

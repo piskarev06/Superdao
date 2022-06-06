@@ -24,22 +24,36 @@
 		bottom: 50px;
 		width: 55px;
 		height: 43px;
+		@include breakpoint(992px) {
+			width: 26px;
+			height: 20px;
+			right: -40px;
+			bottom: 30px;
+		}
 	}
 	&__title-stars svg:nth-child(1) {
 		position: absolute;
 		left: 0px;
 		top: 0px;
+		@include breakpoint(992px) {
+			width: 13px;
+			height: 13px;
+		}
 	}
 	&__title-stars svg:nth-child(2) {
 		position: absolute;
 		right: 0px;
 		bottom: 0px;
+		@include breakpoint(992px) {
+			width: 8px;
+			height: 8px;
+		}
 	}
 
 	&__list {
 		margin: 0 auto;
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		flex-wrap: wrap;
 		width: 100%;
 		gap: 30px;

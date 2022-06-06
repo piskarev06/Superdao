@@ -26,6 +26,18 @@
 		bottom: 70px;
 		width: 76px;
 		height: 56px;
+		@include breakpoint(992px) {
+			width: 50px;
+			height: 38px;
+			right: -62px;
+			bottom: 42px;
+		}
+		@include breakpoint(768px) {
+			width: 29px;
+			height: 22px;
+			right: -12px;
+			bottom: 8px;
+		}
 	}
 
 	&__title-stars > svg:nth-child(1) {
@@ -33,12 +45,24 @@
 
 		right: 0px;
 		bottom: 0px;
+		@include breakpoint(992px) {
+			width: 21px;
+			height: 21px;
+		}
+		@include breakpoint(768px) {
+			width: 13px;
+			height: 13px;
+		}
 	}
 
 	&__title-stars > svg:nth-child(2) {
 		position: absolute;
 		left: 0px;
 		top: 0px;
+		@include breakpoint(992px) {
+			width: 9px;
+			height: 9px;
+		}
 	}
 
 	&__text {

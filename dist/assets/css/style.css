@@ -2312,3 +2312,49 @@ a:focus {
     left: 30px;
     bottom: 0px;
 }
+
+.help__title {
+    margin-bottom: 44px;
+}
+
+.help__imgs {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 48px;
+}
+
+.help__img {
+    width: 160px;
+    height: 160px;
+    border-radius: 40px;
+}
+
+.help__content {
+    max-width: 1056px;
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 20px 28px;
+}
+
+.help__content-span {
+    font-family: "Loos Wide";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    color: #ffffff;
+}
+
+.help__content-star-dn {
+    display: none;
+}

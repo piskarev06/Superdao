@@ -18,21 +18,57 @@
 		top: -10px;
 		width: 88px;
 		height: 88px;
+		@include breakpoint(992px) {
+			left: -100px;
+			top: -30px;
+			width: 61px;
+			height: 61px;
+		}
+		@include breakpoint(768px) {
+			left: 43%;
+			top: -60px;
+			width: 38px;
+			height: 38px;
+		}
 	}
 	&__title-stars > svg:nth-child(1) {
 		position: absolute;
 		left: 20px;
 		top: 0px;
+		@include breakpoint(992px) {
+			width: 26px;
+			height: 26px;
+		}
+		@include breakpoint(768px) {
+			width: 17px;
+			height: 17px;
+		}
 	}
 	&__title-stars > svg:nth-child(2) {
 		position: absolute;
 		left: 0px;
 		bottom: 10px;
+		@include breakpoint(992px) {
+			width: 13px;
+			height: 13px;
+		}
+		@include breakpoint(768px) {
+			width: 9px;
+			height: 9px;
+		}
 	}
 	&__title-stars > svg:nth-child(3) {
 		position: absolute;
 		right: 0px;
 		bottom: 0px;
+		@include breakpoint(992px) {
+			width: 13px;
+			height: 13px;
+		}
+		@include breakpoint(768px) {
+			width: 9px;
+			height: 9px;
+		}
 	}
 
 	&__list {
