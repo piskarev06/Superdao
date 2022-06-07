@@ -487,6 +487,15 @@ a:focus {
     }
 }
 
+.footer .list-item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
 .footer__list {
     display: -ms-flexbox;
     display: flex;
@@ -635,17 +644,112 @@ a:focus {
     align-items: center;
 }
 
+.header__logo {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+}
+
 .header__list {
     display: -ms-flexbox;
     display: flex;
     gap: 20px;
 }
 
-.header__list .nav__link {
+.header__ul {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px;
+}
+
+.header__li {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.header__li:hover > div {
+    color: #ffc803;
+}
+
+.header__li:hover > .header__li-dropdown {
+    visibility: visible;
+    opacity: 1;
+}
+
+.header__li-item {
+    transition: all 0.3s ease;
     padding: 10px;
+    font-weight: 600;
     font-size: 20px;
     line-height: 24px;
-    color: rgba(255, 255, 255, 0.8);
+    color: #ffffff;
+}
+
+.header__li-dropdown {
+    background: #202c37;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 8px;
+    left: 0;
+    padding: 12px 0;
+    border-radius: 8px;
+}
+
+.header__li-dropdown-li-a {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 16px;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 8px 20px;
+    width: 256px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+    background: #202c37;
+    transition: all 0.3s ease;
+}
+
+.header__li-dropdown-li-a:hover {
+    background: #2a3744;
+}
+
+.header__li-dropdown-li-a:hover .header__li-dropdown-li-a-svg-purple {
+    background: rgba(163, 111, 254, 0.2);
+}
+
+.header__li-dropdown-li-a:hover .header__li-dropdown-li-a-svg-red {
+    background: rgba(248, 115, 136, 0.2);
+}
+
+.header__li-dropdown-li-a:hover .header__li-dropdown-li-a-svg-yellow {
+    background: rgba(255, 251, 168, 0.2);
+}
+
+.header__li-dropdown-li-a:hover .header__li-dropdown-li-a-svg-blue {
+    background: rgba(75, 225, 244, 0.2);
+}
+
+.header__li-dropdown-li-a:hover .header__li-dropdown-li-a-svg-orange {
+    background: rgba(255, 129, 53, 0.2);
+}
+
+.header__li-dropdown-li-a-svg {
+    width: 36px;
+    height: 36px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #2f3c49;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 .header__btns {

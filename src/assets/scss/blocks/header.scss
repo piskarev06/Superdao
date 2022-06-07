@@ -14,29 +14,6 @@
 	&__list {
 		display: flex;
 		gap: 20px;
-
-		& .list__item {
-			& .dropdown {
-			}
-		}
-
-		& .nav__link:hover > .dropdown,
-		.dropdown:hover {
-			visibility: visible;
-			opacity: 1;
-			display: block;
-		}
-
-		& .nav__link {
-			transition: all 0.3s ease;
-			padding: 10px;
-
-			font-weight: 600;
-			font-size: 20px;
-			line-height: 24px;
-
-			color: #ffffff;
-		}
 	}
 
 	&__ul {
@@ -110,6 +87,9 @@
 		}
 		&:hover .header__li-dropdown-li-a-svg-orange {
 			background: rgba(255, 129, 53, 0.2);
+		}
+		&:hover .header__li-dropdown-li-a-svg-grey {
+			background: rgba(131, 149, 167, 0.2);
 		}
 	}
 	&__li-dropdown-li-a-svg {

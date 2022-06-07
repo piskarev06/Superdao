@@ -22,6 +22,7 @@
 
 	&__list {
 		display: flex;
+		align-items: center;
 		gap: 36px;
 
 		@include breakpoint(992px) {
@@ -36,7 +37,8 @@
 
 			letter-spacing: -0.01em;
 
-			color: rgba(255, 255, 255, 0.8);
+			color: #fff;
+			transition: all 0.3s ease;
 
 			@include breakpoint(992px) {
 				font-size: 18px;
@@ -44,6 +46,9 @@
 			@include breakpoint(768px) {
 				font-size: 14px;
 				line-height: 17px;
+			}
+			&:hover {
+				color: #ffc803;
 			}
 		}
 	}
@@ -122,4 +127,8 @@
 			}
 		}
 	}
+}
+
+footer .header__li-dropdown {
+	bottom: 50px;
 }
