@@ -642,6 +642,11 @@ footer .header__li-item {
     width: 140px;
   }
 }
+@media (max-width: 768px) {
+  .header__nav {
+    display: none;
+  }
+}
 .header__list {
   display: flex;
   gap: 20px;
@@ -767,6 +772,20 @@ footer .header__li-item {
     font-weight: 600;
     font-size: 12px;
     line-height: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .header .header__btn {
+    display: none;
+  }
+}
+.header__burger {
+  display: none;
+}
+@media (max-width: 768px) {
+  .header__burger {
+    display: block;
+    cursor: pointer;
   }
 }
 
@@ -1129,13 +1148,13 @@ footer .header__li-item {
   transform: rotate(-2deg);
 }
 .ready__column {
-  animation: 60s infinite linear alternate moveColumns;
+  animation: 100s infinite linear alternate moveColumns;
 }
 .ready__column:nth-child(2) {
-  animation: 60s infinite linear alternate-reverse moveColumnAlt;
+  animation: 100s infinite linear alternate-reverse moveColumnAlt;
 }
 .ready__column:nth-child(4) {
-  animation: 60s infinite linear alternate-reverse moveColumnAlt;
+  animation: 100s infinite linear alternate-reverse moveColumnAlt;
 }
 .ready__img img {
   width: 242px;
@@ -1153,24 +1172,24 @@ footer .header__li-item {
 
 @keyframes moveColumns {
   0% {
-    transform: translateY(0);
+    transform: translateY(0px);
   }
   50% {
-    transform: translateY(-790px);
+    transform: translateY(-560px);
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(0px);
   }
 }
 @keyframes moveColumnAlt {
   0% {
-    transform: translateY(-770px);
+    transform: translateY(-560px);
   }
   50% {
-    transform: translateY(20px);
+    transform: translateY(0px);
   }
   100% {
-    transform: translateY(-770px);
+    transform: translateY(-560px);
   }
 }
 .word__inner {
@@ -1287,7 +1306,14 @@ footer .header__li-item {
   color: #23c9de;
 }
 
+.tabs__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .tabs__title {
+  display: inline-block;
+  position: relative;
   margin-bottom: 42px;
 }
 @media (max-width: 992px) {
@@ -1299,6 +1325,33 @@ footer .header__li-item {
   .tabs__title {
     margin-bottom: 25px;
   }
+}
+.tabs__title-stars {
+  position: absolute;
+  width: 66px;
+  height: 53px;
+  left: -51px;
+  top: -40px;
+}
+@media (max-width: 992px) {
+  .tabs__title-stars {
+    transform: scale(0.7);
+  }
+}
+@media (max-width: 768px) {
+  .tabs__title-stars {
+    transform: scale(0.5);
+  }
+}
+.tabs__title-stars svg:nth-child(1) {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.tabs__title-stars svg:nth-child(2) {
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 .tabs__list {
   display: flex;

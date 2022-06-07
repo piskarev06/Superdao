@@ -19,6 +19,12 @@
 		}
 	}
 
+	&__nav {
+		@include breakpoint(768px) {
+			display: none;
+		}
+	}
+
 	&__list {
 		display: flex;
 		gap: 20px;
@@ -145,6 +151,16 @@
 			font-weight: 600;
 			font-size: 12px;
 			line-height: 15px;
+		}
+		@include breakpoint(768px) {
+			display: none;
+		}
+	}
+	&__burger {
+		display: none;
+		@include breakpoint(768px) {
+			display: block;
+			cursor: pointer;
 		}
 	}
 }
