@@ -131,4 +131,29 @@
 
 footer .header__li-dropdown {
 	bottom: 50px;
+	left: auto;
+	right: -20px;
+	@include breakpoint(992px) {
+		transform: scale(0.8);
+		bottom: 35px;
+	}
+	@include breakpoint(768px) {
+		right: -45px;
+		transform: scale(0.7);
+		bottom: 15px;
+	}
+}
+footer .header__li-item {
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 27px;
+
+	@include breakpoint(992px) {
+		font-size: 18px;
+		line-height: 22px;
+	}
+	@include breakpoint(768px) {
+		font-size: 14px;
+		line-height: 17px;
+	}
 }
