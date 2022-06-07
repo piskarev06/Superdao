@@ -1,109 +1,133 @@
-const iconMenu = document.querySelector('.header__icon');
-const menuBody = document.querySelector('.header__menu');
+const iconMenu = document.querySelector('.header__icon')
+const menuBody = document.querySelector('.header__menu')
 if (iconMenu) {
-	iconMenu.addEventListener('click', function (e) {
-		document.body.classList.toggle('_lock');
-		iconMenu.classList.toggle('_active');
-		menuBody.classList.toggle('_active');
-	});
+  iconMenu.addEventListener('click', function (e) {
+    document.body.classList.toggle('_lock')
+    iconMenu.classList.toggle('_active')
+    menuBody.classList.toggle('_active')
+  })
 }
 // End of Burger
 
-const menuLinks = document.querySelectorAll('.nav__link[data-goto]');
+const menuLinks = document.querySelectorAll('.nav__link[data-goto]')
 if (menuLinks.length > 0) {
-	menuLinks.forEach((el) => {
-		el.addEventListener('click', onMenuLinkClick);
-	});
+  menuLinks.forEach((el) => {
+    el.addEventListener('click', onMenuLinkClick)
+  })
 
-	function onMenuLinkClick(e) {
-		const menuLink = e.target;
-		if (
-			menuLink.dataset.goto &&
-			document.querySelector(menuLink.dataset.goto)
-		) {
-			const gotoBlock = document.querySelector(menuLink.dataset.goto);
-			const gotoBlockValue =
-				gotoBlock.getBoundingClientRect().top +
-				pageYOffset -
-				-document.querySelector('header').offsetHeight;
+  function onMenuLinkClick(e) {
+    const menuLink = e.target
+    if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+      const gotoBlock = document.querySelector(menuLink.dataset.goto)
+      const gotoBlockValue =
+        gotoBlock.getBoundingClientRect().top +
+        pageYOffset -
+        -document.querySelector('header').offsetHeight
 
-			if (iconMenu.classList.contains('_active')) {
-				document.body.classList.remove('_lock');
-				iconMenu.classList.remove('_active');
-				menuBody.classList.remove('_active');
-			}
+      if (iconMenu.classList.contains('_active')) {
+        document.body.classList.remove('_lock')
+        iconMenu.classList.remove('_active')
+        menuBody.classList.remove('_active')
+      }
 
-			window.scrollTo({
-				top: gotoBlockValue,
-				behavior: 'smooth',
-			});
-			e.preventDefault();
-		}
-	}
+      window.scrollTo({
+        top: gotoBlockValue,
+        behavior: 'smooth',
+      })
+      e.preventDefault()
+    }
+  }
 }
 // End of Scroll
 
+const tabs = document.getElementById('tabs')
+const content = document.querySelectorAll('.content__item')
+
+const changeClass = (el, tabs) => {
+  for (let i = 0; i < tabs.children.length; i++) {
+    tabs.children[i].classList.remove('active')
+  }
+  el.classList.add('active')
+}
+
+const listener = (tabs, content) => {
+  tabs.addEventListener('click', (e) => {
+    const currentTab = e.target.dataset.btn
+    changeClass(e.target, tabs)
+    for (let i = 0; i < content.length; i++) {
+      content[i].classList.remove('active')
+      if (content[i].dataset.content === currentTab) {
+        content[i].classList.add('active')
+      }
+    }
+  })
+}
+
+listener(tabs, content)
+
+// End of Tabs
+
 const getTopElement = (element) => {
-	let clientTop = document.documentElement.clientTop;
-	return element.getBoundingClientRect().top + window.pageYOffset - clientTop;
-};
+  let clientTop = document.documentElement.clientTop
+  return element.getBoundingClientRect().top + window.pageYOffset - clientTop
+}
 
 // End Of getTopElement
 
-const sectionWordStart = getTopElement(document.querySelector('.word')) - 400;
-const sectionWordContent = sectionWordStart;
-const sectionWordEnd = sectionWordStart + sectionWordContent;
-let words = document.querySelectorAll('.word__span');
+const sectionWordStart = getTopElement(document.querySelector('.word')) - 400
+const sectionWordContent = sectionWordStart
+const sectionWordEnd = sectionWordStart + sectionWordContent
+let words = document.querySelectorAll('.word__span')
 
-const oneWord = sectionWordContent;
-const twoWord = sectionWordContent + 100;
-const threeWord = sectionWordContent + 200;
-const fourWord = sectionWordContent + 300;
-const fiveWord = sectionWordContent + 400;
-const sixWord = sectionWordContent + 500;
-const sevenWord = sectionWordContent + 600;
+const oneWord = sectionWordContent
+const twoWord = sectionWordContent + 100
+const threeWord = sectionWordContent + 200
+const fourWord = sectionWordContent + 300
+const fiveWord = sectionWordContent + 400
+const sixWord = sectionWordContent + 500
+const sevenWord = sectionWordContent + 600
 
 window.addEventListener('scroll', () => {
-	if (oneWord <= window.pageYOffset && twoWord > window.pageYOffset) {
-		words[0].classList.add('active');
-	} else words[0].classList.remove('active');
+  if (oneWord <= window.pageYOffset && twoWord > window.pageYOffset) {
+    words[0].classList.add('active')
+  } else words[0].classList.remove('active')
 
-	if (twoWord <= window.pageYOffset && threeWord > window.pageYOffset) {
-		words[1].classList.add('active');
-	} else words[1].classList.remove('active');
+  if (twoWord <= window.pageYOffset && threeWord > window.pageYOffset) {
+    words[1].classList.add('active')
+  } else words[1].classList.remove('active')
 
-	if (threeWord <= window.pageYOffset && fourWord > window.pageYOffset) {
-		words[2].classList.add('active');
-	} else words[2].classList.remove('active');
+  if (threeWord <= window.pageYOffset && fourWord > window.pageYOffset) {
+    words[2].classList.add('active')
+  } else words[2].classList.remove('active')
 
-	if (fourWord <= window.pageYOffset && fiveWord > window.pageYOffset) {
-		words[3].classList.add('active');
-	} else words[3].classList.remove('active');
+  if (fourWord <= window.pageYOffset && fiveWord > window.pageYOffset) {
+    words[3].classList.add('active')
+  } else words[3].classList.remove('active')
 
-	if (fiveWord <= window.pageYOffset && sixWord > window.pageYOffset) {
-		words[4].classList.add('active');
-	} else words[4].classList.remove('active');
+  if (fiveWord <= window.pageYOffset && sixWord > window.pageYOffset) {
+    words[4].classList.add('active')
+  } else words[4].classList.remove('active')
 
-	if (sixWord <= window.pageYOffset && sevenWord > window.pageYOffset) {
-		words[5].classList.add('active');
-	} else words[5].classList.remove('active');
+  if (sixWord <= window.pageYOffset && sevenWord > window.pageYOffset) {
+    words[5].classList.add('active')
+  } else words[5].classList.remove('active')
 
-	if (sevenWord <= window.pageYOffset && sevenWord + 100 > window.pageYOffset) {
-		words[6].classList.add('active');
-	} else words[6].classList.remove('active');
+  if (sevenWord <= window.pageYOffset && sevenWord + 100 > window.pageYOffset) {
+    words[6].classList.add('active')
+  } else words[6].classList.remove('active')
 
-	console.log(sevenWord);
-	console.log(window.pageYOffset);
-	console.log(sectionWordEnd);
-});
+  console.log(sevenWord)
+  console.log(window.pageYOffset)
+  console.log(sectionWordEnd)
+})
 
 const constellation = (element) => {
-	window.addEventListener('scroll', (e) => {
-		element.style.setProperty('--rotation', window.scrollY);
-	});
-};
+  window.addEventListener('scroll', (e) => {
+    element.style.setProperty('--rotation', window.scrollY)
+  })
+}
 
-document.querySelectorAll('.constellation').forEach(constellation);
+document.querySelectorAll('.constellation').forEach(constellation)
 
 // End of Word
 
