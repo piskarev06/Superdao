@@ -1,241 +1,273 @@
 .ready {
-	&__inner {
-		text-align: center;
-	}
+  &__inner {
+    text-align: center;
+  }
 
-	&__title {
-		display: inline-block;
-		margin-bottom: 50px;
-		position: relative;
+  &__title {
+    position: relative;
+    display: inline-block;
 
-		@include breakpoint(992px) {
-			margin-bottom: 44px;
-		}
-	}
-	&__title-stars {
-		position: absolute;
-		left: -140px;
-		top: -10px;
-		width: 88px;
-		height: 88px;
-		@include breakpoint(992px) {
-			left: -100px;
-			top: -30px;
-			width: 61px;
-			height: 61px;
-		}
-		@include breakpoint(768px) {
-			left: 43%;
-			top: -60px;
-			width: 38px;
-			height: 38px;
-		}
-	}
-	&__title-stars > svg:nth-child(1) {
-		position: absolute;
-		left: 20px;
-		top: 0px;
-		@include breakpoint(992px) {
-			width: 26px;
-			height: 26px;
-		}
-		@include breakpoint(768px) {
-			width: 17px;
-			height: 17px;
-		}
-	}
-	&__title-stars > svg:nth-child(2) {
-		position: absolute;
-		left: 0px;
-		bottom: 10px;
-		@include breakpoint(992px) {
-			width: 13px;
-			height: 13px;
-		}
-		@include breakpoint(768px) {
-			width: 9px;
-			height: 9px;
-		}
-	}
-	&__title-stars > svg:nth-child(3) {
-		position: absolute;
-		right: 0px;
-		bottom: 0px;
-		@include breakpoint(992px) {
-			width: 13px;
-			height: 13px;
-		}
-		@include breakpoint(768px) {
-			width: 9px;
-			height: 9px;
-		}
-	}
+    margin-bottom: 50px;
 
-	&__list {
-		max-width: 1000px;
-		margin: 0 auto;
+    @include breakpoint(992px) {
+      margin-bottom: 44px;
+    }
+    @include breakpoint(768px) {
+      max-width: 360px;
 
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		gap: 23px;
+      margin-bottom: 24px;
+    }
+  }
 
-		margin-bottom: 64px;
+  &__title-stars {
+    position: absolute;
+    left: -140px;
+    top: -10px;
+    width: 88px;
+    height: 88px;
 
-		@include breakpoint(992px) {
-			max-width: 100%;
-			gap: 12px;
+    @include breakpoint(992px) {
+      left: -100px;
+      top: -30px;
+      width: 61px;
+      height: 61px;
+    }
+    @include breakpoint(768px) {
+      left: 43%;
+      top: -60px;
+      width: 38px;
+      height: 38px;
+    }
+  }
 
-			margin-bottom: 44px;
-		}
+  &__title-stars > svg:nth-child(1) {
+    position: absolute;
+    left: 20px;
+    top: 0px;
 
-		& .list__item {
-			padding: 10px 29px;
+    @include breakpoint(992px) {
+      width: 26px;
+      height: 26px;
+    }
+    @include breakpoint(768px) {
+      width: 17px;
+      height: 17px;
+    }
+  }
 
-			font-size: 22px;
-			line-height: 40px;
+  &__title-stars > svg:nth-child(2) {
+    position: absolute;
+    left: 0px;
+    bottom: 10px;
 
-			background: #182632;
-			border-radius: 100px;
+    @include breakpoint(992px) {
+      width: 13px;
+      height: 13px;
+    }
+    @include breakpoint(768px) {
+      width: 9px;
+      height: 9px;
+    }
+  }
 
-			@include breakpoint(992px) {
-				padding: 8px 24px;
+  &__title-stars > svg:nth-child(3) {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
 
-				font-size: 16px;
-				line-height: 32px;
-			}
+    @include breakpoint(992px) {
+      width: 13px;
+      height: 13px;
+    }
+    @include breakpoint(768px) {
+      width: 9px;
+      height: 9px;
+    }
+  }
 
-			&.investment {
-				color: #ffb4d3;
-			}
+  &__list {
+    max-width: 1000px;
+    margin: 0 auto;
 
-			&.startup {
-				color: #ffc24c;
-			}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 23px;
 
-			&.service {
-				color: #d387f7;
-			}
+    margin-bottom: 64px;
 
-			&.community {
-				color: #77e6ff;
-			}
+    @include breakpoint(992px) {
+      max-width: 100%;
+      gap: 12px;
 
-			&.impact {
-				color: #23c9de;
-			}
+      margin-bottom: 44px;
+    }
+    @include breakpoint(768px) {
+      margin-bottom: 24px;
+    }
 
-			&.defi {
-				color: #ff9393;
-			}
+    & .list__item {
+      padding: 10px 29px;
 
-			&.more {
-				position: relative;
-				padding-left: 58.36px;
+      font-size: 22px;
+      line-height: 40px;
 
-				color: #707f8d;
+      background: #182632;
+      border-radius: 100px;
 
-				@include breakpoint(992px) {
-					padding-left: 46px;
-				}
+      @include breakpoint(992px) {
+        padding: 8px 24px;
 
-				&::after {
-					position: absolute;
-					top: 50%;
-					transform: translateY(-50%);
-					left: 29px;
-					content: '';
+        font-size: 16px;
+        line-height: 32px;
+      }
+      @include breakpoint(768px) {
+        padding: 12px 14px;
 
-					width: 18.36px;
-					height: 18.36px;
+        font-size: 14px;
+        line-height: 16px;
+      }
 
-					background: url('../images/ready/star.svg');
-					background-repeat: no-repeat;
-					background-size: cover;
+      &.investment {
+        color: #ffb4d3;
+      }
 
-					@include breakpoint(992px) {
-						width: 14px;
-						height: 14px;
+      &.startup {
+        color: #ffc24c;
+      }
 
-						left: 24px;
-					}
-				}
-			}
-		}
-	}
+      &.service {
+        color: #d387f7;
+      }
 
-	&__block {
-		border-radius: 30px;
-		background: #010001;
-		width: 100%;
-		height: 493px;
-		overflow: hidden;
+      &.community {
+        color: #77e6ff;
+      }
 
-		@include breakpoint(992px) {
-			max-width: 100%;
-			height: 318px;
-			border-radius: 20px;
-		}
-	}
+      &.impact {
+        color: #23c9de;
+      }
 
-	&__columns {
-		display: flex;
-		justify-content: center;
-		gap: 17px;
-		transform: rotate(-2deg);
-	}
+      &.defi {
+        color: #ff9393;
+      }
 
-	&__column {
-		animation: 100s infinite linear alternate moveColumns;
+      &.more {
+        position: relative;
+        padding-left: 58.36px;
 
-		&:nth-child(2) {
-			animation: 100s infinite linear alternate-reverse moveColumnAlt;
-		}
+        color: #707f8d;
 
-		&:nth-child(4) {
-			animation: 100s infinite linear alternate-reverse moveColumnAlt;
-		}
-	}
+        @include breakpoint(992px) {
+          padding-left: 46px;
+        }
+        @include breakpoint(768px) {
+          padding-left: 32.5px;
+        }
 
-	&__img {
-		& img {
-			width: 242px;
-			height: 242px;
+        &::after {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 29px;
+          content: '';
 
-			@include breakpoint(992px) {
-				width: 156px;
-				height: 156px;
-			}
-		}
+          width: 18.36px;
+          height: 18.36px;
 
-		&:not(:last-child) {
-			margin-bottom: 15px;
-		}
-	}
+          background: url('../images/ready/star.svg');
+          background-repeat: no-repeat;
+          background-size: cover;
+
+          @include breakpoint(992px) {
+            width: 14px;
+            height: 14px;
+
+            left: 24px;
+          }
+          @include breakpoint(768px) {
+            width: 10px;
+            height: 10px;
+
+            left: 14.5px;
+          }
+        }
+      }
+    }
+  }
+
+  &__block {
+    border-radius: 30px;
+    background: #010001;
+    width: 100%;
+    height: 493px;
+    overflow: hidden;
+
+    @include breakpoint(992px) {
+      max-width: 100%;
+      height: 318px;
+      border-radius: 20px;
+    }
+  }
+
+  &__columns {
+    display: flex;
+    justify-content: center;
+    gap: 17px;
+    transform: rotate(-2deg);
+  }
+
+  &__column {
+    animation: 100s infinite linear alternate moveColumns;
+
+    &:nth-child(2) {
+      animation: 100s infinite linear alternate-reverse moveColumnAlt;
+    }
+
+    &:nth-child(4) {
+      animation: 100s infinite linear alternate-reverse moveColumnAlt;
+    }
+  }
+
+  &__img {
+    & img {
+      width: 242px;
+      height: 242px;
+
+      @include breakpoint(992px) {
+        width: 156px;
+        height: 156px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
 }
 
 @keyframes moveColumns {
-	0% {
-		transform: translateY(0px);
-	}
-	50% {
-		transform: translateY(-560px);
-	}
-	100% {
-		transform: translateY(0px);
-	}
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-560px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 @keyframes moveColumnAlt {
-	0% {
-		transform: translateY(-560px);
-	}
+  0% {
+    transform: translateY(-560px);
+  }
 
-	50% {
-		transform: translateY(0px);
-	}
+  50% {
+    transform: translateY(0px);
+  }
 
-	100% {
-		transform: translateY(-560px);
-	}
+  100% {
+    transform: translateY(-560px);
+  }
 }

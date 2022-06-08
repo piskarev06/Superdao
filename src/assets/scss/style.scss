@@ -65,6 +65,8 @@ body {
 
   background: $bg;
 
+  overflow-x: hidden;
+
   &._lock {
     overflow: hidden;
   }
@@ -117,6 +119,7 @@ a {
 @import 'blocks/benefits';
 // @import 'blocks/step';
 @import 'blocks/digest';
+@import 'blocks/brands';
 @import 'blocks/press';
 @import 'blocks/podcast';
 @import 'blocks/idea';

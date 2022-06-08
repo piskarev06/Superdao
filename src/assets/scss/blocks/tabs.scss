@@ -1,177 +1,193 @@
 .tabs {
-	&__inner {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	&__title {
-		display: inline-block;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-		position: relative;
-		margin-bottom: 42px;
+  &__title {
+    display: inline-block;
 
-		@include breakpoint(992px) {
-			margin-bottom: 32px;
-		}
-		@include breakpoint(768px) {
-			margin-bottom: 25px;
-		}
-	}
+    position: relative;
+    margin-bottom: 42px;
 
-	&__title-stars {
-		position: absolute;
-		width: 66px;
-		height: 53px;
-		left: -51px;
-		top: -40px;
+    @include breakpoint(992px) {
+      margin-bottom: 32px;
+    }
+    @include breakpoint(768px) {
+      margin-bottom: 25px;
+    }
+    @include breakpoint(440px) {
+      max-width: 260px;
+    }
+  }
 
-		@include breakpoint(992px) {
-			transform: scale(0.7);
-		}
-		@include breakpoint(768px) {
-			transform: scale(0.5);
-		}
-	}
-	&__title-stars svg:nth-child(1) {
-		position: absolute;
-		top: 0;
-		right: 0;
-	}
-	&__title-stars svg:nth-child(2) {
-		position: absolute;
-		left: 0;
-		bottom: 0;
-	}
+  &__title-stars {
+    position: absolute;
+    width: 66px;
+    height: 53px;
+    left: -51px;
+    top: -40px;
 
-	&__list {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		gap: 34px;
+    @include breakpoint(992px) {
+      transform: scale(0.7);
+    }
+    @include breakpoint(768px) {
+      transform: scale(0.5);
+    }
+  }
 
-		margin-bottom: 46px;
+  &__title-stars svg:nth-child(1) {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 
-		@include breakpoint(992px) {
-			margin-bottom: 28px;
+  &__title-stars svg:nth-child(2) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
 
-			gap: 12px 27px;
-		}
-		@include breakpoint(768px) {
-			gap: 12px 16px;
-		}
-	}
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 34px;
 
-	&__item {
-		font-size: 22px;
-		line-height: 40px;
+    margin-bottom: 46px;
 
-		cursor: pointer;
+    @include breakpoint(992px) {
+      margin-bottom: 28px;
 
-		color: #8395a7;
-		transition: all 0.3s linear;
+      gap: 12px 27px;
+    }
+    @include breakpoint(768px) {
+      gap: 12px 16px;
+    }
+  }
 
-		&.active,
-		&:hover {
-			color: $yellow;
-		}
+  &__item {
+    font-size: 22px;
+    line-height: 40px;
 
-		@include breakpoint(992px) {
-			font-size: 16px;
-			line-height: 28px;
-		}
-		@include breakpoint(768px) {
-			font-size: 14px;
-			line-height: 16px;
-		}
-	}
+    cursor: pointer;
 
-	&__content {
-		& .content__item {
-			display: none;
-			opacity: 0;
-			visibility: hidden;
+    color: #8395a7;
+    transition: all 0.3s linear;
 
-			transition: all 0.3s linear;
+    &.active,
+    &:hover {
+      color: $yellow;
+    }
 
-			&.active {
-				display: block;
-				opacity: 1;
-				visibility: visible;
-			}
-		}
+    @include breakpoint(992px) {
+      font-size: 16px;
+      line-height: 28px;
+    }
+    @include breakpoint(768px) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
 
-		& img {
-			width: 100%;
-		}
-	}
+  &__content {
+    & .content__item.active {
+      & img {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
 
-	&__dot {
-		display: none;
+    & img {
+      width: 100%;
 
-		@include breakpoint(768px) {
-			display: flex;
-			justify-content: center;
-			align-items: center;
+      display: none;
+      opacity: 0;
+      visibility: hidden;
 
-			transform: translateY(-11px);
+      transition: all 0.3s linear;
+      animation: fadein 0.3s;
+    }
+  }
 
-			color: #8395a7;
-		}
-	}
+  &__dot {
+    display: none;
 
-	&__btn {
-		position: relative;
+    @include breakpoint(768px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-		padding: 22px 48px;
-		margin-top: 40px;
+      transform: translateY(-11px);
 
-		font-size: 24px;
-		line-height: 36px;
+      color: #8395a7;
+    }
+  }
 
-		color: $yellow;
-		text-shadow: 0px 2px 25px rgba(0, 0, 0, 0.6);
+  &__btn {
+    position: relative;
 
-		background: #252b36;
-		border-radius: 16px;
-		box-shadow: unset;
+    padding: 22px 48px;
+    margin-top: 40px;
 
-		transition: all 0.3s linear;
+    font-size: 24px;
+    line-height: 36px;
 
-		&:hover {
-			background: #2f3643;
-		}
+    color: $yellow;
+    text-shadow: 0px 2px 25px rgba(0, 0, 0, 0.6);
 
-		&:active {
-			background: #1f252f;
-		}
+    background: #252b36;
+    border-radius: 16px;
+    box-shadow: unset;
 
-		& svg {
-			margin-left: 20px;
+    transition: all 0.3s linear;
 
-			@include breakpoint(992px) {
-				margin-left: 16px;
-			}
-			@include breakpoint(768px) {
-				margin-left: 12px;
-			}
-		}
+    &:hover {
+      background: #2f3643;
+    }
 
-		@include breakpoint(992px) {
-			padding: 8px 20px;
+    &:active {
+      background: #1f252f;
+    }
 
-			margin-top: 24px;
+    & svg {
+      margin-left: 20px;
 
-			font-size: 18px;
+      @include breakpoint(992px) {
+        margin-left: 16px;
+      }
+      @include breakpoint(768px) {
+        margin-left: 12px;
+      }
+    }
 
-			border-radius: 12px;
-		}
-		@include breakpoint(768px) {
-			margin-top: 20px;
+    @include breakpoint(992px) {
+      padding: 8px 20px;
 
-			font-size: 14px;
-			line-height: 28px;
+      margin-top: 24px;
 
-			border-radius: 8px;
-		}
-	}
+      font-size: 18px;
+
+      border-radius: 12px;
+    }
+    @include breakpoint(768px) {
+      margin-top: 20px;
+
+      font-size: 14px;
+      line-height: 28px;
+
+      border-radius: 8px;
+    }
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
