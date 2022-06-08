@@ -17,6 +17,9 @@
     @include breakpoint(768px) {
       margin-bottom: 25px;
     }
+    @include breakpoint(440px) {
+      max-width: 260px;
+    }
   }
 
   &__title-stars {
