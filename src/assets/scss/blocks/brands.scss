@@ -1,112 +1,160 @@
 .brands {
-  position: relative;
+	position: relative;
 
-  &__title {
-    margin-bottom: 56px;
+	&__title {
+		margin-bottom: 56px;
 
-    @include breakpoint(1200px) {
-      margin-bottom: 36px;
-    }
-    @include breakpoint(768px) {
-      margin-bottom: 24px;
-    }
-  }
+		@include breakpoint(1200px) {
+			margin-bottom: 36px;
+		}
+		@include breakpoint(768px) {
+			margin-bottom: 24px;
+		}
+	}
 
-  &__list {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		@include breakpoint(1200px) {
+			gap: 24px;
+		}
+		@include breakpoint(768px) {
+			gap: 16px;
+		}
+		// display: flex;
+		// align-items: center;
+		// gap: 40px;
 
-    animation: 100s infinite linear alternate moveBrands;
+		// animation: 100s infinite linear alternate moveBrands;
 
-    &:not(:last-child) {
-      margin-bottom: 40px;
+		// &:not(:last-child) {
+		// 	margin-bottom: 40px;
 
-      @include breakpoint(1200px) {
-        margin-bottom: 24px;
-      }
-      @include breakpoint(768px) {
-        margin-bottom: 16px;
-      }
-    }
+		// 	@include breakpoint(1200px) {
+		// 		margin-bottom: 24px;
+		// 	}
+		// 	@include breakpoint(768px) {
+		// 		margin-bottom: 16px;
+		// 	}
+		// }
 
-    &:nth-child(2) {
-      margin-top: 40px;
+		// &:nth-child(2) {
+		// 	margin-top: 40px;
 
-      animation: 100s infinite linear alternate-reverse moveBrandsAlt;
-    }
+		// 	animation: 100s infinite linear alternate-reverse moveBrandsAlt;
+		// }
 
-    @include breakpoint(1200px) {
-      gap: 24px;
-    }
-    @include breakpoint(768px) {
-      gap: 16px;
-    }
-  }
+		// @include breakpoint(1200px) {
+		// 	gap: 24px;
+		// }
+		// @include breakpoint(768px) {
+		// 	gap: 16px;
+		// }
+	}
 
-  &__img img {
-    @include breakpoint(1200px) {
-      max-height: 88px;
-    }
-    @include breakpoint(768px) {
-      max-height: 45px;
-    }
-  }
+	&__row-1 {
+		display: flex;
+		align-items: center;
+		gap: 40px;
 
-  &__decor {
-    position: absolute;
-    top: 60%;
-    transform: translateY(-50%);
-    z-index: 20;
+		animation: 60s infinite linear moveBrands;
+		@include breakpoint(1200px) {
+			gap: 24px;
+		}
+		@include breakpoint(768px) {
+			gap: 16px;
+		}
+	}
+	&__row-2 {
+		display: flex;
+		align-items: center;
+		gap: 40px;
 
-    width: 500px;
-    height: 320px;
+		animation: 60s infinite linear moveBrandsAlt;
+		@include breakpoint(1200px) {
+			gap: 24px;
+		}
+		@include breakpoint(768px) {
+			gap: 16px;
+		}
+	}
+	&__row-1 > img {
+		width: auto;
+		height: 132px;
+		@include breakpoint(1200px) {
+			height: 88px;
+		}
+		@include breakpoint(768px) {
+			height: 58px;
+		}
+	}
+	&__row-2 > img {
+		width: auto;
+		height: 114px;
+		@include breakpoint(1200px) {
+			height: 75px;
+		}
+		@include breakpoint(768px) {
+			height: 45px;
+		}
+	}
 
-    background: linear-gradient(90deg, #10151a 0%, rgba(16, 21, 26, 0) 100%);
+	&__decor {
+		position: absolute;
+		top: 60%;
+		transform: translateY(-50%);
+		z-index: 20;
 
-    &.one {
-      left: 0;
-    }
+		width: 500px;
+		height: 320px;
 
-    &.two {
-      right: 0;
+		background: linear-gradient(90deg, #10151a 0%, rgba(16, 21, 26, 0) 100%);
 
-      background: linear-gradient(270deg, #10151a 0%, rgba(16, 21, 26, 0) 100%);
-    }
+		&.one {
+			left: 0;
+		}
 
-    @include breakpoint(1200px) {
-      width: 260px;
-      height: 270px;
-    }
-    @include breakpoint(768px) {
-      height: 140px;
-    }
-    @include breakpoint(440px) {
-      width: 85px;
-    }
-  }
+		&.two {
+			right: 0;
+
+			background: linear-gradient(270deg, #10151a 0%, rgba(16, 21, 26, 0) 100%);
+		}
+
+		@include breakpoint(1200px) {
+			width: 220px;
+			height: 270px;
+		}
+		@include breakpoint(768px) {
+			width: 140px;
+			height: 140px;
+		}
+		@include breakpoint(440px) {
+			width: 60px;
+		}
+	}
 }
 
 @keyframes moveBrands {
-  0% {
-    transform: translateX(0px);
-  }
-  50% {
-    transform: translateX(-2245px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
+	0% {
+		transform: translateX(0px);
+	}
+	50% {
+		// transform: translateX(-2028px);
+	}
+	100% {
+		transform: translateX(-3000px);
+	}
 }
 
 @keyframes moveBrandsAlt {
-  0% {
-    transform: translateX(-2245px);
-  }
-  50% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(-2245px);
-  }
+	0% {
+		transform: translateX(-3000px);
+	}
+	50% {
+		// transform: translateX(0px);
+	}
+	100% {
+		transform: translateX(0);
+	}
 }
