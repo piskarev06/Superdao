@@ -133,6 +133,22 @@
 
         transition: all 0.3s linear;
 
+        &.youtube .list__wrapper {
+          padding-top: 35px;
+
+          @include breakpoint(992px) {
+            padding-top: 28px;
+          }
+        }
+
+        &.youtube .list__img {
+          margin-bottom: 26px;
+
+          @include breakpoint(992px) {
+            margin-bottom: 20px;
+          }
+        }
+
         @include breakpoint(992px) {
           width: 100%;
         }
@@ -156,6 +172,10 @@
 
       &__img {
         margin-bottom: 21px;
+
+        @include breakpoint(992px) {
+          margin-bottom: 16px;
+        }
       }
 
       &__title {

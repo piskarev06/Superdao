@@ -107,8 +107,20 @@
       opacity: 0;
       visibility: hidden;
 
+      border-radius: 20px;
+
       transition: all 0.3s linear;
-      animation: fadein 0.3s;
+      animation: fadein 2s;
+
+      @include breakpoint(992px) {
+        border-radius: 12px;
+      }
+      @include breakpoint(768px) {
+        border-radius: 8px;
+      }
+      @include breakpoint(440px) {
+        border-radius: 6.5px;
+      }
     }
   }
 

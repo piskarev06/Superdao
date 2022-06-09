@@ -132,15 +132,15 @@
 
     & .list {
       &__wrapper {
+        padding: 42px 28px 32px;
         height: 100%;
 
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 30px 28px 32px;
 
         @include breakpoint(992px) {
-          padding: 20px;
+          padding: 35px 20px 20px;
         }
       }
 
@@ -195,6 +195,22 @@
             background: #5ed7f2;
             box-shadow: none;
           }
+
+          & .list__wrapper {
+            padding: 31px 28px 32px;
+
+            @include breakpoint(992px) {
+              padding: 27.49px 20px 20px;
+            }
+          }
+
+          & .list__img {
+            margin-bottom: 35px;
+
+            @include breakpoint(992px) {
+              margin-bottom: 19px;
+            }
+          }
         }
       }
 
@@ -203,7 +219,11 @@
       }
 
       &__img {
-        margin-bottom: 30px;
+        margin-bottom: 41px;
+
+        @include breakpoint(992px) {
+          margin-bottom: 30px;
+        }
       }
 
       &__title {

@@ -1,4 +1,13 @@
 .idea {
+  padding-bottom: 200px;
+
+  @include breakpoint(992px) {
+    padding-bottom: 120px;
+  }
+  @include breakpoint(768px) {
+    padding-bottom: 80px;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
