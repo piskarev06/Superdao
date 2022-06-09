@@ -24,7 +24,7 @@
     bottom: 80px;
     width: 61px;
     height: 55px;
-    @include breakpoint(992px) {
+    @include breakpoint(1200px) {
       transform: scale(0.7);
       left: 200px;
       bottom: 10px;
@@ -97,7 +97,7 @@
     display: flex;
     gap: 28px;
 
-    @include breakpoint(992px) {
+    @include breakpoint(1200px) {
       gap: 20px;
     }
     @include breakpoint(768px) {
@@ -117,7 +117,7 @@
 
         padding: 30px;
 
-        @include breakpoint(992px) {
+        @include breakpoint(1200px) {
           padding: 24px 20px 20px 20px;
         }
       }
@@ -136,7 +136,7 @@
         &.youtube .list__wrapper {
           padding-top: 35px;
 
-          @include breakpoint(992px) {
+          @include breakpoint(1200px) {
             padding-top: 28px;
           }
         }
@@ -144,12 +144,12 @@
         &.youtube .list__img {
           margin-bottom: 26px;
 
-          @include breakpoint(992px) {
+          @include breakpoint(1200px) {
             margin-bottom: 20px;
           }
         }
 
-        @include breakpoint(992px) {
+        @include breakpoint(1200px) {
           width: 100%;
         }
         @include breakpoint(768px) {
@@ -173,7 +173,7 @@
       &__img {
         margin-bottom: 21px;
 
-        @include breakpoint(992px) {
+        @include breakpoint(1200px) {
           margin-bottom: 16px;
         }
       }
@@ -187,7 +187,7 @@
 
         margin-bottom: 12px;
 
-        @include breakpoint(992px) {
+        @include breakpoint(1200px) {
           font-size: 17px;
           line-height: 24px;
         }
@@ -217,7 +217,7 @@
 
       &__name,
       &__span {
-        @include breakpoint(992px) {
+        @include breakpoint(1200px) {
           font-size: 14px;
           line-height: 24px;
         }
@@ -235,7 +235,7 @@
 
         color: #ffffff;
 
-        @include breakpoint(992px) {
+        @include breakpoint(1200px) {
           font-size: 12px;
           line-height: 15px;
         }

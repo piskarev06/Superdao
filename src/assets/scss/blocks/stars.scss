@@ -7,7 +7,7 @@
 		margin: auto;
 		width: 77px;
 		height: 88px;
-		@include breakpoint(992px) {
+		@include breakpoint(1200px) {
 			transform: scale(0.7);
 		}
 	}

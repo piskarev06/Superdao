@@ -9,7 +9,7 @@
 		position: relative;
 		margin-bottom: 44px;
 
-		@include breakpoint(992px) {
+		@include breakpoint(1200px) {
 			margin-bottom: 32px;
 		}
 
@@ -24,7 +24,7 @@
 		bottom: 50px;
 		width: 55px;
 		height: 43px;
-		@include breakpoint(992px) {
+		@include breakpoint(1200px) {
 			width: 26px;
 			height: 20px;
 			right: -40px;
@@ -35,7 +35,7 @@
 		position: absolute;
 		left: 0px;
 		top: 0px;
-		@include breakpoint(992px) {
+		@include breakpoint(1200px) {
 			width: 13px;
 			height: 13px;
 		}
@@ -44,7 +44,7 @@
 		position: absolute;
 		right: 0px;
 		bottom: 0px;
-		@include breakpoint(992px) {
+		@include breakpoint(1200px) {
 			width: 8px;
 			height: 8px;
 		}
@@ -58,7 +58,7 @@
 		width: 100%;
 		gap: 30px;
 
-		@include breakpoint(992px) {
+		@include breakpoint(1200px) {
 			gap: 27px;
 		}
 		@include breakpoint(768px) {
@@ -85,7 +85,7 @@
 
 			margin-bottom: 16px;
 
-			@include breakpoint(992px) {
+			@include breakpoint(1200px) {
 				width: 100px;
 				height: 100px;
 				border-radius: 24px;
@@ -171,7 +171,7 @@
 		}
 
 		&__title {
-			@include breakpoint(992px) {
+			@include breakpoint(1200px) {
 				font-weight: 600;
 				font-size: 14px;
 				line-height: 24px;

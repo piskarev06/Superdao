@@ -3,34 +3,34 @@
 @import 'vendor/reset';
 
 .paddings {
-  padding: 100px 0;
-  @include breakpoint(992px) {
-    padding: 50px 0;
-  }
-  @include breakpoint(768px) {
-    padding: 40px 0;
-  }
+	padding: 100px 0;
+	@include breakpoint(1200px) {
+		padding: 50px 0;
+	}
+	@include breakpoint(768px) {
+		padding: 40px 0;
+	}
 }
 
 .constellation {
-  --rotation: 0;
-  position: relative;
+	--rotation: 0;
+	position: relative;
 }
 
 .star {
-  transform: rotate(calc(1deg * var(--rotation)));
-  // position: absolute;
+	transform: rotate(calc(1deg * var(--rotation)));
+	// position: absolute;
 }
 
 .big-star {
-  transform: rotate(calc(0.3deg * var(--rotation)));
+	transform: rotate(calc(0.3deg * var(--rotation)));
 }
 
 .small-star-1 {
-  transform: rotate(calc(0.9deg * var(--rotation)));
+	transform: rotate(calc(0.9deg * var(--rotation)));
 }
 .small-star-2 {
-  transform: rotate(calc(1deg * var(--rotation)));
+	transform: rotate(calc(1deg * var(--rotation)));
 }
 
 // .star:nth-child(1) {
@@ -51,60 +51,64 @@
 // 	right: 15px;
 // }
 
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 html {
-  font-size: 22px;
-  overflow-x: hidden;
+	font-size: 22px;
 }
 
 body {
-  font-family: 'Montserrat', 'Loos Wide', sans-serif;
-  font-weight: 600;
-  font-size: 22px;
-  line-height: 27px;
-  color: $white;
+	font-family: 'Montserrat', 'Loos Wide', sans-serif;
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 27px;
+	color: $white;
 
-  background: $bg;
+	background: $bg;
 
-  overflow-x: hidden;
+	overflow-x: hidden;
 
-  &._lock {
-    overflow: hidden;
-  }
+	&._lock {
+		overflow: hidden;
+	}
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 
-  &:focus {
-    outline: none;
-  }
+	&:focus {
+		outline: none;
+	}
 }
 
 .h2 {
-  font-family: 'Loos Wide';
-  font-weight: 700;
-  font-size: 54px;
-  line-height: 80px;
+	font-family: 'Loos Wide';
+	font-weight: 700;
+	font-size: 54px;
+	line-height: 80px;
 
-  text-align: center;
+	text-align: center;
 
-  color: #fff;
+	color: #fff;
 
-  @include breakpoint(992px) {
-    font-size: 36px;
-    line-height: 45px;
-  }
-  @include breakpoint(768px) {
-    font-size: 28px;
-    line-height: 36px;
-  }
+	@include breakpoint(1200px) {
+		font-size: 36px;
+		line-height: 45px;
+	}
+	@include breakpoint(768px) {
+		font-size: 28px;
+		line-height: 36px;
+	}
 }
 
 /* Blocks */

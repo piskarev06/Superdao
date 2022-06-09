@@ -24,7 +24,7 @@
     bottom: 70px;
     width: 58px;
     height: 59px;
-    @include breakpoint(992px) {
+    @include breakpoint(1200px) {
       right: -62px;
       bottom: 30px;
       width: 44px;
@@ -41,7 +41,7 @@
     position: absolute;
     left: 0px;
     top: 0px;
-    @include breakpoint(992px) {
+    @include breakpoint(1200px) {
       width: 25px;
       height: 25px;
     }
@@ -50,7 +50,7 @@
     position: absolute;
     right: 0px;
     bottom: 0px;
-    @include breakpoint(992px) {
+    @include breakpoint(1200px) {
       width: 12px;
       height: 12px;
     }
@@ -120,7 +120,7 @@
     display: flex;
     gap: 28px;
 
-    @include breakpoint(992px) {
+    @include breakpoint(1200px) {
       gap: 20px;
     }
     @include breakpoint(768px) {
@@ -139,7 +139,7 @@
         flex-direction: column;
         justify-content: space-between;
 
-        @include breakpoint(992px) {
+        @include breakpoint(1200px) {
           padding: 35px 20px 20px;
         }
       }
@@ -151,7 +151,7 @@
 
         transition: all 0.3s linear;
 
-        @include breakpoint(992px) {
+        @include breakpoint(1200px) {
           width: 100%;
         }
         @include breakpoint(768px) {
@@ -199,7 +199,7 @@
           & .list__wrapper {
             padding: 31px 28px 32px;
 
-            @include breakpoint(992px) {
+            @include breakpoint(1200px) {
               padding: 27.49px 20px 20px;
             }
           }
@@ -207,7 +207,7 @@
           & .list__img {
             margin-bottom: 35px;
 
-            @include breakpoint(992px) {
+            @include breakpoint(1200px) {
               margin-bottom: 19px;
             }
           }
@@ -221,7 +221,7 @@
       &__img {
         margin-bottom: 41px;
 
-        @include breakpoint(992px) {
+        @include breakpoint(1200px) {
           margin-bottom: 30px;
         }
       }
@@ -235,7 +235,7 @@
 
         margin-bottom: 12px;
 
-        @include breakpoint(992px) {
+        @include breakpoint(1200px) {
           font-size: 18px;
           line-height: 24px;
 
@@ -250,7 +250,7 @@
         color: #10151a;
         opacity: 0.8;
 
-        @include breakpoint(992px) {
+        @include breakpoint(1200px) {
           font-size: 13px;
           line-height: 22px;
         }

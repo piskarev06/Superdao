@@ -1,205 +1,206 @@
 .tabs {
-  &__inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
-  &__title {
-    display: inline-block;
+	&__title {
+		display: inline-block;
 
-    position: relative;
-    margin-bottom: 42px;
+		position: relative;
+		margin-bottom: 42px;
 
-    @include breakpoint(992px) {
-      margin-bottom: 32px;
-    }
-    @include breakpoint(768px) {
-      margin-bottom: 25px;
-    }
-    @include breakpoint(440px) {
-      max-width: 260px;
-    }
-  }
+		@include breakpoint(1200px) {
+			margin-bottom: 32px;
+		}
+		@include breakpoint(768px) {
+			margin-bottom: 25px;
+		}
+		@include breakpoint(440px) {
+			max-width: 260px;
+		}
+	}
 
-  &__title-stars {
-    position: absolute;
-    width: 66px;
-    height: 53px;
-    left: -51px;
-    top: -40px;
+	&__title-stars {
+		position: absolute;
+		width: 66px;
+		height: 53px;
+		left: -51px;
+		top: -40px;
 
-    @include breakpoint(992px) {
-      transform: scale(0.7);
-    }
-    @include breakpoint(768px) {
-      transform: scale(0.5);
-    }
-  }
+		@include breakpoint(1200px) {
+			transform: scale(0.7);
+		}
+		@include breakpoint(768px) {
+			transform: scale(0.5);
+		}
+	}
 
-  &__title-stars svg:nth-child(1) {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
+	&__title-stars svg:nth-child(1) {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
 
-  &__title-stars svg:nth-child(2) {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-  }
+	&__title-stars svg:nth-child(2) {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
 
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 34px;
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 34px;
 
-    margin-bottom: 46px;
+		margin-bottom: 46px;
 
-    @include breakpoint(992px) {
-      margin-bottom: 28px;
+		@include breakpoint(1200px) {
+			margin-bottom: 28px;
 
-      gap: 12px 27px;
-    }
-    @include breakpoint(768px) {
-      gap: 12px 16px;
-    }
-  }
+			gap: 12px 27px;
+		}
+		@include breakpoint(768px) {
+			gap: 12px 16px;
+		}
+	}
 
-  &__item {
-    font-size: 22px;
-    line-height: 40px;
+	&__item {
+		font-size: 22px;
+		line-height: 40px;
 
-    cursor: pointer;
+		cursor: pointer;
 
-    color: #8395a7;
-    transition: all 0.3s linear;
+		color: #8395a7;
+		transition: all 0.3s linear;
+		font-weight: 500;
 
-    &.active,
-    &:hover {
-      color: $yellow;
-    }
+		&.active,
+		&:hover {
+			color: $yellow;
+		}
 
-    @include breakpoint(992px) {
-      font-size: 16px;
-      line-height: 28px;
-    }
-    @include breakpoint(768px) {
-      font-size: 14px;
-      line-height: 16px;
-    }
-  }
+		@include breakpoint(1200px) {
+			font-size: 16px;
+			line-height: 28px;
+		}
+		@include breakpoint(768px) {
+			font-size: 14px;
+			line-height: 16px;
+		}
+	}
 
-  &__content {
-    & .content__item.active {
-      & img {
-        display: block;
-        opacity: 1;
-        visibility: visible;
-      }
-    }
+	&__content {
+		& .content__item.active {
+			& img {
+				display: block;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
 
-    & img {
-      width: 100%;
+		& img {
+			width: 100%;
 
-      display: none;
-      opacity: 0;
-      visibility: hidden;
+			display: none;
+			opacity: 0;
+			visibility: hidden;
 
-      border-radius: 20px;
+			border-radius: 20px;
 
-      transition: all 0.3s linear;
-      animation: fadein 2s;
+			transition: all 0.3s linear;
+			animation: fadein 2s;
 
-      @include breakpoint(992px) {
-        border-radius: 12px;
-      }
-      @include breakpoint(768px) {
-        border-radius: 8px;
-      }
-      @include breakpoint(440px) {
-        border-radius: 6.5px;
-      }
-    }
-  }
+			@include breakpoint(1200px) {
+				border-radius: 12px;
+			}
+			@include breakpoint(768px) {
+				border-radius: 8px;
+			}
+			@include breakpoint(440px) {
+				border-radius: 6.5px;
+			}
+		}
+	}
 
-  &__dot {
-    display: none;
+	&__dot {
+		display: none;
 
-    @include breakpoint(768px) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+		@include breakpoint(768px) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
-      transform: translateY(-11px);
+			transform: translateY(-11px);
 
-      color: #8395a7;
-    }
-  }
+			color: #8395a7;
+		}
+	}
 
-  &__btn {
-    position: relative;
+	&__btn {
+		position: relative;
 
-    padding: 22px 48px;
-    margin-top: 40px;
+		padding: 22px 48px;
+		margin-top: 40px;
 
-    font-size: 24px;
-    line-height: 36px;
+		font-size: 24px;
+		line-height: 36px;
 
-    color: $yellow;
-    text-shadow: 0px 2px 25px rgba(0, 0, 0, 0.6);
+		color: $yellow;
+		text-shadow: 0px 2px 25px rgba(0, 0, 0, 0.6);
 
-    background: #252b36;
-    border-radius: 16px;
-    box-shadow: unset;
+		background: #252b36;
+		border-radius: 16px;
+		box-shadow: unset;
 
-    transition: all 0.3s linear;
+		transition: all 0.3s linear;
 
-    &:hover {
-      background: #2f3643;
-    }
+		&:hover {
+			background: #2f3643;
+		}
 
-    &:active {
-      background: #1f252f;
-    }
+		&:active {
+			background: #1f252f;
+		}
 
-    & svg {
-      margin-left: 20px;
+		& svg {
+			margin-left: 20px;
 
-      @include breakpoint(992px) {
-        margin-left: 16px;
-      }
-      @include breakpoint(768px) {
-        margin-left: 12px;
-      }
-    }
+			@include breakpoint(1200px) {
+				margin-left: 16px;
+			}
+			@include breakpoint(768px) {
+				margin-left: 12px;
+			}
+		}
 
-    @include breakpoint(992px) {
-      padding: 8px 20px;
+		@include breakpoint(1200px) {
+			padding: 8px 20px;
 
-      margin-top: 24px;
+			margin-top: 24px;
 
-      font-size: 18px;
+			font-size: 18px;
 
-      border-radius: 12px;
-    }
-    @include breakpoint(768px) {
-      margin-top: 20px;
+			border-radius: 12px;
+		}
+		@include breakpoint(768px) {
+			margin-top: 20px;
 
-      font-size: 14px;
-      line-height: 28px;
+			font-size: 14px;
+			line-height: 28px;
 
-      border-radius: 8px;
-    }
-  }
+			border-radius: 8px;
+		}
+	}
 }
 
 @keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }

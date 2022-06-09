@@ -16,7 +16,7 @@
 		position: relative;
 		margin-bottom: 20px;
 
-		@include breakpoint(992px) {
+		@include breakpoint(1200px) {
 			margin-bottom: 16px;
 		}
 	}
@@ -26,7 +26,7 @@
 		bottom: 70px;
 		width: 76px;
 		height: 56px;
-		@include breakpoint(992px) {
+		@include breakpoint(1200px) {
 			width: 50px;
 			height: 38px;
 			right: -62px;
@@ -45,7 +45,7 @@
 
 		right: 0px;
 		bottom: 0px;
-		@include breakpoint(992px) {
+		@include breakpoint(1200px) {
 			width: 21px;
 			height: 21px;
 		}
@@ -59,7 +59,7 @@
 		position: absolute;
 		left: 0px;
 		top: 0px;
-		@include breakpoint(992px) {
+		@include breakpoint(1200px) {
 			width: 9px;
 			height: 9px;
 		}
@@ -69,7 +69,7 @@
 		max-width: 1140px;
 		text-align: center;
 
-		@include breakpoint(992px) {
+		@include breakpoint(1200px) {
 			max-width: 693px;
 		}
 	}
@@ -85,7 +85,7 @@
 
 		transition: all 0.3s linear;
 
-		@include breakpoint(992px) {
+		@include breakpoint(1200px) {
 			font-size: 32px;
 			line-height: 50px;
 

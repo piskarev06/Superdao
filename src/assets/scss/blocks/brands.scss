@@ -4,7 +4,7 @@
   &__title {
     margin-bottom: 56px;
 
-    @include breakpoint(992px) {
+    @include breakpoint(1200px) {
       margin-bottom: 36px;
     }
     @include breakpoint(768px) {
@@ -22,7 +22,7 @@
     &:not(:last-child) {
       margin-bottom: 40px;
 
-      @include breakpoint(992px) {
+      @include breakpoint(1200px) {
         margin-bottom: 24px;
       }
       @include breakpoint(768px) {
@@ -36,7 +36,7 @@
       animation: 100s infinite linear alternate-reverse moveBrandsAlt;
     }
 
-    @include breakpoint(992px) {
+    @include breakpoint(1200px) {
       gap: 24px;
     }
     @include breakpoint(768px) {
@@ -45,7 +45,7 @@
   }
 
   &__img img {
-    @include breakpoint(992px) {
+    @include breakpoint(1200px) {
       max-height: 88px;
     }
     @include breakpoint(768px) {
@@ -74,7 +74,7 @@
       background: linear-gradient(270deg, #10151a 0%, rgba(16, 21, 26, 0) 100%);
     }
 
-    @include breakpoint(992px) {
+    @include breakpoint(1200px) {
       width: 260px;
       height: 270px;
     }
