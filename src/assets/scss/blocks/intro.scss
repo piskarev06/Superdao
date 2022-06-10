@@ -1,7 +1,27 @@
 .intro {
+	position: relative;
+	padding-top: 97px;
+
+	@include breakpoint(768px) {
+		padding-top: 64px;
+	}
+
+	&__video {
+		position: absolute;
+		top: calc(50% + 97px);
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		height: 100%;
+
+		@include breakpoint(768px) {
+			top: calc(50% + 64px);
+		}
+	}
+
 	&__inner {
 		position: relative;
-		min-height: calc(100vh - 104px);
+		height: calc(100vh - 104px);
 
 		display: flex;
 		flex-direction: column;
