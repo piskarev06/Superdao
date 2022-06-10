@@ -1,252 +1,250 @@
 .ready {
-  &__inner {
-    position: relative;
+	&__inner {
+		text-align: center;
+	}
 
-    text-align: center;
-  }
+	&__title {
+		position: relative;
+		display: inline-block;
 
-  &__title {
-    position: relative;
-    display: inline-block;
+		margin-bottom: 50px;
 
-    margin-bottom: 50px;
+		@include breakpoint(1200px) {
+			margin-bottom: 44px;
+		}
+		@include breakpoint(768px) {
+			max-width: 360px;
 
-    @include breakpoint(1200px) {
-      margin-bottom: 44px;
-    }
-    @include breakpoint(768px) {
-      max-width: 360px;
+			margin-bottom: 24px;
+		}
+	}
 
-      margin-bottom: 24px;
-    }
-  }
+	&__title-stars {
+		position: absolute;
+		left: -140px;
+		top: -10px;
+		width: 88px;
+		height: 88px;
 
-  &__title-stars {
-    position: absolute;
-    left: -140px;
-    top: -10px;
-    width: 88px;
-    height: 88px;
+		@include breakpoint(1200px) {
+			left: -100px;
+			top: -30px;
+			width: 61px;
+			height: 61px;
+		}
+		@include breakpoint(768px) {
+			left: 68px;
+			top: -18px;
+			width: 38px;
+			height: 38px;
+		}
+	}
 
-    @include breakpoint(1200px) {
-      left: -100px;
-      top: -30px;
-      width: 61px;
-      height: 61px;
-    }
-    @include breakpoint(768px) {
-      left: 68px;
-      top: -18px;
-      width: 38px;
-      height: 38px;
-    }
-  }
+	&__title-stars > svg:nth-child(1) {
+		position: absolute;
+		left: 20px;
+		top: 0px;
 
-  &__title-stars > svg:nth-child(1) {
-    position: absolute;
-    left: 20px;
-    top: 0px;
+		@include breakpoint(1200px) {
+			width: 26px;
+			height: 26px;
+		}
+		@include breakpoint(768px) {
+			width: 17px;
+			height: 17px;
+		}
+	}
 
-    @include breakpoint(1200px) {
-      width: 26px;
-      height: 26px;
-    }
-    @include breakpoint(768px) {
-      width: 17px;
-      height: 17px;
-    }
-  }
+	&__title-stars > svg:nth-child(2) {
+		position: absolute;
+		left: 0px;
+		bottom: 10px;
 
-  &__title-stars > svg:nth-child(2) {
-    position: absolute;
-    left: 0px;
-    bottom: 10px;
+		@include breakpoint(1200px) {
+			width: 13px;
+			height: 13px;
+		}
+		@include breakpoint(768px) {
+			width: 9px;
+			height: 9px;
+		}
+	}
 
-    @include breakpoint(1200px) {
-      width: 13px;
-      height: 13px;
-    }
-    @include breakpoint(768px) {
-      width: 9px;
-      height: 9px;
-    }
-  }
+	&__title-stars > svg:nth-child(3) {
+		position: absolute;
+		right: 0px;
+		bottom: 0px;
 
-  &__title-stars > svg:nth-child(3) {
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
+		@include breakpoint(1200px) {
+			width: 13px;
+			height: 13px;
+		}
+		@include breakpoint(768px) {
+			width: 9px;
+			height: 9px;
+		}
+	}
 
-    @include breakpoint(1200px) {
-      width: 13px;
-      height: 13px;
-    }
-    @include breakpoint(768px) {
-      width: 9px;
-      height: 9px;
-    }
-  }
+	&__list {
+		max-width: 1000px;
+		margin: 0 auto;
 
-  &__list {
-    max-width: 1000px;
-    margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 23px;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 23px;
+		margin-bottom: 64px;
 
-    margin-bottom: 64px;
+		@include breakpoint(1200px) {
+			max-width: 900px;
+			gap: 12px;
 
-    @include breakpoint(1200px) {
-      max-width: 900px;
-      gap: 12px;
+			margin-bottom: 44px;
+		}
+		@include breakpoint(768px) {
+			margin-bottom: 24px;
+		}
 
-      margin-bottom: 44px;
-    }
-    @include breakpoint(768px) {
-      margin-bottom: 24px;
-    }
+		& .list__item {
+			padding: 8px 26px;
 
-    & .list__item {
-      padding: 10px 29px;
+			font-size: 20px;
+			line-height: 40px;
 
-      font-size: 22px;
-      line-height: 40px;
+			background: #182632;
+			border-radius: 100px;
+			font-weight: 500;
 
-      background: #182632;
-      border-radius: 100px;
-      font-weight: 500;
+			@include breakpoint(1200px) {
+				padding: 8px 24px;
 
-      @include breakpoint(1200px) {
-        padding: 8px 24px;
+				font-size: 16px;
+				line-height: 32px;
+			}
+			@include breakpoint(768px) {
+				padding: 12px 14px;
 
-        font-size: 16px;
-        line-height: 32px;
-      }
-      @include breakpoint(768px) {
-        padding: 12px 14px;
+				font-size: 14px;
+				line-height: 16px;
+			}
 
-        font-size: 14px;
-        line-height: 16px;
-      }
+			&.investment {
+				color: #ffb4d3;
+			}
 
-      &.investment {
-        color: #ffb4d3;
-      }
+			&.startup {
+				color: #ffc24c;
+			}
 
-      &.startup {
-        color: #ffc24c;
-      }
+			&.service {
+				color: #d387f7;
+			}
 
-      &.service {
-        color: #d387f7;
-      }
+			&.community {
+				color: #77e6ff;
+			}
 
-      &.community {
-        color: #77e6ff;
-      }
+			&.impact {
+				color: #23c9de;
+			}
 
-      &.impact {
-        color: #23c9de;
-      }
+			&.defi {
+				color: #ff9393;
+			}
 
-      &.defi {
-        color: #ff9393;
-      }
+			&.more {
+				position: relative;
+				padding-left: 58.36px;
 
-      &.more {
-        position: relative;
-        padding-left: 58.36px;
+				color: #707f8d;
 
-        color: #707f8d;
+				@include breakpoint(1200px) {
+					padding-left: 46px;
+				}
+				@include breakpoint(768px) {
+					padding-left: 32.5px;
+				}
 
-        @include breakpoint(1200px) {
-          padding-left: 46px;
-        }
-        @include breakpoint(768px) {
-          padding-left: 32.5px;
-        }
+				&::after {
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					left: 29px;
+					content: '';
 
-        &::after {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          left: 29px;
-          content: '';
+					width: 18.36px;
+					height: 18.36px;
 
-          width: 18.36px;
-          height: 18.36px;
+					background: url('../images/ready/star.svg');
+					background-repeat: no-repeat;
+					background-size: cover;
 
-          background: url('../images/ready/star.svg');
-          background-repeat: no-repeat;
-          background-size: cover;
+					@include breakpoint(1200px) {
+						width: 14px;
+						height: 14px;
 
-          @include breakpoint(1200px) {
-            width: 14px;
-            height: 14px;
+						left: 24px;
+					}
+					@include breakpoint(768px) {
+						width: 10px;
+						height: 10px;
 
-            left: 24px;
-          }
-          @include breakpoint(768px) {
-            width: 10px;
-            height: 10px;
+						left: 14.5px;
+					}
+				}
+			}
+		}
+	}
 
-            left: 14.5px;
-          }
-        }
-      }
-    }
-  }
+	&__block {
+		border-radius: 30px;
+		background: #010001;
+		width: 100%;
+		height: 493px;
+		overflow: hidden;
 
-  &__block {
-    border-radius: 30px;
-    background: #010001;
-    width: 100%;
-    height: 493px;
-    overflow: hidden;
+		@include breakpoint(1200px) {
+			max-width: 100%;
+			height: 318px;
+			border-radius: 20px;
+		}
+	}
 
-    @include breakpoint(1200px) {
-      max-width: 100%;
-      height: 318px;
-      border-radius: 20px;
-    }
-  }
+	&__columns {
+		display: flex;
+		justify-content: center;
+		gap: 17px;
+		transform: rotate(-2deg);
+	}
 
-  &__columns {
-    display: flex;
-    justify-content: center;
-    gap: 17px;
-    transform: rotate(-2deg);
-  }
+	&__column {
+		animation: 100s infinite linear alternate moveColumns;
 
-  &__column {
-    animation: 100s infinite linear alternate moveColumns;
+		&:nth-child(2) {
+			animation: 100s infinite linear alternate-reverse moveColumnAlt;
+		}
 
-    &:nth-child(2) {
-      animation: 100s infinite linear alternate-reverse moveColumnAlt;
-    }
+		&:nth-child(4) {
+			animation: 100s infinite linear alternate-reverse moveColumnAlt;
+		}
+	}
 
-    &:nth-child(4) {
-      animation: 100s infinite linear alternate-reverse moveColumnAlt;
-    }
-  }
+	&__img {
+		& img {
+			width: 242px;
+			height: 242px;
 
-  &__img {
-    & img {
-      width: 242px;
-      height: 242px;
+			@include breakpoint(1200px) {
+				width: 156px;
+				height: 156px;
+			}
+		}
 
-      @include breakpoint(1200px) {
-        width: 156px;
-        height: 156px;
-      }
-    }
-
-    &:not(:last-child) {
-      margin-bottom: 15px;
-    }
-  }
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
 }
 
 @keyframes moveColumns {

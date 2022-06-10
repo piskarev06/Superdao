@@ -1,176 +1,173 @@
 .idea {
-  padding-bottom: 200px;
+	padding-bottom: 200px;
 
-  @include breakpoint(1200px) {
-    padding-bottom: 120px;
-  }
-  @include breakpoint(768px) {
-    padding-bottom: 80px;
-  }
+	@include breakpoint(1200px) {
+		padding-bottom: 120px;
+	}
+	@include breakpoint(768px) {
+		padding-bottom: 80px;
+	}
 
-  &__inner {
-    position: relative;
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+		text-align: center;
+	}
 
-    text-align: center;
-  }
+	&__title {
+		margin-bottom: 16px;
 
-  &__title {
-    margin-bottom: 16px;
+		@include breakpoint(1200px) {
+			margin-bottom: 20px;
+		}
+		@include breakpoint(768px) {
+			margin-bottom: 12px;
+		}
+		@include breakpoint(440px) {
+			max-width: 250px;
+		}
+	}
 
-    @include breakpoint(1200px) {
-      margin-bottom: 20px;
-    }
-    @include breakpoint(768px) {
-      margin-bottom: 12px;
-    }
-    @include breakpoint(440px) {
-      max-width: 250px;
-    }
-  }
+	&__text {
+		font-family: 'Loos Wide';
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 74px;
+		text-align: center;
 
-  &__text {
-    font-family: 'Loos Wide';
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 74px;
-    text-align: center;
+		color: #495663;
 
-    color: #495663;
+		@include breakpoint(1200px) {
+			font-size: 30px;
+			line-height: 50px;
+		}
+		@include breakpoint(768px) {
+			max-width: 240px;
 
-    @include breakpoint(1200px) {
-      font-size: 30px;
-      line-height: 50px;
-    }
-    @include breakpoint(768px) {
-      max-width: 240px;
+			font-size: 20px;
+			line-height: 28px;
+		}
+	}
 
-      font-size: 20px;
-      line-height: 28px;
-    }
-  }
+	&__btns {
+		margin-top: 52px;
 
-  &__btns {
-    margin-top: 52px;
+		display: flex;
+		align-items: center;
+		gap: 32px;
 
-    display: flex;
-    align-items: center;
-    gap: 32px;
+		@include breakpoint(1200px) {
+			margin-top: 42px;
 
-    @include breakpoint(1200px) {
-      margin-top: 42px;
+			gap: 24px;
+		}
+		@include breakpoint(768px) {
+			flex-direction: column;
+			gap: 16px;
 
-      gap: 24px;
-    }
-    @include breakpoint(768px) {
-      flex-direction: column;
-      gap: 16px;
+			margin-top: 32px;
+		}
+	}
 
-      margin-top: 32px;
-    }
-  }
+	&__btn {
+		@include breakpoint(768px) {
+			& svg {
+				width: 44px;
+				height: 44px;
+			}
+		}
 
-  &__btn {
-    @include breakpoint(768px) {
-      & svg {
-        width: 44px;
-        height: 44px;
-      }
-    }
+		&.telegram {
+			padding-right: 49px;
 
-    &.telegram {
-      padding-right: 49px;
+			background: $yellow;
+			box-shadow: 0px 8px 40px rgba(255, 200, 3, 0.2);
 
-      background: $yellow;
-      box-shadow: 0px 8px 40px rgba(255, 200, 3, 0.2);
+			transition: all 0.3s linear;
 
-      transition: all 0.3s linear;
+			@include breakpoint(768px) {
+				padding-right: 28px;
+			}
 
-      @include breakpoint(768px) {
-        padding-right: 28px;
-      }
+			&:hover {
+				background: #ffdc25;
+				box-shadow: 0px 25px 60px rgba(255, 200, 3, 0.2);
+			}
 
-      &:hover {
-        background: #ffdc25;
-        box-shadow: 0px 25px 60px rgba(255, 200, 3, 0.2);
-      }
+			&:active {
+				box-shadow: unset;
+				background: #e3b200;
+			}
+		}
 
-      &:active {
-        box-shadow: unset;
-        background: #e3b200;
-      }
-    }
+		&.email {
+			padding-right: 36px;
 
-    &.email {
-      padding-right: 36px;
+			background: $purple-light;
+			box-shadow: 0px 8px 40px rgba(226, 193, 249, 0.2);
 
-      background: $purple-light;
-      box-shadow: 0px 8px 40px rgba(226, 193, 249, 0.2);
+			transition: all 0.3s linear;
 
-      transition: all 0.3s linear;
+			@include breakpoint(768px) {
+				padding-right: 19px;
+			}
 
-      @include breakpoint(768px) {
-        padding-right: 19px;
-      }
+			&:hover {
+				box-shadow: 0px 25px 60px rgba(226, 193, 249, 0.2);
+			}
 
-      &:hover {
-        box-shadow: 0px 25px 60px rgba(226, 193, 249, 0.2);
-      }
+			&:active {
+				box-shadow: unset;
+				background: #cda8e8;
+			}
+		}
+	}
 
-      &:active {
-        box-shadow: unset;
-        background: #cda8e8;
-      }
-    }
-  }
+	&__block {
+		display: flex;
+		flex-direction: column;
 
-  &__block {
-    display: flex;
-    flex-direction: column;
+		text-align: left;
 
-    text-align: left;
+		margin-left: 16px;
+	}
 
-    margin-left: 16px;
-  }
+	&__strong {
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 24px;
 
-  &__strong {
-    font-family: 'Loos Wide';
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
+		color: #4d3705;
 
-    color: #4d3705;
+		@include breakpoint(1200px) {
+			font-size: 18px;
+			line-height: 22px;
+		}
+		@include breakpoint(768px) {
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
 
-    @include breakpoint(1200px) {
-      font-size: 18px;
-      line-height: 22px;
-    }
-    @include breakpoint(768px) {
-      font-size: 16px;
-      line-height: 20px;
-    }
-  }
+	&__contacts {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
 
-  &__contacts {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+		color: #4d3705;
 
-    color: #4d3705;
+		opacity: 0.7;
 
-    opacity: 0.7;
-
-    @include breakpoint(1200px) {
-      font-size: 14px;
-      line-height: 17px;
-    }
-    @include breakpoint(768px) {
-      font-size: 12px;
-      line-height: 15px;
-    }
-  }
+		@include breakpoint(1200px) {
+			font-size: 14px;
+			line-height: 17px;
+		}
+		@include breakpoint(768px) {
+			font-size: 12px;
+			line-height: 15px;
+		}
+	}
 }

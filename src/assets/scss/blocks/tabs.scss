@@ -1,194 +1,226 @@
 .tabs {
-  &__inner {
-    position: relative;
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+	&__title {
+		display: inline-block;
 
-  &__title {
-    display: inline-block;
+		position: relative;
+		margin-bottom: 42px;
 
-    position: relative;
-    margin-bottom: 42px;
+		@include breakpoint(1200px) {
+			margin-bottom: 32px;
+		}
+		@include breakpoint(768px) {
+			margin-bottom: 25px;
+		}
+		@include breakpoint(440px) {
+			max-width: 260px;
+		}
+	}
 
-    @include breakpoint(1200px) {
-      margin-bottom: 32px;
-    }
-    @include breakpoint(768px) {
-      margin-bottom: 25px;
-    }
-    @include breakpoint(440px) {
-      max-width: 260px;
-    }
-  }
+	&__title-stars {
+		position: absolute;
+		width: 66px;
+		height: 53px;
+		left: -51px;
+		top: -40px;
 
-  &__title-stars {
-    position: absolute;
-    width: 66px;
-    height: 53px;
-    left: -51px;
-    top: -40px;
+		@include breakpoint(1200px) {
+			transform: scale(0.7);
+		}
+		@include breakpoint(768px) {
+			transform: scale(0.5);
+		}
+	}
 
-    @include breakpoint(1200px) {
-      transform: scale(0.7);
-    }
-    @include breakpoint(768px) {
-      transform: scale(0.5);
-    }
-  }
+	&__title-stars svg:nth-child(1) {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
 
-  &__title-stars svg:nth-child(1) {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
+	&__title-stars svg:nth-child(2) {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
 
-  &__title-stars svg:nth-child(2) {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-  }
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 0px;
 
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 34px;
+		margin-bottom: 46px;
 
-    margin-bottom: 46px;
+		@include breakpoint(1200px) {
+			margin-bottom: 28px;
 
-    @include breakpoint(1200px) {
-      margin-bottom: 28px;
+			gap: 12px 27px;
+		}
+		@include breakpoint(768px) {
+			gap: 0;
+			max-width: 350px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		@include breakpoint(380px) {
+			gap: 0 7.5px;
+		}
+	}
 
-      gap: 12px 27px;
-    }
-    @include breakpoint(768px) {
-      gap: 12px 16px;
-    }
-  }
+	&__item {
+		font-size: 22px;
+		line-height: 40px;
+		padding: 10px 20px;
 
-  &__item {
-    font-size: 22px;
-    line-height: 40px;
+		cursor: pointer;
 
-    cursor: pointer;
+		color: #8395a7;
+		transition: all 0.3s linear;
+		font-weight: 500;
 
-    color: #8395a7;
-    transition: all 0.3s linear;
-    font-weight: 500;
+		&.active,
+		&:hover {
+			color: $yellow;
+		}
 
-    &.active,
-    &:hover {
-      color: $yellow;
-    }
+		@include breakpoint(1200px) {
+			font-size: 16px;
+			line-height: 28px;
+			padding: 10px 13.5px;
+		}
+		@include breakpoint(768px) {
+			font-size: 14px;
+			line-height: 16px;
+			padding: 6px 8px;
+		}
+		@include breakpoint(380px) {
+			padding: 6px 0px;
+		}
+	}
 
-    @include breakpoint(1200px) {
-      font-size: 16px;
-      line-height: 28px;
-    }
-    @include breakpoint(768px) {
-      font-size: 14px;
-      line-height: 16px;
-    }
-  }
+	// &__item:nth-child(1) {
+	// 	@include breakpoint(420px) {
+	// 		padding: 6px 8px 6px 0;
+	// 	}
+	// }
+	// &__item:nth-child(3) {
+	// 	@include breakpoint(420px) {
+	// 		padding: 6px 0px 6px 0;
+	// 	}
+	// }
+	// &__item:nth-child(10) {
+	// 	@include breakpoint(420px) {
+	// 		padding: 6px 0px 6px 8px;
+	// 	}
+	// }
 
-  &__content {
-    & .content__item.active {
-      & img {
-        display: block;
-        opacity: 1;
-        visibility: visible;
-      }
-    }
+	&__content {
+		& .content__item.active {
+			& img {
+				display: block;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
 
-    & img {
-      width: 100%;
+		& img {
+			width: 100%;
 
-      display: none;
-      opacity: 0;
-      visibility: hidden;
+			display: none;
+			opacity: 0;
+			visibility: hidden;
 
-      border-radius: 20px;
+			border-radius: 20px;
 
-      transition: all 0.3s linear;
-      animation: fadein 2s;
+			transition: all 0.3s linear;
+			animation: fadein 2s;
 
-      @include breakpoint(1200px) {
-        border-radius: 12px;
-      }
-      @include breakpoint(768px) {
-        border-radius: 8px;
-      }
-      @include breakpoint(440px) {
-        border-radius: 6.5px;
-      }
-    }
-  }
+			@include breakpoint(1200px) {
+				border-radius: 12px;
+			}
+			@include breakpoint(768px) {
+				border-radius: 8px;
+			}
+			@include breakpoint(440px) {
+				border-radius: 6.5px;
+			}
+		}
+	}
 
-  &__dot {
-    display: none;
+	&__dot {
+		display: none;
 
-    @include breakpoint(768px) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+		@include breakpoint(768px) {
+			width: 3px;
+			height: 3px;
+			border-radius: 50%;
+			background: #8395a7;
+			opacity: 0.6;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		@include breakpoint(420px) {
+			width: 2px;
+			height: 2px;
+		}
+	}
 
-      transform: translateY(-11px);
+	&__btn {
+		position: relative;
 
-      color: #8395a7;
-    }
-  }
+		padding: 22px 48px;
+		margin-top: 40px;
 
-  &__btn {
-    position: relative;
+		font-size: 24px;
+		line-height: 36px;
 
-    padding: 22px 48px;
-    margin-top: 40px;
+		color: $yellow;
+		text-shadow: 0px 2px 25px rgba(0, 0, 0, 0.6);
 
-    font-size: 24px;
-    line-height: 36px;
+		background: #252b36;
+		border-radius: 16px;
+		box-shadow: unset;
 
-    color: $yellow;
-    text-shadow: 0px 2px 25px rgba(0, 0, 0, 0.6);
+		transition: all 0.3s linear;
 
-    background: #252b36;
-    border-radius: 16px;
-    box-shadow: unset;
+		&:hover {
+			background: #2f3643;
+		}
 
-    transition: all 0.3s linear;
+		&:active {
+			background: #1f252f;
+		}
 
-    &:hover {
-      background: #2f3643;
-    }
+		& svg {
+			margin-left: 20px;
 
-    &:active {
-      background: #1f252f;
-    }
+			@include breakpoint(1200px) {
+				margin-left: 16px;
+			}
+			@include breakpoint(768px) {
+				margin-left: 12px;
+			}
+		}
 
-    & svg {
-      margin-left: 20px;
+		@include breakpoint(1200px) {
+			padding: 8px 20px;
 
-      @include breakpoint(1200px) {
-        margin-left: 16px;
-      }
-      @include breakpoint(768px) {
-        margin-left: 12px;
-      }
-    }
+			margin-top: 24px;
 
-    @include breakpoint(1200px) {
-      padding: 8px 20px;
+			font-size: 18px;
 
-      margin-top: 24px;
-
-      font-size: 18px;
-
-      border-radius: 12px;
-    }
-    @include breakpoint(768px) {
-      margin-top: 20px;
+			border-radius: 12px;
+		}
+		@include breakpoint(768px) {
+			margin-top: 20px;
 
       font-size: 14px;
       line-height: 28px;
