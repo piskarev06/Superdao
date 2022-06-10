@@ -20,10 +20,20 @@
 
 		@include breakpoint(1200px) {
 			padding: 36px 48px 48px;
+			max-width: 736px;
+			width: 100%;
+			margin: 0 auto;
 		}
 		@include breakpoint(768px) {
 			padding: 28px 24px 24px;
-			text-align: center;
+			max-width: 400px;
+
+			background: #13202b;
+			border: 1px solid #2a3744;
+			border-radius: 22px;
+		}
+		@include breakpoint(500px) {
+			width: 100%;
 		}
 	}
 
@@ -58,11 +68,17 @@
 
 			margin-bottom: 48px;
 		}
-		@include breakpoint(1200px) {
+		@include breakpoint(768px) {
 			font-size: 19px;
 			line-height: 28px;
 
 			margin-bottom: 24px;
+		}
+		@include breakpoint(500px) {
+			max-width: 240px;
+
+			margin-left: auto;
+			margin-right: auto;
 		}
 	}
 
@@ -74,6 +90,8 @@
 		@include breakpoint(1200px) {
 			max-width: 515px;
 			width: 100%;
+			margin-right: auto;
+			margin-left: auto;
 		}
 		@include breakpoint(768px) {
 			flex-direction: column;
@@ -98,10 +116,24 @@
 		&:active {
 			background: #c299fa;
 		}
+		@include breakpoint(1200px) {
+			font-size: 20px;
+			line-height: 36px;
+			width: 167px;
+			height: 60px;
+		}
+		@include breakpoint(768px) {
+			font-size: 14px;
+			line-height: 24px;
+			width: 100%;
+			height: 44px;
+			border-radius: 10px;
+		}
 	}
 
 	&__input {
-		width: 506px;
+		max-width: 506px;
+		width: 100%;
 		height: 68px;
 		padding: 21px 20px 20px 28px;
 
@@ -120,9 +152,18 @@
 
 		@include breakpoint(1200px) {
 			padding: 18px 24px;
+			max-width: 324px;
+			height: 60px;
+			font-size: 20px;
+			line-height: 24px;
 		}
 		@include breakpoint(768px) {
 			padding: 13px 18px;
+			width: 100%;
+			height: 44px;
+			border-radius: 10px;
+			max-width: 100%;
+			width: 100%;
 		}
 
 		&:focus {
