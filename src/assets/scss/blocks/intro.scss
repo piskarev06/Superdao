@@ -88,13 +88,14 @@
 	}
 
 	&__btn {
+		font-family: 'Montserrat';
 		margin-top: 56px;
 
 		font-size: 20px;
 		line-height: 36px;
 
 		font-weight: 700;
-		transition: all 0.3 ease;
+		transition: all 0.3s ease;
 
 		&:hover {
 			background: #ffda3e;

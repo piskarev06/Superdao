@@ -724,7 +724,9 @@
     <!-- Main -->
     <main class="main">
 <section class="intro">
-  <video class="intro__video" autoplay loop src="assets/video/anim-intro.mp4"></video>
+  <!-- <video class="intro__video" autoplay loop src="assets/video/anim-intro.mp4"></video> -->
+  <script class="intro__motion" src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets6.lottiefiles.com/packages/lf20_owfna26w.json"  background="rgba(255, 255, 255, 0)"  speed="1"  style="width: 100%; height: 100%;"  loop  autoplay></lottie-player>
   <div class="glow glow-1"></div>
   <div class="container">
     <div class="intro__inner paddings">
@@ -883,9 +885,9 @@
         </div>
         Designed <br class="br-designed"> for the full journey</h2>
       <p class="word__text">
-        <span class="word__span">Organisation design, </span> <span class="word__span">Smart contract development, </span> 
-        <span class="word__span">Fundraising, </span> <span class="word__span">Launch marketing, </span> <span class="word__span">Member onboarding, </span>
-        <span class="word__span">Contributor management, </span><span class="word__span"> DAO operations</span>
+        <span class="word__span">Organisation design</span> <span class="word__span">Smart contract development</span> 
+        <span class="word__span">Fundraising</span> <span class="word__span">Launch marketing</span> <span class="word__span">Member onboarding</span>
+        <span class="word__span">Contributor management</span><span class="word__span"> DAO operations</span>
       </p> 
     </div>
     <!-- word__inner -->
@@ -921,7 +923,7 @@
           <div class="tabs__dot"></div>
           <li class="tabs__item" data-btn="5">Governance</li>
           <div class="tabs__dot"></div>
-          <li class="tabs__item" data-btn="6">+ App store</li>
+          <li class="tabs__item" data-btn="6">App store</li>
         </ul>
 
         <div class="tabs__content">
@@ -1221,31 +1223,36 @@
       <div class="glow"></div>
       <h2 class="brands__title h2">Backed by</h2>
       <div class="brands__list">
-          <div class="brands__row-1">
+        <div class="brands__row-1">
+            <img src="assets/images/brands/0.png" alt="0">
             <img src="assets/images/brands/1.png" alt="01">
             <img src="assets/images/brands/2.png" alt="02">
             <img src="assets/images/brands/3.png" alt="03">
             <img src="assets/images/brands/4.png" alt="04">
             <img src="assets/images/brands/5.png" alt="05">
             <img src="assets/images/brands/6.png" alt="06">            
-            <img src="assets/images/brands/1.png" alt="01">                    
-            <img src="assets/images/brands/2.png" alt="02">
-            <img src="assets/images/brands/3.png" alt="03"> 
-            <img src="assets/images/brands/4.png" alt="04">
-            <img src="assets/images/brands/5.png" alt="05">
-            <img src="assets/images/brands/6.png" alt="06">
-            <img src="assets/images/brands/1.png" alt="01">
-            <img src="assets/images/brands/2.png" alt="02">
-            <img src="assets/images/brands/3.png" alt="03">
-            <img src="assets/images/brands/4.png" alt="04">
-            <img src="assets/images/brands/5.png" alt="05"> 
-            <img src="assets/images/brands/6.png" alt="06">
+            <img src="assets/images/brands/0.png" alt="0">
             <img src="assets/images/brands/1.png" alt="01">
             <img src="assets/images/brands/2.png" alt="02">
             <img src="assets/images/brands/3.png" alt="03">
             <img src="assets/images/brands/4.png" alt="04">
             <img src="assets/images/brands/5.png" alt="05">
-            <img src="assets/images/brands/6.png" alt="06">
+            <img src="assets/images/brands/6.png" alt="06">            
+            <img src="assets/images/brands/0.png" alt="0">
+            <img src="assets/images/brands/1.png" alt="01">
+            <img src="assets/images/brands/2.png" alt="02">
+            <img src="assets/images/brands/3.png" alt="03">
+            <img src="assets/images/brands/4.png" alt="04">
+            <img src="assets/images/brands/5.png" alt="05">
+            <img src="assets/images/brands/6.png" alt="06">            
+            <img src="assets/images/brands/0.png" alt="0">
+            <img src="assets/images/brands/1.png" alt="01">
+            <img src="assets/images/brands/2.png" alt="02">
+            <img src="assets/images/brands/3.png" alt="03">
+            <img src="assets/images/brands/4.png" alt="04">
+            <img src="assets/images/brands/5.png" alt="05">
+            <img src="assets/images/brands/6.png" alt="06">            
+            
           </div>
 
           <div class="brands__row-2">
@@ -1307,8 +1314,8 @@
         <li class="list__item decrypt">
           <a href="" class="list__wrapper">
             <div class="list__block">
-              <div class="list__img">
-                <img src="assets/images/press/03.svg" alt="decrypt" />
+              <div class="list__img img1">
+                <img  src="assets/images/press/03.svg" alt="decrypt" />
               </div>
 
               <h4 class="list__title">
@@ -1325,7 +1332,7 @@
         <li class="list__item block">
           <a href="" class="list__wrapper">
             <div class="list__block">
-              <div class="list__img">
+              <div class="list__img img2">
                 <img src="assets/images/press/02.svg" alt="blockworks" />
               </div>
 
@@ -1344,7 +1351,7 @@
         <li class="list__item tech">
           <a href="" class="list__wrapper">
             <div class="list__block">
-              <div class="list__img">
+              <div class="list__img img3">
                 <img src="assets/images/press/01.svg" alt="techcrunch" />
               </div>
 
@@ -1404,7 +1411,7 @@
               <strong class="list__name">The Pomp Podcast</strong>
               <span class="list__span">by Anthony Pompliano</span>
             </div>
-            <span class="list__link">Listen on Spotify</span>
+            <span class="list__link">Listen</span>
           </a>
         </li>
 
@@ -1421,7 +1428,7 @@
               <strong class="list__name">The Unstoppable Podcast</strong>
               <span class="list__span">by Josh Gordon</span>
             </div>
-            <span class="list__link">Watch on Youtube</span></a
+            <span class="list__link">Watch</span></a
           >
         </li>
 
@@ -1436,7 +1443,7 @@
               <strong class="list__name">Zima Red</strong>
               <span class="list__span">by Andrew Steinwold</span>
             </div>
-            <span class="list__link">Listen on Spotify</span>
+            <span class="list__link">Listen</span>
           </a>
         </li>
       </ul>

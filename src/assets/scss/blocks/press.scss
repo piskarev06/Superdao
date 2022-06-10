@@ -143,7 +143,7 @@
 
 		& .list {
 			&__wrapper {
-				padding: 42px 28px 32px;
+				padding: 40px 20px 20px;
 				height: 100%;
 
 				display: flex;
@@ -151,7 +151,7 @@
 				justify-content: space-between;
 
 				@include breakpoint(1200px) {
-					padding: 35px 20px 20px;
+					padding: 29px 20px 20px;
 				}
 			}
 
@@ -208,10 +208,10 @@
 					}
 
 					& .list__wrapper {
-						padding: 31px 28px 32px;
+						padding: 31px 20px 20px;
 
 						@include breakpoint(1200px) {
-							padding: 27.49px 20px 20px;
+							padding: 24px 20px 20px;
 						}
 					}
 
@@ -297,5 +297,52 @@
 				}
 			}
 		}
+	}
+}
+
+.img1 > img {
+	width: 120px;
+	@include breakpoint(1200px) {
+		width: 91px;
+	}
+	@include breakpoint(768px) {
+		width: 105px;
+	}
+}
+.img2 > img {
+	width: 140px;
+	@include breakpoint(1200px) {
+		width: 104px;
+	}
+	@include breakpoint(768px) {
+		width: 127px;
+	}
+}
+.img3 > img {
+	width: 159px;
+	@include breakpoint(1200px) {
+		width: 126px;
+	}
+	@include breakpoint(768px) {
+		width: 142px;
+	}
+}
+
+.img1 {
+	margin-bottom: 21px !important;
+	@include breakpoint(1200px) {
+		margin-bottom: 16px !important;
+	}
+}
+.img2 {
+	margin-bottom: 25px !important;
+	@include breakpoint(1200px) {
+		margin-bottom: 14px !important;
+	}
+}
+.img3 {
+	margin-bottom: 25px !important;
+	@include breakpoint(1200px) {
+		margin-bottom: 14px !important;
 	}
 }
