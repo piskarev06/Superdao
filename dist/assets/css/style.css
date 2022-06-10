@@ -498,6 +498,16 @@ a:focus {
     }
 }
 
+.footer__logo img {
+    width: 253px;
+}
+
+@media (max-width: 1200px) {
+    .footer__logo img {
+        width: 170px;
+    }
+}
+
 @media (max-width: 768px) {
     .footer__logo img {
         width: 127px;

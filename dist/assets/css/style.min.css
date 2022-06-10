@@ -480,14 +480,21 @@ a:focus {
 @media (max-width: 768px) {
   .footer__inner {
     flex-direction: column;
-    gap: 32px;
+    gap: 20px;
   }
 }
 .footer__logo img {
   width: 253px;
+  margin-bottom: 7px;
+}
+@media (max-width: 1200px) {
+  .footer__logo img {
+    width: 170px;
+  }
 }
 @media (max-width: 768px) {
   .footer__logo img {
+    margin-bottom: 0px;
     width: 127px;
     height: 21.1px;
   }
