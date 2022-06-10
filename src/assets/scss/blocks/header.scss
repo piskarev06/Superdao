@@ -1,4 +1,8 @@
 .header {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+
   padding: 30px 0;
 
   background: linear-gradient(180deg, #0a1117 0%, rgba(10, 17, 23, 0) 100%);
@@ -201,8 +205,7 @@
     padding: 20px 0;
     margin-bottom: 30px;
   }
-  &__top-logo {
-  }
+
   &__top-cross {
     cursor: pointer;
   }
@@ -301,8 +304,6 @@
     font-size: 0.75em;
 
     cursor: pointer;
-    &:hover {
-    }
   }
 }
 

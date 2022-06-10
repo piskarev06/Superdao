@@ -1,23 +1,25 @@
 .glow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  width: 388px;
-  height: 301px;
+	// display: none;
 
-  background: #5c9dff;
-  filter: blur(644px);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+	width: 388px;
+	height: 301px;
 
-  @include breakpoint(992px) {
-    width: 252px;
-    height: 75px;
+	background: #5c9dff;
+	filter: blur(644px);
 
-    filter: blur(400px);
-  }
-  @include breakpoint(768px) {
-    width: 252px;
-    height: 35px;
-  }
+	@include breakpoint(992px) {
+		width: 252px;
+		height: 75px;
+
+		filter: blur(400px);
+	}
+	@include breakpoint(768px) {
+		width: 252px;
+		height: 35px;
+	}
 }
