@@ -1,26 +1,26 @@
-.glow {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: -1;
-	width: 388px;
-	height: 301px;
+// .glow {
+// 	position: absolute;
+// 	top: 50%;
+// 	left: 50%;
+// 	transform: translate(-50%, -50%);
+// 	z-index: -1;
+// 	width: 388px;
+// 	height: 301px;
 
-	background: #5c9dff;
-	filter: blur(644px);
+// 	background: #5c9dff;
+// 	filter: blur(644px);
 
-	@include breakpoint(992px) {
-		width: 252px;
-		height: 75px;
+// 	@include breakpoint(992px) {
+// 		width: 252px;
+// 		height: 75px;
 
-		filter: blur(400px);
-	}
-	@include breakpoint(768px) {
-		width: 252px;
-		height: 35px;
-	}
-}
+// 		filter: blur(400px);
+// 	}
+// 	@include breakpoint(768px) {
+// 		width: 252px;
+// 		height: 35px;
+// 	}
+// }
 
 // .glow-1 {
 // 	width: 388px;
