@@ -5,10 +5,10 @@
 	&__title {
 		margin-bottom: 44px;
 		@include breakpoint(1200px) {
-			margin-bottom: 16px;
+			margin-bottom: 32px;
 		}
 		@include breakpoint(768px) {
-			margin-bottom: 12px;
+			margin-bottom: 22px;
 		}
 		@include breakpoint(420px) {
 			margin-bottom: 24px;
@@ -28,7 +28,13 @@
 			gap: 9px;
 			margin-bottom: 25px;
 		}
-		@include breakpoint(420px) {
+		// @include breakpoint(600px) {
+		// 	max-width: 270px;
+		// 	flex-wrap: wrap;
+		// 	margin-left: auto;
+		// 	margin-right: auto;
+		// }
+		@include breakpoint(600px) {
 			margin: 0 auto;
 			flex-wrap: wrap;
 			max-width: 280px;
@@ -51,7 +57,7 @@
 			height: 72px;
 			border-radius: 20px;
 		}
-		@include breakpoint(420px) {
+		@include breakpoint(600px) {
 			width: 82px;
 			height: 82px;
 			border-radius: 13px;
@@ -69,6 +75,9 @@
 		@include breakpoint(1200px) {
 			max-width: 760px;
 			gap: 20px 16px;
+		}
+		@include breakpoint(800px) {
+			gap: 20px 12px;
 		}
 		@include breakpoint(768px) {
 			max-width: 450px;

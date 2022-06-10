@@ -13,6 +13,7 @@
 	}
 
 	&__list {
+		overflow-x: hidden;
 		display: flex;
 		flex-direction: column;
 		gap: 40px;
@@ -58,7 +59,7 @@
 		align-items: center;
 		gap: 40px;
 
-		animation: 60s infinite linear moveBrands;
+		animation: 100s infinite linear moveBrands;
 		@include breakpoint(1200px) {
 			gap: 24px;
 		}
@@ -71,7 +72,7 @@
 		align-items: center;
 		gap: 40px;
 
-		animation: 60s infinite linear moveBrandsAlt;
+		animation: 100s infinite linear moveBrandsAlt;
 		@include breakpoint(1200px) {
 			gap: 24px;
 		}
@@ -143,13 +144,13 @@
 		// transform: translateX(-2028px);
 	}
 	100% {
-		transform: translateX(-3000px);
+		transform: translateX(-2000px);
 	}
 }
 
 @keyframes moveBrandsAlt {
 	0% {
-		transform: translateX(-3000px);
+		transform: translateX(-2000px);
 	}
 	50% {
 		// transform: translateX(0px);

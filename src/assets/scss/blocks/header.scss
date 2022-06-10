@@ -1,5 +1,5 @@
 .header {
-	padding: 30px 0;
+	padding: 22px 0;
 	@include breakpoint(768px) {
 		padding: 20px 0;
 	}
@@ -12,9 +12,9 @@
 
 	&__logo {
 		align-self: flex-start;
-		margin-top: 3px;
+		margin-top: 11px;
 		@include breakpoint(1200px) {
-			margin-top: 0px;
+			margin-top: 9px;
 		}
 		@include breakpoint(768px) {
 			margin-top: -5px;
@@ -61,7 +61,7 @@
 
 	&__li-item {
 		transition: all 0.3s ease;
-		padding: 10px;
+		padding: 18px 10px;
 
 		font-weight: 500;
 		font-size: 20px;
@@ -234,7 +234,7 @@
 		flex-direction: column;
 		gap: 12px;
 		width: 100%;
-		margin-bottom: 62px;
+		margin-bottom: 32px;
 	}
 }
 
@@ -390,4 +390,8 @@
 	transition: all 0.3s ease;
 	height: 100%;
 	overflow: auto;
+}
+
+.header__mobile .footer__social {
+	padding: 30px 0;
 }
