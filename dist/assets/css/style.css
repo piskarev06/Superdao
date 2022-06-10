@@ -692,6 +692,7 @@ footer .header__li-item {
 
 .header {
     padding: 30px 0;
+    background: linear-gradient(180deg, #0a1117 0%, rgba(10, 17, 23, 0) 100%);
 }
 
 @media (max-width: 768px) {
@@ -1274,6 +1275,7 @@ footer .header__li-item {
 }
 
 .intro__inner {
+    position: relative;
     height: calc(100vh - 104px);
     display: -ms-flexbox;
     display: flex;
@@ -1382,6 +1384,7 @@ footer .header__li-item {
 }
 
 .ready__inner {
+    position: relative;
     text-align: center;
 }
 
@@ -1738,6 +1741,7 @@ footer .header__li-item {
 }
 
 .word__inner {
+    position: relative;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -1885,6 +1889,7 @@ footer .header__li-item {
 }
 
 .tabs__inner {
+    position: relative;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -2132,6 +2137,7 @@ footer .header__li-item {
 }
 
 .benefits__inner {
+    position: relative;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -2377,6 +2383,10 @@ footer .header__li-item {
         font-size: 12px;
         line-height: 18px;
     }
+}
+
+.digest__inner {
+    position: relative;
 }
 
 .digest__decor {
@@ -2783,6 +2793,10 @@ footer .header__li-item {
     }
 }
 
+.press__inner {
+    position: relative;
+}
+
 .press__top {
     display: -ms-flexbox;
     display: flex;
@@ -3114,6 +3128,10 @@ footer .header__li-item {
     background-size: cover;
 }
 
+.podcast__inner {
+    position: relative;
+}
+
 .podcast__top {
     display: -ms-flexbox;
     display: flex;
@@ -3420,6 +3438,7 @@ footer .header__li-item {
 }
 
 .idea__inner {
+    position: relative;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -3646,6 +3665,40 @@ footer .header__li-item {
     position: absolute;
     left: 30px;
     bottom: 0px;
+}
+
+.glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width: 388px;
+    height: 301px;
+    background: #5c9dff;
+    -webkit-filter: blur(644px);
+    filter: blur(644px);
+}
+
+@media (max-width: 992px) {
+    .glow {
+        width: 252px;
+        height: 75px;
+        -webkit-filter: blur(400px);
+        filter: blur(400px);
+    }
+}
+
+@media (max-width: 768px) {
+    .glow {
+        width: 252px;
+        height: 35px;
+    }
+}
+
+.help__inner {
+    position: relative;
 }
 
 .help__title {
