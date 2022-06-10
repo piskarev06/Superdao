@@ -1,5 +1,7 @@
 .digest {
-  
+  &__inner {
+    position: relative;
+  }
 
   &__decor {
     position: absolute;

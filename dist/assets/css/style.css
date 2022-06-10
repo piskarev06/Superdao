@@ -920,7 +920,7 @@ footer .header__li-item {
     opacity: 0;
     position: fixed;
     top: 0;
-    left: 0;
+    left: -100%;
     z-index: 99999;
     width: 100%;
     min-height: 100vh;
@@ -1143,6 +1143,8 @@ footer .header__li-item {
 }
 
 .opened .header__mobile {
+    top: 0;
+    left: 0;
     visibility: visible;
     opacity: 1;
     transition: all 0.3s ease;
