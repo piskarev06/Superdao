@@ -2964,7 +2964,6 @@ footer .header__li-item {
 }
 
 .glow {
-  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
