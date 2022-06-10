@@ -1,6 +1,7 @@
 .intro {
 	&__inner {
-		height: calc(100vh - 104px);
+		position: relative;
+		min-height: calc(100vh - 104px);
 
 		display: flex;
 		flex-direction: column;

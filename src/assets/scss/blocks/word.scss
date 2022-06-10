@@ -1,119 +1,121 @@
 .word {
-	&__inner {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+  &__inner {
+    position: relative;
 
-		@include breakpoint(768px) {
-			max-width: 400px;
-			margin: 0 auto;
-		}
-	}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-	&__title {
-		display: inline-block;
-		position: relative;
-		margin-bottom: 20px;
+    @include breakpoint(768px) {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
 
-		@include breakpoint(1200px) {
-			margin-bottom: 16px;
-		}
-	}
-	&__title-stars {
-		position: absolute;
-		right: -100px;
-		bottom: 70px;
-		width: 76px;
-		height: 56px;
-		@include breakpoint(1200px) {
-			width: 50px;
-			height: 38px;
-			right: -62px;
-			bottom: 42px;
-		}
-		@include breakpoint(768px) {
-			width: 29px;
-			height: 22px;
-			right: 15px;
-			bottom: 50px;
-		}
-	}
+  &__title {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 20px;
 
-	&__title-stars > svg:nth-child(1) {
-		position: absolute;
+    @include breakpoint(1200px) {
+      margin-bottom: 16px;
+    }
+  }
+  &__title-stars {
+    position: absolute;
+    right: -100px;
+    bottom: 70px;
+    width: 76px;
+    height: 56px;
+    @include breakpoint(1200px) {
+      width: 50px;
+      height: 38px;
+      right: -62px;
+      bottom: 42px;
+    }
+    @include breakpoint(768px) {
+      width: 29px;
+      height: 22px;
+      right: 15px;
+      bottom: 50px;
+    }
+  }
 
-		right: 0px;
-		bottom: 0px;
-		@include breakpoint(1200px) {
-			width: 21px;
-			height: 21px;
-		}
-		@include breakpoint(768px) {
-			width: 13px;
-			height: 13px;
-		}
-	}
+  &__title-stars > svg:nth-child(1) {
+    position: absolute;
 
-	&__title-stars > svg:nth-child(2) {
-		position: absolute;
-		left: 0px;
-		top: 0px;
-		@include breakpoint(1200px) {
-			width: 9px;
-			height: 9px;
-		}
-	}
+    right: 0px;
+    bottom: 0px;
+    @include breakpoint(1200px) {
+      width: 21px;
+      height: 21px;
+    }
+    @include breakpoint(768px) {
+      width: 13px;
+      height: 13px;
+    }
+  }
 
-	&__text {
-		max-width: 1140px;
-		text-align: center;
+  &__title-stars > svg:nth-child(2) {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    @include breakpoint(1200px) {
+      width: 9px;
+      height: 9px;
+    }
+  }
 
-		@include breakpoint(1200px) {
-			max-width: 693px;
-		}
-	}
+  &__text {
+    max-width: 1140px;
+    text-align: center;
 
-	&__span {
-		font-family: 'Loos Wide';
-		font-weight: 700;
-		font-size: 40px;
-		line-height: 74px;
+    @include breakpoint(1200px) {
+      max-width: 693px;
+    }
+  }
 
-		text-align: center;
-		color: #37424d;
+  &__span {
+    font-family: 'Loos Wide';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 74px;
 
-		transition: all 0.3s linear;
+    text-align: center;
+    color: #37424d;
 
-		@include breakpoint(1200px) {
-			font-size: 32px;
-			line-height: 50px;
+    transition: all 0.3s linear;
 
-			&:nth-child(1) {
-				display: block;
-			}
-		}
+    @include breakpoint(1200px) {
+      font-size: 32px;
+      line-height: 50px;
 
-		@include breakpoint(768px) {
-			font-size: 20px;
-			line-height: 36px;
+      &:nth-child(1) {
+        display: block;
+      }
+    }
 
-			display: block;
-			&:nth-child(3),
-			&:nth-child(4) {
-				display: inline;
-			}
-		}
+    @include breakpoint(768px) {
+      font-size: 20px;
+      line-height: 36px;
 
-		&.active {
-			color: #23c9de;
-		}
-	}
+      display: block;
+      &:nth-child(3),
+      &:nth-child(4) {
+        display: inline;
+      }
+    }
+
+    &.active {
+      color: #23c9de;
+    }
+  }
 }
 
 .br-designed {
-	display: none;
-	@include breakpoint(768px) {
-		display: block;
-	}
+  display: none;
+  @include breakpoint(768px) {
+    display: block;
+  }
 }

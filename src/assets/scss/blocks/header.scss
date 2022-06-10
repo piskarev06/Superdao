@@ -1,4 +1,6 @@
 .header {
+	position: relative;
+	z-index: 10;
 	padding: 22px 0;
 	@include breakpoint(768px) {
 		padding: 20px 0;
