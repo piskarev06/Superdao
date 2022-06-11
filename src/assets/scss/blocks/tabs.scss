@@ -173,6 +173,123 @@
 		}
 	}
 
+	&__buttons {
+		margin-top: 44px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 32px;
+
+		@include breakpoint(1200px) {
+			margin-top: 32px;
+			gap: 20px;
+		}
+		@include breakpoint(768px) {
+			gap: 12px;
+			max-width: 200px;
+			flex-wrap: wrap;
+			margin: 0 auto;
+			margin-top: 24px;
+		}
+	}
+	&__button:nth-child(1) {
+		font-family: 'Montserrat';
+
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 36px;
+
+		color: #ffcf01;
+
+		width: 280px;
+		height: 68px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 16px;
+		background: rgba(255, 207, 1, 0.15);
+		border-radius: 16px;
+
+		transition: all 0.3s ease;
+
+		&:hover {
+			background: rgba(255, 207, 1, 0.2);
+		}
+		&:active {
+			background: rgba(255, 207, 1, 0.1);
+		}
+
+		@include breakpoint(1200px) {
+			width: 240px;
+			height: 56px;
+			font-size: 17px;
+			line-height: 36px;
+			border-radius: 12px;
+			gap: 15.5px;
+		}
+		@include breakpoint(768px) {
+			width: 190px;
+			height: 44px;
+			font-size: 15px;
+			line-height: 36px;
+			border-radius: 8px;
+			gap: 11px;
+		}
+	}
+	&__button:nth-child(2) {
+		font-family: 'Montserrat';
+
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 36px;
+
+		color: #4be1f4;
+
+		width: 280px;
+		height: 68px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 16px;
+		background: rgba(75, 225, 244, 0.15);
+		border-radius: 16px;
+
+		transition: all 0.3s ease;
+
+		&:hover {
+			background: rgba(75, 225, 244, 0.2);
+		}
+		&:active {
+			background: rgba(75, 225, 244, 0.1);
+		}
+
+		@include breakpoint(1200px) {
+			width: 240px;
+			height: 56px;
+			font-size: 17px;
+			line-height: 36px;
+			border-radius: 12px;
+			gap: 15.5px;
+		}
+		@include breakpoint(768px) {
+			width: 190px;
+			height: 44px;
+			font-size: 15px;
+			line-height: 36px;
+			border-radius: 8px;
+			gap: 11px;
+		}
+	}
+
+	&__button-svg {
+		@include breakpoint(1200px) {
+			width: 21px;
+		}
+		@include breakpoint(768px) {
+			width: 18px;
+		}
+	}
+
 	&__btn {
 		position: relative;
 
@@ -222,19 +339,19 @@
 		@include breakpoint(768px) {
 			margin-top: 20px;
 
-      font-size: 14px;
-      line-height: 28px;
+			font-size: 14px;
+			line-height: 28px;
 
-      border-radius: 8px;
-    }
-  }
+			border-radius: 8px;
+		}
+	}
 }
 
 @keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
