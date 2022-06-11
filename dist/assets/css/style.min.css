@@ -415,7 +415,7 @@ body {
   font-size: 22px;
   line-height: 27px;
   color: #e5e5e5;
-  background: #10151a;
+  background: #0a1117;
   overflow-x: hidden;
 }
 body._lock {
@@ -460,7 +460,7 @@ a:focus {
 /* Blocks */
 .footer {
   padding: 56px 0;
-  background: #171e25;
+  background: #121e28;
 }
 @media (max-width: 1200px) {
   .footer {
@@ -1076,7 +1076,7 @@ footer .header__li-item {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  color: #10151a;
+  color: #0a1117;
   text-decoration: none;
   transition: all 0.2s linear;
 }
@@ -1089,7 +1089,7 @@ footer .header__li-item {
   padding: 11px 20px;
   font-size: 18px;
   line-height: 22px;
-  color: #10151a;
+  color: #0a1117;
   background: #77e6ff;
   border-radius: 12px;
   box-shadow: unset;
@@ -2089,7 +2089,7 @@ footer .header__li-item {
   border: 2px solid #2a3744;
   border-radius: 30px;
   background: url("../images/lights.svg") center/cover no-repeat;
-  background-color: #171e25;
+  background-color: #121e28;
 }
 @media (max-width: 1200px) {
   .digest__block {
@@ -3139,7 +3139,6 @@ footer .header__li-item {
   font-size: 16px;
   line-height: 20px;
   color: #4d3705;
-  opacity: 0.7;
 }
 @media (max-width: 1200px) {
   .idea__contacts {
@@ -3187,9 +3186,7 @@ footer .header__li-item {
 }
 
 .glow {
-  display: none;
   position: absolute;
-  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
@@ -3198,7 +3195,7 @@ footer .header__li-item {
   background: #5c9dff;
   filter: blur(644px);
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .glow {
     width: 252px;
     height: 75px;
@@ -3207,6 +3204,189 @@ footer .header__li-item {
 }
 @media (max-width: 768px) {
   .glow {
+    width: 252px;
+    height: 35px;
+  }
+}
+
+.glow-1 {
+  width: 388px;
+  height: 131px;
+  top: 55%;
+  left: 50%;
+}
+@media (max-width: 1200px) {
+  .glow-1 {
+    width: 252px;
+    height: 75px;
+    filter: blur(400px);
+  }
+}
+@media (max-width: 768px) {
+  .glow-1 {
+    width: 252px;
+    height: 35px;
+  }
+}
+
+.glow-2 {
+  width: 388px;
+  height: 131px;
+  left: 50%;
+  transform: translate(-50%, 400%);
+}
+@media (max-width: 1200px) {
+  .glow-2 {
+    width: 252px;
+    height: 75px;
+    filter: blur(400px);
+    transform: translate(-50%, 490%);
+  }
+}
+@media (max-width: 768px) {
+  .glow-2 {
+    width: 252px;
+    height: 35px;
+  }
+}
+
+.glow-3 {
+  width: 636px;
+  height: 41px;
+  left: 50%;
+  transform: translate(-50%, 100%);
+}
+@media (max-width: 1200px) {
+  .glow-3 {
+    width: 336px;
+    height: 50px;
+    filter: blur(400px);
+    transform: translate(-50%, 100%);
+  }
+}
+@media (max-width: 768px) {
+  .glow-3 {
+    width: 252px;
+    height: 35px;
+  }
+}
+
+.glow-4 {
+  width: 388px;
+  height: 131px;
+  left: 50%;
+  transform: translate(-50%, 800%);
+}
+@media (max-width: 1200px) {
+  .glow-4 {
+    width: 252px;
+    height: 75px;
+    filter: blur(400px);
+    transform: translate(-50%, 800%);
+  }
+}
+@media (max-width: 768px) {
+  .glow-4 {
+    width: 252px;
+    height: 35px;
+  }
+}
+
+.glow-5 {
+  width: 388px;
+  height: 131px;
+  left: 50%;
+  transform: translate(-50%, 100%);
+}
+@media (max-width: 1200px) {
+  .glow-5 {
+    width: 252px;
+    height: 75px;
+    filter: blur(400px);
+  }
+}
+@media (max-width: 768px) {
+  .glow-5 {
+    width: 252px;
+    height: 35px;
+  }
+}
+
+.glow-6 {
+  width: 388px;
+  height: 131px;
+  left: 50%;
+  transform: translate(-50%, 140%);
+}
+@media (max-width: 1200px) {
+  .glow-6 {
+    width: 252px;
+    height: 75px;
+    filter: blur(400px);
+  }
+}
+@media (max-width: 768px) {
+  .glow-6 {
+    width: 252px;
+    height: 35px;
+  }
+}
+
+.glow-7 {
+  width: 388px;
+  height: 131px;
+  left: 50%;
+  transform: translate(-50%, 140%);
+}
+@media (max-width: 1200px) {
+  .glow-7 {
+    width: 252px;
+    height: 75px;
+    filter: blur(400px);
+  }
+}
+@media (max-width: 768px) {
+  .glow-7 {
+    width: 252px;
+    height: 35px;
+  }
+}
+
+.glow-9 {
+  width: 88px;
+  height: 131px;
+  left: 50%;
+  transform: translate(-50%, 180%);
+}
+@media (max-width: 1200px) {
+  .glow-9 {
+    width: 252px;
+    height: 75px;
+    filter: blur(400px);
+  }
+}
+@media (max-width: 768px) {
+  .glow-9 {
+    width: 252px;
+    height: 35px;
+  }
+}
+
+.glow-10 {
+  width: 88px;
+  height: 131px;
+  left: 50%;
+  transform: translate(-50%, 180%);
+}
+@media (max-width: 1200px) {
+  .glow-10 {
+    width: 252px;
+    height: 75px;
+    filter: blur(400px);
+  }
+}
+@media (max-width: 768px) {
+  .glow-10 {
     width: 252px;
     height: 35px;
   }
