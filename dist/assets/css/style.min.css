@@ -1133,15 +1133,22 @@ footer .header__li-item {
 }
 .intro__video {
   position: absolute;
-  top: calc(50% + 97px);
+  top: calc(50% + 104px);
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, calc(-50% - 104px));
   width: 100%;
-  height: 100%;
+  height: calc(100vh + 104px);
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .intro__video {
-    top: calc(50% + 64px);
+    top: 55%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+  }
+}
+@media (max-width: 600px) {
+  .intro__video {
+    display: none;
   }
 }
 .intro__inner {
@@ -2124,6 +2131,7 @@ footer .header__li-item {
 
 .brands {
   position: relative;
+  overflow: hidden;
 }
 .brands__title {
   margin-bottom: 56px;

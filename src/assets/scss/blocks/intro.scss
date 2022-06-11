@@ -8,14 +8,19 @@
 
   &__video {
     position: absolute;
-    top: calc(50% + 97px);
+    top: calc(50% + 104px);
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, calc(-50% - 104px));
     width: 100%;
-    height: 100%;
+    height: calc(100vh + 104px);
 
-    @include breakpoint(768px) {
-      top: calc(50% + 64px);
+    @include breakpoint(992px) {
+      top: 55%;
+      transform: translate(-50%, -50%);
+      height: 100vh;
+    }
+    @include breakpoint(600px) {
+      display: none;
     }
   }
 
