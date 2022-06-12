@@ -1,9 +1,16 @@
 .intro {
 	position: relative;
-	padding-top: 97px;
+	// padding-top: 97px;
+	position: relative;
+
+	height: calc(100vh - -104px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	@include breakpoint(768px) {
-		padding-top: 64px;
+		height: calc(100vh - -64px);
+		// padding-top: 64px;
 	}
 
 	&__video {
@@ -21,7 +28,7 @@
 
 	&__inner {
 		position: relative;
-		height: calc(100vh - 104px);
+		// height: calc(100vh - 104px);
 		&__video {
 			position: absolute;
 			top: calc(50% + 104px);
