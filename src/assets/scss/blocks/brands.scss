@@ -1,5 +1,6 @@
 .brands {
 	position: relative;
+	overflow-x: hidden;
 
 	&__inner {
 		display: flex;
@@ -69,7 +70,7 @@
 	}
 
 	&__list {
-		overflow-x: hidden;
+		overflow-x: hidden !important;
 		display: flex;
 		flex-direction: column;
 		gap: 40px;
