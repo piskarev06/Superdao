@@ -22,6 +22,9 @@
 		width: 252px;
 		height: 35px;
 	}
+	@include breakpoint(440px) {
+		display: none;
+	}
 }
 
 .glow-1 {

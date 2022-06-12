@@ -36,8 +36,11 @@
 	&__list {
 		display: flex;
 		align-items: center;
-		gap: 36px;
+		gap: 50px;
 
+		@include breakpoint(1600px) {
+			gap: 36px;
+		}
 		@include breakpoint(1200px) {
 			gap: 16px;
 		}
@@ -144,17 +147,17 @@
 }
 
 footer .header__li-dropdown {
-	bottom: 60px;
+	bottom: 68px;
 	left: auto;
 	right: -20px;
 	@include breakpoint(1200px) {
-		transform: scale(0.8);
-		bottom: 40px;
+		transform: scale(0.9);
+		bottom: 55px;
 	}
 	@include breakpoint(768px) {
 		right: -45px;
-		transform: scale(0.7);
-		bottom: 30px;
+		transform: scale(0.75);
+		bottom: 40px;
 	}
 }
 footer .header__li-item {

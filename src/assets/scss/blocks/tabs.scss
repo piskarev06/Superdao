@@ -9,7 +9,7 @@
 		display: inline-block;
 
 		position: relative;
-		margin-bottom: 42px;
+		margin-bottom: 32px;
 
 		@include breakpoint(1200px) {
 			margin-bottom: 32px;
@@ -56,12 +56,12 @@
 		align-items: center;
 		gap: 0px;
 
-		margin-bottom: 46px;
+		margin-bottom: 36px;
 
 		@include breakpoint(1200px) {
 			margin-bottom: 28px;
 
-			gap: 12px 27px;
+			// gap: 12px 27px;
 		}
 		@include breakpoint(768px) {
 			gap: 0;
@@ -103,6 +103,12 @@
 		@include breakpoint(380px) {
 			padding: 6px 0px;
 		}
+	}
+	&__item:nth-child(1) {
+		padding-left: 0;
+	}
+	&__item:nth-child(10) {
+		padding-right: 0;
 	}
 
 	// &__item:nth-child(1) {

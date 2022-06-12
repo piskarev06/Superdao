@@ -71,7 +71,7 @@
 
 	&__link {
 		position: relative;
-		padding-right: 21px;
+		// padding-right: 21px;
 
 		font-weight: 600;
 		font-size: 22px;
@@ -79,7 +79,7 @@
 
 		color: #8395a7;
 		text-shadow: 0px 2px 25px rgba(0, 0, 0, 0.6);
-		transition: all 0.3s ease;
+		// transition: all 0.3s ease;
 
 		&--mobile,
 		&-wrapper {
@@ -91,6 +91,9 @@
 
 			text-shadow: 0px 2px 25px rgba(0, 0, 0, 0.6);
 		}
+		// &:hover .press__link-svg {
+		// 	fill: #ffc803 !important;
+		// }
 		&:active {
 			color: #e3b200;
 
@@ -111,20 +114,20 @@
 			}
 		}
 
-		&::after {
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
-			right: 0;
-			content: '';
+		// &::after {
+		// 	position: absolute;
+		// 	top: 50%;
+		// 	transform: translateY(-50%);
+		// 	right: 0;
+		// 	content: '';
 
-			width: 13px;
-			height: 10px;
+		// 	width: 13px;
+		// 	height: 10px;
 
-			background: url('../images/arrows/arrow--gray.svg');
-			background-repeat: no-repeat;
-			background-size: cover;
-		}
+		// 	background: url('../images/arrows/arrow--gray.svg');
+		// 	background-repeat: no-repeat;
+		// 	background-size: cover;
+		// }
 	}
 
 	&__list {
@@ -144,6 +147,8 @@
 		& .list {
 			&__wrapper {
 				padding: 40px 20px 20px;
+				padding-left: 28px;
+				padding-bottom: 32px;
 				height: 100%;
 
 				display: flex;
@@ -209,6 +214,8 @@
 
 					& .list__wrapper {
 						padding: 31px 20px 20px;
+						padding-left: 28px;
+						padding-bottom: 32px;
 
 						@include breakpoint(1200px) {
 							padding: 24px 20px 20px;
@@ -300,6 +307,10 @@
 	}
 }
 
+// .press__link:hover .press__link-svg {
+// 	fill: #ffc803 !important;
+// }
+
 .img1 > img {
 	width: 120px;
 	@include breakpoint(1200px) {
@@ -345,4 +356,26 @@
 	@include breakpoint(1200px) {
 		margin-bottom: 14px !important;
 	}
+}
+
+.press__link-svg {
+	fill: #8395a7;
+}
+
+.press__link:hover .press__link-svg {
+	fill: #ffc803;
+}
+.press__link:active .press__link-svg {
+	fill: #e3b200;
+}
+
+.press__link-svg-2 {
+	fill: #8395a7;
+}
+
+.press__link:hover .press__link-svg-2 {
+	fill: #ffc803;
+}
+.press__link:active .press__link-svg-2 {
+	fill: #e3b200;
 }

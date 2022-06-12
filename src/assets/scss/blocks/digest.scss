@@ -137,7 +137,7 @@
 		height: 68px;
 		padding: 21px 20px 20px 28px;
 
-		background: #171e25;
+		background: #121e28;
 		border: 2px solid #2a3744;
 		border-radius: 16px;
 
@@ -158,7 +158,8 @@
 			line-height: 24px;
 		}
 		@include breakpoint(768px) {
-			padding: 13px 18px;
+			padding: 0px 18px;
+			padding-bottom: 3px;
 			width: 100%;
 			height: 44px;
 			border-radius: 10px;
