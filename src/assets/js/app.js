@@ -214,6 +214,38 @@ window.onscroll = function () {
 	}
 };
 
+const formEl = document.getElementById('form');
+const emailEl = document.getElementById('email');
+const buttonEl = document.getElementById('button');
+const loaderEl = document.getElementById('loader');
+const checkedEl = document.getElementById('checked');
+
+formEl.addEventListener('submit', async (event) => {
+	event.preventDefault();
+	console.log('submitted', emailEl.value);
+
+	// сменить текст кнопки
+	buttonEl.innerHTML =
+		'<div id="loader" class="lds-ring"><div></div><div></div><div></div><div></div></div>';
+
+	await fetch('https://api-eu.customer.io/v1/webhook/a5a02b55d37837cb', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify({ email: emailEl.value }),
+	});
+
+	// сменить текст кнопки
+	buttonEl.innerHTML = `<svg id="checked" width="27" height="20" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M25.7121 0.507124C26.4675 1.21537 26.5058 2.40194 25.7976 3.1574L10.5632 19.4074C10.2087 19.7855 9.71358 20 9.19532 20C8.67705 20 8.1819 19.7855 7.82744 19.4074L1.38212 12.5324C0.67388 11.7769 0.712156 10.5904 1.46762 9.88212C2.22308 9.17388 3.40964 9.21216 4.11789 9.96762L9.19532 15.3835L23.0618 0.592616C23.7701 -0.162844 24.9566 -0.20112 25.7121 0.507124Z" fill="#3A3A3A"/></svg>`;
+
+	// очистить инпут
+	setTimeout(() => {
+		buttonEl.innerHTML = 'Subscribe';
+		emailEl.value = '';
+	}, 4 * 1000);
+});
+
 // End of Word
 
 // let clientTop = document.documentElement.clientTop

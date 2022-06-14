@@ -1238,9 +1238,13 @@
         <h2 class="digest__title h2">Weekly digest</h2>
         <p class="digest__text">Latest news in DAOs and Web3</p>
 
-        <form action="" class="digest__form">
-          <input placeholder="Your email" type="email" class="digest__input" />
-          <button class="digest__btn btn btn--digest">Subscribe</button>
+        <form id="form" class="digest__form">
+          <input required id="email" placeholder="Your email" type="email" class="digest__input" onchange="inputChange()" />
+          <button id="button" type="submit" class="digest__btn btn btn--digest">Subscribe
+            
+            
+                          
+          </button>
         </form>
 
         <!-- <div class="digest__decor">
