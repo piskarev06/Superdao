@@ -2,15 +2,23 @@
 	position: relative;
 	// padding-top: 97px;
 
-	height: calc(100vh + 104px);
+	min-height: calc(100vh + 104px);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 500px;
+	// min-height: 500px;
 
 	@include breakpoint(768px) {
-		height: calc(100vh + 64px);
+		min-height: calc(100vh + 64px);
 		// padding-top: 64px;
+	}
+
+	&__arrows {
+		position: absolute;
+		left: 50%;
+		bottom: 100px;
+
+		transform: translate(-50%, -50%);
 	}
 
 	&__inner {
@@ -24,6 +32,8 @@
 		align-items: center;
 
 		text-align: center;
+
+		padding: 200px 0;
 
 		@include breakpoint(768px) {
 			max-width: 400px;
