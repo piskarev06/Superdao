@@ -105,6 +105,25 @@
 		// }
 	}
 
+	&__list-img1 {
+		@include breakpoint(1200px) {
+			width: 40px;
+			height: 40px;
+		}
+	}
+	&__list-img2 {
+		@include breakpoint(1200px) {
+			width: 40px;
+			height: 40px;
+		}
+	}
+	&__list-img3 {
+		@include breakpoint(1200px) {
+			width: 40px;
+			height: 40px;
+		}
+	}
+
 	&__list {
 		display: flex;
 		gap: 28px;
@@ -154,10 +173,10 @@
 				}
 
 				&.youtube .list__img {
-					margin-bottom: 26px;
+					margin-bottom: 21px;
 
 					@include breakpoint(1200px) {
-						margin-bottom: 20px;
+						margin-bottom: 16px;
 					}
 				}
 

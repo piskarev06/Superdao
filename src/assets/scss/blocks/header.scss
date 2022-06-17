@@ -420,12 +420,19 @@
 	width: 49px;
 	height: 21px;
 
-	background: rgba(255, 207, 1, 0.2);
+	background: rgba(75, 225, 244, 0.2);
 	border-radius: 4px;
 
 	font-size: 14px;
 	line-height: 17px;
 	font-weight: 700;
 
-	color: #ffcf01;
+	color: #4be1f4;
+
+	@include breakpoint(1200px) {
+		font-size: 11px;
+		line-height: 15px;
+		width: 44px;
+		height: 19px;
+	}
 }

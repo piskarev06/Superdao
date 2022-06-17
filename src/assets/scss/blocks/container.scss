@@ -11,7 +11,13 @@
 }
 
 .header .container {
-	max-width: 1470px;
+	max-width: 1600px;
+	@include breakpoint(1800px) {
+		max-width: 1470px;
+		margin: 0 auto;
+		padding: 0 15px;
+	}
+
 	@include breakpoint(1600px) {
 		max-width: 1170px;
 		margin: 0 auto;
@@ -19,7 +25,12 @@
 	}
 }
 .footer .container {
-	max-width: 1470px;
+	max-width: 1600px;
+	@include breakpoint(1800px) {
+		max-width: 1470px;
+		margin: 0 auto;
+		padding: 0 15px;
+	}
 	@include breakpoint(1600px) {
 		max-width: 1170px;
 		margin: 0 auto;
