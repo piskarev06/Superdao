@@ -1,39 +1,3 @@
-const formEl = document.getElementById('form');
-const emailEl = document.getElementById('email');
-const buttonEl = document.getElementById('button');
-const loaderEl = document.getElementById('loader');
-const checkedEl = document.getElementById('checked');
-
-formEl.addEventListener('submit', async (event) => {
-	event.preventDefault();
-	console.log('submitted', emailEl.value);
-
-	// сменить текст кнопки
-	buttonEl.innerHTML =
-		'<div id="loader" class="lds-ring"><div></div><div></div><div></div><div></div></div>';
-
-	await fetch('https://api-eu.customer.io/v1/webhook/a5a02b55d37837cb', {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify({
-			email: emailEl.value,
-			createdAt: new Date().toISOString(),
-			formName: 'Site newsletter form',
-		}),
-	});
-
-	// сменить текст кнопки
-	buttonEl.innerHTML = `<svg id="checked" width="27" height="20" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M25.7121 0.507124C26.4675 1.21537 26.5058 2.40194 25.7976 3.1574L10.5632 19.4074C10.2087 19.7855 9.71358 20 9.19532 20C8.67705 20 8.1819 19.7855 7.82744 19.4074L1.38212 12.5324C0.67388 11.7769 0.712156 10.5904 1.46762 9.88212C2.22308 9.17388 3.40964 9.21216 4.11789 9.96762L9.19532 15.3835L23.0618 0.592616C23.7701 -0.162844 24.9566 -0.20112 25.7121 0.507124Z" fill="#3A3A3A"/></svg>`;
-
-	// очистить инпут
-	setTimeout(() => {
-		buttonEl.innerHTML = 'Subscribe';
-		emailEl.value = '';
-	}, 4 * 1000);
-});
-
 //burger
 let burger = document.querySelector('.header__burger');
 let cross = document.querySelector('.header__top-cross');
@@ -51,40 +15,6 @@ cross.onclick = function () {
 
 	body.classList.remove('scroll-hidden');
 };
-
-const menuLinks = document.querySelectorAll('.nav__link[data-goto]');
-if (menuLinks.length > 0) {
-	menuLinks.forEach((el) => {
-		el.addEventListener('click', onMenuLinkClick);
-	});
-
-	function onMenuLinkClick(e) {
-		const menuLink = e.target;
-		if (
-			menuLink.dataset.goto &&
-			document.querySelector(menuLink.dataset.goto)
-		) {
-			const gotoBlock = document.querySelector(menuLink.dataset.goto);
-			const gotoBlockValue =
-				gotoBlock.getBoundingClientRect().top +
-				pageYOffset -
-				-document.querySelector('header').offsetHeight;
-
-			if (iconMenu.classList.contains('_active')) {
-				document.body.classList.remove('_lock');
-				iconMenu.classList.remove('_active');
-				menuBody.classList.remove('_active');
-			}
-
-			window.scrollTo({
-				top: gotoBlockValue,
-				behavior: 'smooth',
-			});
-			e.preventDefault();
-		}
-	}
-}
-// End of Scroll
 
 const tabs = document.getElementById('tabs');
 const content = document.querySelectorAll('.content__item');
@@ -136,8 +66,6 @@ const sevenWord = sectionWordContent + 600;
 window.addEventListener('resize', () => {
 	window.removeEventListener('scroll', wordListeneer);
 
-	console.log('resize');
-
 	const sectionWordStart = getTopElement(document.querySelector('.word')) - 400;
 	const sectionWordContent = sectionWordStart;
 	const sectionWordEnd = sectionWordStart + sectionWordContent;
@@ -178,7 +106,6 @@ function wordListeneer(
 	sixWord,
 	sevenWord
 ) {
-	console.log('func');
 	window.addEventListener('scroll', () => {
 		if (oneWord <= window.pageYOffset && twoWord > window.pageYOffset) {
 			words[0].classList.add('active');
@@ -210,10 +137,6 @@ function wordListeneer(
 		) {
 			words[6].classList.add('active');
 		} else words[6].classList.remove('active');
-
-		// console.log(sevenWord);
-		// console.log(window.pageYOffset);
-		// console.log(sectionWordEnd);
 	});
 }
 
@@ -249,6 +172,42 @@ window.onscroll = function () {
 		navbar.classList.add('header-background');
 	}
 };
+
+const formEl = document.getElementById('form');
+const emailEl = document.getElementById('email');
+const buttonEl = document.getElementById('button');
+const loaderEl = document.getElementById('loader');
+const checkedEl = document.getElementById('checked');
+
+formEl.addEventListener('submit', async (event) => {
+	event.preventDefault();
+	console.log('submitted', emailEl.value);
+
+	// сменить текст кнопки
+	buttonEl.innerHTML =
+		'<div id="loader" class="lds-ring"><div></div><div></div><div></div><div></div></div>';
+
+	await fetch('https://api-eu.customer.io/v1/webhook/a5a02b55d37837cb', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify({
+			email: emailEl.value,
+			createdAt: new Date().toISOString(),
+			formName: 'Site newsletter form',
+		}),
+	});
+
+	// сменить текст кнопки
+	buttonEl.innerHTML = `<svg id="checked" width="27" height="20" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M25.7121 0.507124C26.4675 1.21537 26.5058 2.40194 25.7976 3.1574L10.5632 19.4074C10.2087 19.7855 9.71358 20 9.19532 20C8.67705 20 8.1819 19.7855 7.82744 19.4074L1.38212 12.5324C0.67388 11.7769 0.712156 10.5904 1.46762 9.88212C2.22308 9.17388 3.40964 9.21216 4.11789 9.96762L9.19532 15.3835L23.0618 0.592616C23.7701 -0.162844 24.9566 -0.20112 25.7121 0.507124Z" fill="#3A3A3A"/></svg>`;
+
+	// очистить инпут
+	setTimeout(() => {
+		buttonEl.innerHTML = 'Subscribe';
+		emailEl.value = '';
+	}, 4 * 1000);
+});
 
 // End of Word
 

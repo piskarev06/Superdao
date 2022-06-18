@@ -2495,6 +2495,14 @@ footer .header__li-item {
     display: block;
     opacity: 1;
     visibility: visible;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+    .tabs__content .content__item.active img {
+        max-width: 657px;
+    }
 }
 
 .tabs__content img {
@@ -2502,15 +2510,15 @@ footer .header__li-item {
     display: none;
     opacity: 0;
     visibility: hidden;
-    border-radius: 20px;
+    border-radius: 17px;
     transition: all 0.3s linear;
-    -webkit-animation: fadein 2s;
-    animation: fadein 2s;
+    -webkit-animation: fadein 1.5s;
+    animation: fadein 1.5s;
 }
 
 @media (max-width: 1200px) {
     .tabs__content img {
-        border-radius: 12px;
+        border-radius: 10px;
     }
 }
 
