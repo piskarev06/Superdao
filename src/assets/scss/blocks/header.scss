@@ -15,11 +15,13 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		position: relative;
 	}
 
 	&__logo {
+		pointer-events: none;
 		align-self: flex-start;
-		margin-top: 11px;
+		margin-top: 3px;
 		@include breakpoint(1200px) {
 			margin-top: 11px;
 		}
@@ -34,6 +36,17 @@
 	}
 
 	&__nav {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		@include breakpoint(1200px) {
+			position: relative;
+			top: auto;
+			left: auto;
+			transform: none;
+			
+		}
 		@include breakpoint(768px) {
 			display: none;
 		}
