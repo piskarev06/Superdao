@@ -1,1 +1,204 @@
-!function(e){var t={};function n(o){if(t[o])return t[o].exports;var r=t[o]={i:o,l:!1,exports:{}};return e[o].call(r.exports,r,r.exports,n),r.l=!0,r.exports}n.m=e,n.c=t,n.d=function(e,t,o){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:o})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var o=Object.create(null);if(n.r(o),Object.defineProperty(o,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var r in e)n.d(o,r,function(t){return e[t]}.bind(null,r));return o},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s=0)}([function(e,t){function n(e,t,n,o,r,i,c){try{var a=e[i](c),d=a.value}catch(e){return void n(e)}a.done?t(d):Promise.resolve(d).then(o,r)}var o=document.querySelector(".header__burger"),r=document.querySelector(".header__top-cross"),i=(document.querySelector(".header__mobile"),document.querySelector("body"));o.onclick=function(){i.classList.add("opened"),i.classList.add("scroll-hidden")},r.onclick=function(){i.classList.remove("opened"),i.classList.remove("scroll-hidden")};var c=document.getElementById("tabs"),a=document.querySelectorAll(".content__item");!function(e,t){e.addEventListener("click",(function(n){var o=n.target.dataset.btn;!function(e,t){for(var n=0;n<t.children.length;n++)t.children[n].classList.remove("active");e.classList.add("active")}(n.target,e);for(var r=0;r<t.length;r++)t[r].classList.remove("active"),t[r].dataset.content===o&&t[r].classList.add("active")}))}(c,a);var d=function(e){var t=document.documentElement.clientTop;return e.getBoundingClientRect().top+window.pageYOffset-t},s=d(document.querySelector(".word"))-400,l=s,u=document.querySelectorAll(".word__span"),f=l,v=l+100,m=l+200,w=l+300,p=l+400,g=l+500,y=l+600;function L(e,t,n,o,r,i,c,a,d,s,l){window.addEventListener("scroll",(function(){r<=window.pageYOffset&&i>window.pageYOffset?o[0].classList.add("active"):o[0].classList.remove("active"),i<=window.pageYOffset&&c>window.pageYOffset?o[1].classList.add("active"):o[1].classList.remove("active"),c<=window.pageYOffset&&a>window.pageYOffset?o[2].classList.add("active"):o[2].classList.remove("active"),a<=window.pageYOffset&&d>window.pageYOffset?o[3].classList.add("active"):o[3].classList.remove("active"),d<=window.pageYOffset&&s>window.pageYOffset?o[4].classList.add("active"):o[4].classList.remove("active"),s<=window.pageYOffset&&l>window.pageYOffset?o[5].classList.add("active"):o[5].classList.remove("active"),l<=window.pageYOffset&&l+100>window.pageYOffset?o[6].classList.add("active"):o[6].classList.remove("active")}))}window.addEventListener("resize",(function(){window.removeEventListener("scroll",L);var e=d(document.querySelector(".word"))-400;L(e,e,e+e,u,e,e+100,e+200,e+300,e+400,e+500,e+600)})),L(0,0,0,u,f,v,m,w,p,g,y);document.querySelectorAll(".constellation").forEach((function(e){window.addEventListener("scroll",(function(t){e.style.setProperty("--rotation",window.scrollY)}))}));var h=document.querySelector(".header");window.onscroll=function(){0==window.scrollY?h.classList.remove("header-background"):h.classList.add("header-background")};var b=document.getElementById("form"),O=document.getElementById("email"),S=document.getElementById("button");document.getElementById("loader"),document.getElementById("checked");b.addEventListener("submit",function(){var e,t=(e=regeneratorRuntime.mark((function e(t){return regeneratorRuntime.wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return t.preventDefault(),console.log("submitted",O.value),S.innerHTML='<div id="loader" class="lds-ring"><div></div><div></div><div></div><div></div></div>',e.next=5,fetch("https://api-eu.customer.io/v1/webhook/a5a02b55d37837cb",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:O.value,createdAt:(new Date).toISOString(),formName:"Site newsletter form"})});case 5:S.innerHTML='<svg id="checked" width="27" height="20" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M25.7121 0.507124C26.4675 1.21537 26.5058 2.40194 25.7976 3.1574L10.5632 19.4074C10.2087 19.7855 9.71358 20 9.19532 20C8.67705 20 8.1819 19.7855 7.82744 19.4074L1.38212 12.5324C0.67388 11.7769 0.712156 10.5904 1.46762 9.88212C2.22308 9.17388 3.40964 9.21216 4.11789 9.96762L9.19532 15.3835L23.0618 0.592616C23.7701 -0.162844 24.9566 -0.20112 25.7121 0.507124Z" fill="#3A3A3A"/></svg>',setTimeout((function(){S.innerHTML="Subscribe",O.value=""}),4e3);case 7:case"end":return e.stop()}}),e)})),function(){var t=this,o=arguments;return new Promise((function(r,i){var c=e.apply(t,o);function a(e){n(c,r,i,a,d,"next",e)}function d(e){n(c,r,i,a,d,"throw",e)}a(void 0)}))});return function(e){return t.apply(this,arguments)}}())}]);
+let burger = document.querySelector('.header__burger');
+let cross = document.querySelector('.header__top-cross');
+let mobMenu = document.querySelector('.header__mobile');
+
+let body = document.querySelector('body');
+
+burger.onclick = function () {
+	body.classList.add('opened');
+
+	body.classList.add('scroll-hidden');
+};
+cross.onclick = function () {
+	body.classList.remove('opened');
+
+	body.classList.remove('scroll-hidden');
+};
+
+const tabs = document.getElementById('tabs');
+const content = document.querySelectorAll('.content__item');
+
+const changeClass = (el, tabs) => {
+	for (let i = 0; i < tabs.children.length; i++) {
+		tabs.children[i].classList.remove('active');
+	}
+	el.classList.add('active');
+};
+
+const listener = (tabs, content) => {
+	tabs.addEventListener('click', (e) => {
+		const currentTab = e.target.dataset.btn;
+		changeClass(e.target, tabs);
+		for (let i = 0; i < content.length; i++) {
+			content[i].classList.remove('active');
+			if (content[i].dataset.content === currentTab) {
+				content[i].classList.add('active');
+			}
+		}
+	});
+};
+
+listener(tabs, content);
+
+
+const getTopElement = (element) => {
+	let clientTop = document.documentElement.clientTop;
+	return element.getBoundingClientRect().top + window.pageYOffset - clientTop;
+};
+
+
+const sectionWordStart = getTopElement(document.querySelector('.word')) - 400;
+const sectionWordContent = sectionWordStart;
+const sectionWordEnd = sectionWordStart + sectionWordContent;
+let words = document.querySelectorAll('.word__span');
+
+const oneWord = sectionWordContent;
+const twoWord = sectionWordContent + 100;
+const threeWord = sectionWordContent + 200;
+const fourWord = sectionWordContent + 300;
+const fiveWord = sectionWordContent + 400;
+const sixWord = sectionWordContent + 500;
+const sevenWord = sectionWordContent + 600;
+
+window.addEventListener('resize', () => {
+	window.removeEventListener('scroll', wordListeneer);
+
+	const sectionWordStart = getTopElement(document.querySelector('.word')) - 400;
+	const sectionWordContent = sectionWordStart;
+	const sectionWordEnd = sectionWordStart + sectionWordContent;
+
+	const oneWord = sectionWordContent;
+	const twoWord = sectionWordContent + 100;
+	const threeWord = sectionWordContent + 200;
+	const fourWord = sectionWordContent + 300;
+	const fiveWord = sectionWordContent + 400;
+	const sixWord = sectionWordContent + 500;
+	const sevenWord = sectionWordContent + 600;
+
+	wordListeneer(
+		sectionWordStart,
+		sectionWordContent,
+		sectionWordEnd,
+		words,
+		oneWord,
+		twoWord,
+		threeWord,
+		fourWord,
+		fiveWord,
+		sixWord,
+		sevenWord
+	);
+});
+
+function wordListeneer(
+	sectionWordStart,
+	sectionWordContent,
+	sectionWordEnd,
+	words,
+	oneWord,
+	twoWord,
+	threeWord,
+	fourWord,
+	fiveWord,
+	sixWord,
+	sevenWord
+) {
+	window.addEventListener('scroll', () => {
+		if (oneWord <= window.pageYOffset && twoWord > window.pageYOffset) {
+			words[0].classList.add('active');
+		} else words[0].classList.remove('active');
+
+		if (twoWord <= window.pageYOffset && threeWord > window.pageYOffset) {
+			words[1].classList.add('active');
+		} else words[1].classList.remove('active');
+
+		if (threeWord <= window.pageYOffset && fourWord > window.pageYOffset) {
+			words[2].classList.add('active');
+		} else words[2].classList.remove('active');
+
+		if (fourWord <= window.pageYOffset && fiveWord > window.pageYOffset) {
+			words[3].classList.add('active');
+		} else words[3].classList.remove('active');
+
+		if (fiveWord <= window.pageYOffset && sixWord > window.pageYOffset) {
+			words[4].classList.add('active');
+		} else words[4].classList.remove('active');
+
+		if (sixWord <= window.pageYOffset && sevenWord > window.pageYOffset) {
+			words[5].classList.add('active');
+		} else words[5].classList.remove('active');
+
+		if (
+			sevenWord <= window.pageYOffset &&
+			sevenWord + 100 > window.pageYOffset
+		) {
+			words[6].classList.add('active');
+		} else words[6].classList.remove('active');
+	});
+}
+
+wordListeneer(
+	sectionWordStart,
+	sectionWordContent,
+	sectionWordEnd,
+	words,
+	oneWord,
+	twoWord,
+	threeWord,
+	fourWord,
+	fiveWord,
+	sixWord,
+	sevenWord
+);
+
+const constellation = (element) => {
+	window.addEventListener('scroll', (e) => {
+		element.style.setProperty('--rotation', window.scrollY);
+	});
+};
+
+document.querySelectorAll('.constellation').forEach(constellation);
+
+const navbar = document.querySelector('.header');
+
+window.onscroll = function () {
+	const top = window.scrollY;
+	if (top == 0) {
+		navbar.classList.remove('header-background');
+	} else {
+		navbar.classList.add('header-background');
+	}
+};
+
+const formEl = document.getElementById('form');
+const emailEl = document.getElementById('email');
+const buttonEl = document.getElementById('button');
+const loaderEl = document.getElementById('loader');
+const checkedEl = document.getElementById('checked');
+
+formEl.addEventListener('submit', async (event) => {
+	event.preventDefault();
+	console.log('submitted', emailEl.value);
+
+
+	buttonEl.innerHTML =
+		'<div id="loader" class="lds-ring"><div></div><div></div><div></div><div></div></div>';
+
+	await fetch('https://api-eu.customer.io/v1/webhook/a5a02b55d37837cb', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify({
+			email: emailEl.value,
+			createdAt: new Date().toISOString(),
+			formName: 'Site newsletter form',
+		}),
+	});
+
+	buttonEl.innerHTML = `<svg id="checked" width="27" height="20" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M25.7121 0.507124C26.4675 1.21537 26.5058 2.40194 25.7976 3.1574L10.5632 19.4074C10.2087 19.7855 9.71358 20 9.19532 20C8.67705 20 8.1819 19.7855 7.82744 19.4074L1.38212 12.5324C0.67388 11.7769 0.712156 10.5904 1.46762 9.88212C2.22308 9.17388 3.40964 9.21216 4.11789 9.96762L9.19532 15.3835L23.0618 0.592616C23.7701 -0.162844 24.9566 -0.20112 25.7121 0.507124Z" fill="#3A3A3A"/></svg>`;
+	setTimeout(() => {
+		buttonEl.innerHTML = 'Subscribe';
+		emailEl.value = '';
+	}, 4 * 1000);
+});
