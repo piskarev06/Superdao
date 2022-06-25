@@ -1320,7 +1320,7 @@ footer .header__li-item {
 
 @media (max-width: 1200px) {
     .container {
-        max-width: 992px;
+        max-width: 780px;
     }
 }
 
