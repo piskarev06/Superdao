@@ -198,7 +198,10 @@
 	}
 
 	&__block {
-		position: relative;
+		-webkit-mask-image: -webkit-radial-gradient(white, black);
+		-webkit-border-radius: 30px;
+		-khtml-border-radius: 30px;
+		-moz-border-radius: 30px;
 		border-radius: 30px;
 		background: #010001;
 		width: 100%;
@@ -211,6 +214,9 @@
 			max-width: 736px;
 
 			height: 318px;
+			-webkit-border-radius: 20px;
+			-khtml-border-radius: 20px;
+			-moz-border-radius: 20px;
 			border-radius: 20px;
 		}
 	}
