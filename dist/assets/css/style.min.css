@@ -384,7 +384,7 @@ textarea {
   height: 99%;
   position: absolute;
   z-index: -1;
-  opacity: 1;
+  opacity: 0.7;
   padding-bottom: 120px;
 }
 @media (max-width: 768px) {
@@ -447,7 +447,7 @@ body {
   font-size: 22px;
   line-height: 27px;
   color: #e5e5e5;
-  background: #0f1119 !important;
+  background: #0f1117 !important;
   overflow-x: hidden;
 }
 body._lock {
