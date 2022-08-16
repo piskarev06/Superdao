@@ -1,3 +1,4 @@
+//burger
 let burger = document.querySelector(".header__burger");
 let cross = document.querySelector(".header__top-cross");
 let mobMenu = document.querySelector(".header__mobile");
@@ -160,17 +161,6 @@ const constellation = (element) => {
 };
 
 document.querySelectorAll(".constellation").forEach(constellation);
-
-const navbar = document.querySelector(".header");
-
-window.onscroll = function () {
-  const top = window.scrollY;
-  if (top == 0) {
-    navbar.classList.remove("header-background");
-  } else {
-    navbar.classList.add("header-background");
-  }
-};
 
 const formEl = document.getElementById("form");
 const emailEl = document.getElementById("email");
