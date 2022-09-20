@@ -162,6 +162,17 @@ const constellation = (element) => {
 
 document.querySelectorAll(".constellation").forEach(constellation);
 
+const navbar = document.querySelector(".header");
+
+window.onscroll = function () {
+  const top = window.scrollY;
+  if (top == 0) {
+    navbar.classList.remove("header-background");
+  } else {
+    navbar.classList.add("header-background");
+  }
+};
+
 const formEl = document.getElementById("form");
 const emailEl = document.getElementById("email");
 const buttonEl = document.getElementById("button");
@@ -197,3 +208,98 @@ formEl.addEventListener("submit", async (event) => {
     emailEl.value = "";
   }, 4 * 1000);
 });
+
+// End of Word
+
+// let clientTop = document.documentElement.clientTop
+
+// document.querySelector('.step').getBoundingClientRect().top + window.pageYOffset - clientTop
+
+// const sectionStepStart = getTopElement(document.querySelector('.step')) - 500
+// const sectionStepContent = sectionStepStart
+// const sectionStepEnd = sectionStepStart + sectionStepContent
+// let steps = document.querySelectorAll('.step__span')
+
+// const oneStep = sectionStepContent
+// const twoStep = sectionStepContent + 100
+// const threeStep = sectionStepContent + 200
+// const fourStep = sectionStepContent + 300
+// const fiveStep = sectionStepContent + 400
+// const sixStep = sectionStepContent + 500
+// const sevenStep = sectionStepContent + 600
+
+// let cards = document.querySelectorAll('.step__content')
+
+// const oneCard = sectionStepContent
+// const twoCard = sectionStepContent + 100
+// const threeCard = sectionStepContent + 200
+// const fourCard = sectionStepContent + 300
+// const fiveCard = sectionStepContent + 400
+// const sixCard = sectionStepContent + 500
+// const sevenCard = sectionStepContent + 600
+
+// window.addEventListener('scroll', () => {
+//   console.log(sectionStepStart, window.pageYOffset)
+
+//   if (oneStep <= window.pageYOffset && twoStep > window.pageYOffset) {
+//     steps[0].classList.add('active')
+//   } else steps[0].classList.remove('active')
+
+//   if (twoStep <= window.pageYOffset && threeStep > window.pageYOffset) {
+//     steps[1].classList.add('active')
+//   } else steps[1].classList.remove('active')
+
+//   if (threeStep <= window.pageYOffset && fourStep > window.pageYOffset) {
+//     steps[2].classList.add('active')
+//   } else steps[2].classList.remove('active')
+
+//   if (fourStep <= window.pageYOffset && fiveStep > window.pageYOffset) {
+//     steps[3].classList.add('active')
+//   } else steps[3].classList.remove('active')
+
+//   if (fiveStep <= window.pageYOffset && sixStep > window.pageYOffset) {
+//     steps[4].classList.add('active')
+//   } else steps[4].classList.remove('active')
+
+//   if (sixStep <= window.pageYOffset && sevenStep > window.pageYOffset) {
+//     steps[5].classList.add('active')
+//   } else steps[5].classList.remove('active')
+
+//   if (sevenStep <= window.pageYOffset && sectionStepEnd > window.pageYOffset) {
+//     steps[6].classList.add('active')
+//   } else steps[6].classList.remove('active')
+// })
+
+// window.addEventListener('scroll', () => {
+//   console.log(sectionStepStart, window.pageYOffset)
+
+//   if (oneCard <= window.pageYOffset && twoCard > window.pageYOffset) {
+//     cards[0].classList.add('active')
+//   } else cards[0].classList.remove('active')
+
+//   if (twoCard <= window.pageYOffset && threeCard > window.pageYOffset) {
+//     cards[1].classList.add('active')
+//   } else cards[1].classList.remove('active')
+
+//   if (threeCard <= window.pageYOffset && fourCard > window.pageYOffset) {
+//     cards[2].classList.add('active')
+//   } else cards[2].classList.remove('active')
+
+//   if (fourCard <= window.pageYOffset && fiveCard > window.pageYOffset) {
+//     cards[3].classList.add('active')
+//   } else cards[3].classList.remove('active')
+
+//   if (fiveCard <= window.pageYOffset && sixCard > window.pageYOffset) {
+//     cards[4].classList.add('active')
+//   } else cards[4].classList.remove('active')
+
+//   if (sixCard <= window.pageYOffset && sevenCard > window.pageYOffset) {
+//     cards[5].classList.add('active')
+//   } else cards[5].classList.remove('active')
+
+//   if (sevenCard <= window.pageYOffset && sectionStepEnd > window.pageYOffset) {
+//     cards[6].classList.add('active')
+//   } else cards[6].classList.remove('active')
+// })
+
+// End Of Step

@@ -3,91 +3,91 @@
     position: relative;
   }
 
-	&__title {
-		margin-bottom: 44px;
-		@include breakpoint(1200px) {
-			margin-bottom: 32px;
-		}
-		@include breakpoint(768px) {
-			margin-bottom: 22px;
-		}
-		@include breakpoint(420px) {
-			margin-bottom: 24px;
-		}
-	}
+  &__title {
+    margin-bottom: 44px;
+    @include breakpoint(1200px) {
+      margin-bottom: 32px;
+    }
+    @include breakpoint(768px) {
+      margin-bottom: 22px;
+    }
+    @include breakpoint(420px) {
+      margin-bottom: 24px;
+    }
+  }
 
-	&__imgs {
-		display: flex;
-		justify-content: center;
-		gap: 25px;
-		margin-bottom: 48px;
-		@include breakpoint(1200px) {
-			gap: 16px;
-			margin-bottom: 36px;
-		}
-		@include breakpoint(768px) {
-			gap: 9px;
-			margin-bottom: 25px;
-		}
-		// @include breakpoint(600px) {
-		// 	max-width: 270px;
-		// 	flex-wrap: wrap;
-		// 	margin-left: auto;
-		// 	margin-right: auto;
-		// }
-		@include breakpoint(600px) {
-			margin: 0 auto;
-			flex-wrap: wrap;
-			max-width: 280px;
-			gap: 10px;
-			margin-bottom: 26px;
-		}
-	}
+  &__imgs {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 48px;
+    @include breakpoint(1200px) {
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+    @include breakpoint(768px) {
+      gap: 9px;
+      margin-bottom: 25px;
+    }
+    // @include breakpoint(600px) {
+    // 	max-width: 270px;
+    // 	flex-wrap: wrap;
+    // 	margin-left: auto;
+    // 	margin-right: auto;
+    // }
+    @include breakpoint(600px) {
+      margin: 0 auto;
+      flex-wrap: wrap;
+      max-width: 280px;
+      gap: 10px;
+      margin-bottom: 26px;
+    }
+  }
 
-	&__img {
-		width: 160px;
-		height: 160px;
-		border-radius: 40px;
-		@include breakpoint(1200px) {
-			width: 115px;
-			height: 115px;
-			border-radius: 24px;
-		}
-		@include breakpoint(768px) {
-			width: 72px;
-			height: 72px;
-			border-radius: 20px;
-		}
-		@include breakpoint(600px) {
-			width: 82px;
-			height: 82px;
-			border-radius: 13px;
-		}
-	}
+  &__img {
+    width: 160px;
+    height: 160px;
+    border-radius: 40px;
+    @include breakpoint(1200px) {
+      width: 115px;
+      height: 115px;
+      border-radius: 24px;
+    }
+    @include breakpoint(768px) {
+      width: 72px;
+      height: 72px;
+      border-radius: 20px;
+    }
+    @include breakpoint(600px) {
+      width: 82px;
+      height: 82px;
+      border-radius: 13px;
+    }
+  }
 
-	&__content {
-		max-width: 1056px;
-		margin: 0 auto;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-wrap: wrap;
-		gap: 20px 28px;
-		@include breakpoint(1200px) {
-			max-width: 760px;
-			gap: 20px 16px;
-		}
-		@include breakpoint(800px) {
-			gap: 20px 12px;
-		}
-		@include breakpoint(768px) {
-			max-width: 450px;
-			gap: 10px 10px;
-		}
-	}
+  &__content {
+    max-width: 1056px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px 28px;
+    @include breakpoint(1200px) {
+      max-width: 760px;
+      gap: 20px 16px;
+    }
+    @include breakpoint(800px) {
+      gap: 20px 12px;
+    }
+    @include breakpoint(768px) {
+      max-width: 450px;
+      gap: 10px 10px;
+    }
+  }
 
   &__content-span {
-    font-family: 'Loos Wide';
+    font-family: "Loos Wide";
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -137,5 +137,67 @@
     @include breakpoint(768px) {
       display: none;
     }
+  }
+}
+
+.a {
+  @include breakpoint(768px) {
+    order: 1;
+  }
+}
+.b {
+  @include breakpoint(768px) {
+    order: 2;
+  }
+}
+.c {
+  @include breakpoint(768px) {
+    order: 6;
+  }
+}
+.d {
+  @include breakpoint(768px) {
+    order: 4;
+  }
+}
+.e {
+  @include breakpoint(768px) {
+    order: 5;
+  }
+}
+.f {
+  @include breakpoint(768px) {
+    order: 3;
+  }
+}
+.g {
+  @include breakpoint(768px) {
+    order: 7;
+  }
+}
+
+.h {
+  @include breakpoint(768px) {
+    order: 8;
+  }
+}
+.i {
+  @include breakpoint(768px) {
+    order: 10;
+  }
+}
+.j {
+  @include breakpoint(768px) {
+    order: 9;
+  }
+}
+.k {
+  @include breakpoint(768px) {
+    order: 11;
+  }
+}
+.l {
+  @include breakpoint(768px) {
+    order: 12;
   }
 }
